@@ -1,6 +1,7 @@
 package com.wx.commonservice.service;
 
 import org.hibernate.SQLQuery;
+import org.hibernate.query.internal.NativeQueryImpl;
 import org.hibernate.transform.Transformers;
 import org.hibernate.type.StandardBasicTypes;
 import org.hibernate.type.Type;
@@ -13,6 +14,7 @@ import org.springframework.stereotype.Service;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.List;
@@ -39,7 +41,7 @@ public class CommonServiceImpl implements CommonService {
         for (String key: params.keySet()) {
             nativeQuery.setParameter(key,params.get(key));
         }
-        nativeQuery.unwrap(SQLQuery.class).setResultTransformer(entityTrans);
+        nativeQuery.unwrap(NativeQueryImpl.class).setResultTransformer(entityTrans);
         List<T> resultList = nativeQuery.getResultList();
         return resultList;
     }
@@ -51,7 +53,7 @@ public class CommonServiceImpl implements CommonService {
             nativeQuery.setParameter(i,params.get(i));
         }
 
-        nativeQuery.unwrap(SQLQuery.class).setResultTransformer(entityTrans);
+        nativeQuery.unwrap(NativeQueryImpl.class).setResultTransformer(entityTrans);
         List<T> resultList = nativeQuery.getResultList();
         return resultList;
     }
@@ -62,8 +64,8 @@ public class CommonServiceImpl implements CommonService {
             nativeQuery.setParameter(key,params.get(key));
         }
         EntityTrans entityTrans = new EntityTrans(c);
-        nativeQuery.unwrap(SQLQuery.class).setResultTransformer(entityTrans);
-        nativeQuery.setFirstResult(pageable.getOffset());
+        nativeQuery.unwrap(NativeQueryImpl.class).setResultTransformer(entityTrans);
+        nativeQuery.setFirstResult((int)pageable.getOffset());
         nativeQuery.setMaxResults(pageable.getPageSize());
         Query countNativeQuery = entityManager.createNativeQuery("select count(*) from ("+sql+") a");
         for (String key: params.keySet()) {
@@ -79,8 +81,8 @@ public class CommonServiceImpl implements CommonService {
             nativeQuery.setParameter(i,params.get(i));
         }
         EntityTrans entityTrans = new EntityTrans(c);
-        nativeQuery.unwrap(SQLQuery.class).setResultTransformer(entityTrans);
-        nativeQuery.setFirstResult(pageable.getOffset());
+        nativeQuery.unwrap(NativeQueryImpl.class).setResultTransformer(entityTrans);
+        nativeQuery.setFirstResult((int)pageable.getOffset());
         nativeQuery.setMaxResults(pageable.getPageSize());
         Query countNativeQuery = entityManager.createNativeQuery("select count(*) from ("+sql+") a");
         for (int i=0;i<params.size();i++) {
@@ -93,8 +95,8 @@ public class CommonServiceImpl implements CommonService {
     public <T> Page<T> pageBySql(String sql,Pageable pageable,Class<T> c){
         Query nativeQuery = entityManager.createNativeQuery(sql);
         EntityTrans entityTrans = new EntityTrans(c);
-        nativeQuery.unwrap(SQLQuery.class).setResultTransformer(entityTrans);
-        nativeQuery.setFirstResult(pageable.getOffset());
+        nativeQuery.unwrap(NativeQueryImpl.class).setResultTransformer(entityTrans);
+        nativeQuery.setFirstResult((int)pageable.getOffset());
         nativeQuery.setMaxResults(pageable.getPageSize());
         Query countNativeQuery = entityManager.createNativeQuery("select count(*) from ("+sql+") a");
         long total = Long.parseLong(String.valueOf(countNativeQuery.getSingleResult()));
@@ -110,7 +112,7 @@ public class CommonServiceImpl implements CommonService {
     @Override
     public List<Map<String, Object>> nativeQuery4Map(String sql) {
         Query nativeQuery = entityManager.createNativeQuery(sql);
-        nativeQuery.unwrap(SQLQuery.class).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP);
+        nativeQuery.unwrap(NativeQueryImpl.class).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP);
         return nativeQuery.getResultList();
     }
 
@@ -123,13 +125,13 @@ public class CommonServiceImpl implements CommonService {
 //            System.out.println(params.get(key));
             nativeQuery.setParameter(key,params.get(key));
         }
-        nativeQuery.unwrap(SQLQuery.class).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP);
+        nativeQuery.unwrap(NativeQueryImpl.class).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP);
         return nativeQuery.getResultList();
     }
     @Override
     public Map<String, Object> nativeQuery4OneMap(String sql) {
         Query nativeQuery = entityManager.createNativeQuery(sql);
-        nativeQuery.unwrap(SQLQuery.class).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP);
+        nativeQuery.unwrap(NativeQueryImpl.class).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP);
         nativeQuery.setFirstResult(0);
         nativeQuery.setMaxResults(1);
         List<Map<String, Object>>  list= nativeQuery.getResultList();
@@ -149,7 +151,7 @@ public class CommonServiceImpl implements CommonService {
 //            System.out.println(params.get(key));
             nativeQuery.setParameter(key,params.get(key));
         }
-        nativeQuery.unwrap(SQLQuery.class).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP);
+        nativeQuery.unwrap(NativeQueryImpl.class).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP);
         nativeQuery.setFirstResult(0);
         nativeQuery.setMaxResults(1);
         List<Map<String, Object>>  list= nativeQuery.getResultList();
@@ -170,8 +172,8 @@ public class CommonServiceImpl implements CommonService {
 //            System.out.println(params.get(key));
             nativeQuery.setParameter(key,params.get(key));
         }
-        nativeQuery.unwrap(SQLQuery.class).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP);
-        nativeQuery.setFirstResult(pageable.getOffset());
+        nativeQuery.unwrap(NativeQueryImpl.class).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP);
+        nativeQuery.setFirstResult((int)pageable.getOffset());
         nativeQuery.setMaxResults(pageable.getPageSize());
         Query countNativeQuery = entityManager.createNativeQuery("select count(*) from ("+sql+") a");
         for (String key: params.keySet()) {
@@ -205,7 +207,7 @@ public class CommonServiceImpl implements CommonService {
     @Override
     public <T> T getOneField(String sql,String field, Class<T> c) {
         Query nativeQuery = entityManager.createNativeQuery(sql);
-        nativeQuery.unwrap(SQLQuery.class).addScalar(field, standardType(c.getName()));
+        nativeQuery.unwrap(NativeQueryImpl.class).addScalar(field, standardType(c.getName()));
 //        nativeQuery.unwrap(SQLQuery.class).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP);
         nativeQuery.setFirstResult(0);
         nativeQuery.setMaxResults(1);
@@ -223,7 +225,7 @@ public class CommonServiceImpl implements CommonService {
         for (int i=0;i<params.size();i++) {
             nativeQuery.setParameter(i,params.get(i));
         }
-        nativeQuery.unwrap(SQLQuery.class).addScalar(field, standardType(c.getName()));
+        nativeQuery.unwrap(NativeQueryImpl.class).addScalar(field, standardType(c.getName()));
         nativeQuery.setFirstResult(0);
         nativeQuery.setMaxResults(1);
         List<T>  list= nativeQuery.getResultList();
@@ -240,7 +242,7 @@ public class CommonServiceImpl implements CommonService {
         for (String key: params.keySet()) {
             nativeQuery.setParameter(key,params.get(key));
         }
-        nativeQuery.unwrap(SQLQuery.class).addScalar(field, standardType(c.getName()));
+        nativeQuery.unwrap(NativeQueryImpl.class).addScalar(field, standardType(c.getName()));
         nativeQuery.setFirstResult(0);
         nativeQuery.setMaxResults(1);
         List<T>  list= nativeQuery.getResultList();
@@ -255,7 +257,7 @@ public class CommonServiceImpl implements CommonService {
     public <T> List<T> getOneFieldList(String sql,String field, Class<T> c) {
         Query nativeQuery = entityManager.createNativeQuery(sql);
 
-        nativeQuery.unwrap(SQLQuery.class).addScalar(field, standardType(c.getName()));
+        nativeQuery.unwrap(NativeQueryImpl.class).addScalar(field, standardType(c.getName()));
 //        nativeQuery.unwrap(SQLQuery.class).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP);
         List<T>  list= nativeQuery.getResultList();
         return list;
@@ -267,7 +269,7 @@ public class CommonServiceImpl implements CommonService {
         for (int i=0;i<params.size();i++) {
             nativeQuery.setParameter(i,params.get(i));
         }
-        nativeQuery.unwrap(SQLQuery.class).addScalar(field, standardType(c.getName()));
+        nativeQuery.unwrap(NativeQueryImpl.class).addScalar(field, standardType(c.getName()));
 //        nativeQuery.unwrap(SQLQuery.class).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP);
         List<T>  list= nativeQuery.getResultList();
         return list;
@@ -279,7 +281,7 @@ public class CommonServiceImpl implements CommonService {
         for (String key: params.keySet()) {
             nativeQuery.setParameter(key,params.get(key));
         }
-        nativeQuery.unwrap(SQLQuery.class).addScalar(field, standardType(c.getName()));
+        nativeQuery.unwrap(NativeQueryImpl.class).addScalar(field, standardType(c.getName()));
 //        nativeQuery.unwrap(SQLQuery.class).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP);
         List<T>  list= nativeQuery.getResultList();
         return list;
@@ -288,9 +290,9 @@ public class CommonServiceImpl implements CommonService {
     @Override
     public Page<Map<String, Object>> nativeQuery4Map(String sql, Pageable pageable) {
         Query nativeQuery = entityManager.createNativeQuery(sql);
-        nativeQuery.unwrap(SQLQuery.class).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP);
+        nativeQuery.unwrap(NativeQueryImpl.class).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP);
 
-        nativeQuery.setFirstResult(pageable.getOffset());
+        nativeQuery.setFirstResult((int)pageable.getOffset());
         nativeQuery.setMaxResults(pageable.getPageSize());
 
         Query countNativeQuery = entityManager.createNativeQuery("select count(*) from ("+sql+") a");
@@ -302,7 +304,7 @@ public class CommonServiceImpl implements CommonService {
     public <T> T nativeQuery4FirstObject(String sql, Class<T> c){
         Query nativeQuery = entityManager.createNativeQuery(sql);
         EntityTrans entityTrans = new EntityTrans(c);
-        nativeQuery.unwrap(SQLQuery.class).setResultTransformer(entityTrans);
+        nativeQuery.unwrap(NativeQueryImpl.class).setResultTransformer(entityTrans);
         List<T> resultList = nativeQuery.getResultList();
         if(resultList == null || resultList.size() == 0){
             return null;
@@ -320,7 +322,7 @@ public class CommonServiceImpl implements CommonService {
             nativeQuery.setParameter(i,params.get(i));
         }
         EntityTrans entityTrans = new EntityTrans(c);
-        nativeQuery.unwrap(SQLQuery.class).setResultTransformer(entityTrans);
+        nativeQuery.unwrap(NativeQueryImpl.class).setResultTransformer(entityTrans);
         List<T> resultList = nativeQuery.getResultList();
         if(resultList == null || resultList.size() == 0){
             return null;
@@ -338,7 +340,8 @@ public class CommonServiceImpl implements CommonService {
             nativeQuery.setParameter(key,params.get(key));
         }
         EntityTrans entityTrans = new EntityTrans(c);
-        nativeQuery.unwrap(SQLQuery.class).setResultTransformer(entityTrans);
+        TypedQuery<T> query = entityManager.createQuery(sql, c);
+        nativeQuery.unwrap(NativeQueryImpl.class).setResultTransformer(entityTrans);
         List<T> resultList = nativeQuery.getResultList();
         if(resultList == null || resultList.size() == 0){
             return null;
