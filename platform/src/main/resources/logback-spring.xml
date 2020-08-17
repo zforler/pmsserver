@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+    <jmxConfigurator/>
+    <property name="project" value="hhd-platform-service-station"/>
+    <springProperty scope="context" name="ip" source="spring.cloud.client.ipAddress" />
+    <appender name="LOGSTASH" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!--<filter class="ch.qos.logback.classic.filter.LevelFilter">-->
+        <!--<level>INFO</level>-->
+        <!--<onMatch>ACCEPT</onMatch>-->
+        <!--<onMismatch>DENY</onMismatch>-->
+        <!--</filter>-->
+        <file>/log/${project}.log</file> <!-- 当前的日志文件文件放在 elk文件下，该日志的内容会被filebeat传送到es -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!-- 历史日志会放到 bak 文件下，最多保存3天的历史，最多占用 512M的空间 -->
+            <fileNamePattern>/log/bak/${project}.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxHistory>3</maxHistory>
+            <maxFileSize>128MB</maxFileSize>
+            <totalSizeCap>512MB</totalSizeCap>
+        </rollingPolicy>
+        <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
+            <providers>
+                <pattern>
+                    <pattern>
+                        {
+                        "tags": ["log"],
+                        "project": "${project}",
+                        "ip": "${ip}",
+                        "log_time": "%date{\"yyyy-MM-dd'T'HH:mm:ss,SSSZ\"}",
+                        "log_level": "%level",
+                        "thread": "%thread",
+                        "class_name": "%class",
+                        "line_number": "%line",
+                        "logger": "%logger",
+                        "method": "%method",
+                        "file_name": "%file",
+                        "message": "%message",
+                        "stack_trace": "%exception{5}"
+                        }
+
+                    </pattern>
+                </pattern>
+            </providers>
+        </encoder>
+    </appender>
+    <!--<appender name="LOGSTASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">-->
+    <!--<destination>127.0.0.1:4560</destination>-->
+    <!--<encoder charset="UTF-8" class="net.logstash.logback.encoder.LogstashEncoder" />-->
+    <!--</appender>-->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder charset="UTF-8"> <!-- encoder 可以指定字符集，对于中文输出有意义 -->
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="LOGSTASH" />
+        <!--<appender-ref ref="STDOUT" />-->
+    </root>
+</configuration>
