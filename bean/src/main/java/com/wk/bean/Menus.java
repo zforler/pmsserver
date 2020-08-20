@@ -1,9 +1,8 @@
 package com.wk.bean;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Menus {
@@ -17,8 +16,30 @@ public class Menus {
     private String icon;
     private String filePath;
     private Integer level;
+    private List<Menus> children;
+    public void addChildren(Menus menus){
+        if(children == null){
+            children = new ArrayList<>();
+        }
+        children.add(menus);
+    }
+    public void addChildren(List<Menus> menus){
+        if(children == null){
+            children = new ArrayList<>();
+        }
+        children.addAll(menus);
+    }
+    @Transient
+    public List<Menus> getChildren() {
+        return children;
+    }
+
+    public void setChildren(List<Menus> children) {
+        this.children = children;
+    }
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "menu_id")
     public int getMenuId() {
         return menuId;
