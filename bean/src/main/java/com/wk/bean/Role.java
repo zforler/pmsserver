@@ -7,19 +7,39 @@ import javax.persistence.Id;
 
 @Entity
 public class Role {
-    private int roleId;
+    private String roleId;
     private String roleName;
-    private String cusotmerId;
+    private String customerId;
+    private Integer level;
     private Integer createTime;
     private Integer updateTime;
+    @Basic
+    @Column(name = "customer_id")
+    public String getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(String customerId) {
+        this.customerId = customerId;
+    }
+
+    @Basic
+    @Column(name = "level")
+    public Integer getLevel() {
+        return level;
+    }
+
+    public void setLevel(Integer level) {
+        this.level = level;
+    }
 
     @Id
     @Column(name = "role_id")
-    public int getRoleId() {
+    public String getRoleId() {
         return roleId;
     }
 
-    public void setRoleId(int roleId) {
+    public void setRoleId(String roleId) {
         this.roleId = roleId;
     }
 
@@ -33,15 +53,6 @@ public class Role {
         this.roleName = roleName;
     }
 
-    @Basic
-    @Column(name = "cusotmer_id")
-    public String getCusotmerId() {
-        return cusotmerId;
-    }
-
-    public void setCusotmerId(String cusotmerId) {
-        this.cusotmerId = cusotmerId;
-    }
 
     @Basic
     @Column(name = "create_time")
@@ -70,9 +81,8 @@ public class Role {
 
         Role role = (Role) o;
 
-        if (roleId != role.roleId) return false;
+        if (roleId != null ? !roleId.equals(role.roleId) : role.roleId != null) return false;
         if (roleName != null ? !roleName.equals(role.roleName) : role.roleName != null) return false;
-        if (cusotmerId != null ? !cusotmerId.equals(role.cusotmerId) : role.cusotmerId != null) return false;
         if (createTime != null ? !createTime.equals(role.createTime) : role.createTime != null) return false;
         if (updateTime != null ? !updateTime.equals(role.updateTime) : role.updateTime != null) return false;
 
@@ -81,9 +91,8 @@ public class Role {
 
     @Override
     public int hashCode() {
-        int result = roleId;
+        int result =  (roleName != null ? roleName.hashCode() : 0);
         result = 31 * result + (roleName != null ? roleName.hashCode() : 0);
-        result = 31 * result + (cusotmerId != null ? cusotmerId.hashCode() : 0);
         result = 31 * result + (createTime != null ? createTime.hashCode() : 0);
         result = 31 * result + (updateTime != null ? updateTime.hashCode() : 0);
         return result;

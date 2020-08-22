@@ -17,6 +17,17 @@ public class Menus {
     private String filePath;
     private Integer level;
     private List<Menus> children;
+    private Integer authed;
+
+    @Transient
+    public Integer getAuthed() {
+        return authed;
+    }
+
+    public void setAuthed(Integer authed) {
+        this.authed = authed;
+    }
+
     public void addChildren(Menus menus){
         if(children == null){
             children = new ArrayList<>();

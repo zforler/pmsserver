@@ -1,5 +1,7 @@
 package com.wk.config.interceptor;
 
+import com.wk.bean.UserInfo;
+import com.wk.common.cache.LocalMemCache;
 import com.wk.config.annotation.IgnoreAuth;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
@@ -29,7 +31,9 @@ public class AuthorizationInterceptor extends HandlerInterceptorAdapter {
        }
         //从header中获取token
         String token = request.getHeader("x-token");
-
+        UserInfo userInfo = new UserInfo();
+        userInfo.setUserId("00000000");
+        LocalMemCache.addUserToken(token,userInfo);
 
         return true;
     }

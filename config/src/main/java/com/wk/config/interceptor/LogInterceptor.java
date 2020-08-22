@@ -37,25 +37,25 @@ public class LogInterceptor implements HandlerInterceptor {
     public void afterCompletion(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, Exception e) throws Exception {
         //返回视图时，插入操作日志
         //LogMapper logMapper = getMapper(LogMapper.class,httpServletRequest);
-        SysLog log = LoggerUtil.getRequestLog();
-
-        log =LoggerUtil.updateLog(log,httpServletResponse);
-
-        logger.info(GsonUtil.toJson(log,SysLog.class));
-        if(log.getRequestMethod().equalsIgnoreCase("get")){
-            LoggerUtil.removeRequestLog();
-            return;
-        }
-        try {
-            //保存
-
-//            SysLogService sysLogService= ContextHolder.getBean(SysLogService.class);
-//            sysLogService.saveSysLog(log);
-        } catch (Exception e1) {
-            logger.error(e1.getMessage(),e1);
-        }finally {
-            LoggerUtil.removeRequestLog();
-        }
+//        SysLog log = LoggerUtil.getRequestLog();
+//
+//        log =LoggerUtil.updateLog(log,httpServletResponse);
+//
+//        logger.info(GsonUtil.toJson(log,SysLog.class));
+//        if(log.getRequestMethod().equalsIgnoreCase("get")){
+//            LoggerUtil.removeRequestLog();
+//            return;
+//        }
+//        try {
+//            //保存
+//
+////            SysLogService sysLogService= ContextHolder.getBean(SysLogService.class);
+////            sysLogService.saveSysLog(log);
+//        } catch (Exception e1) {
+//            logger.error(e1.getMessage(),e1);
+//        }finally {
+//            LoggerUtil.removeRequestLog();
+//        }
 
 
     }

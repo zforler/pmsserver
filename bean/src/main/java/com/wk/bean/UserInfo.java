@@ -8,13 +8,44 @@ public class UserInfo {
     private String userId;
     private String customerId;
     private String userName;
+    private String password;
     private String realName;
     private Integer sex;
     private String phone;
     private Integer createTime;
     private Integer updateTime;
     private String roleId;
+    private String roleName;
+    private Integer status;
     private String append;
+    @Transient
+    public String getRoleName() {
+        return roleName;
+    }
+
+    public void setRoleName(String roleName) {
+        this.roleName = roleName;
+    }
+    @Basic
+    @Column(name = "status")
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
+    @Basic
+    @Column(name = "password")
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     @Basic
     @Column(name = "customer_id")
     public String getCustomerId() {

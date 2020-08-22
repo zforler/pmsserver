@@ -3,7 +3,7 @@ package com.wk.bean;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "sys_log", schema = "h_cloud", catalog = "")
+@Table(name = "sys_log", schema = "pms", catalog = "")
 public class SysLog {
 	private long id;
 	private String clientIp;
