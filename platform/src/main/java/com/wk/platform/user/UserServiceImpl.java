@@ -1,7 +1,10 @@
 package com.wk.platform.user;
 
+import com.wk.bean.Customer;
+import com.wk.bean.Menus;
 import com.wk.bean.Role;
 import com.wk.bean.UserInfo;
+import com.wk.common.cache.LocalMemCache;
 import com.wk.common.constant.Const;
 import com.wk.common.util.MD5Util;
 import com.wk.common.util.TimeUtil;
@@ -9,8 +12,12 @@ import com.wk.common.vo.PageList;
 import com.wk.common.vo.Result;
 import com.wk.commonservice.service.CommonService;
 import com.wk.commonservice.service.SeqService;
+import com.wk.platform.customer.CustomerRepo;
+import com.wk.platform.menu.MenuService;
+import com.wk.platform.role.RoleRepo;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.tomcat.util.security.MD5Encoder;
+import org.checkerframework.checker.units.qual.A;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -33,6 +40,36 @@ public class UserServiceImpl implements UserService {
     private CommonService commonService;
     @Autowired
     private SeqService seqService;
+    @Autowired
+    private MenuService menuService;
+    @Autowired
+    private CustomerRepo customerRepo;
+    @Autowired
+    private RoleRepo roleRepo;
+    @Override
+    public Result login(String userName, String password) {
+        String md5Str = MD5Util.getMD5Str(password);
+        UserInfo userInfo = userInfoRepo.findFirstByUserNameAndPassword(userName,md5Str);
+        if(userInfo == null){
+            return Result.error("用户名或密码错误");
+        }
+        Map<String,Object> res = new HashMap<>();
+        res.put("user", userInfo);
+
+        String userId = userInfo.getUserId();
+        //生成token
+        String token = UUID.randomUUID().toString()+userId;
+        LocalMemCache.addUserToken(token,userInfo);
+        res.put("token", token);
+
+        Customer customer = customerRepo.findFirstByCustomerId(userInfo.getCustomerId());
+        res.put("customer", customer);
+//        Result<List<Menus>> userMenus = menuService.findUserMenus(userId, "00000000");
+//        res.put("menus", userMenus.getData());
+        Role role = roleRepo.findFirstByRoleId(userInfo.getRoleId());
+        res.put("role", role);
+        return Result.success(res);
+    }
 
     @Override
     public UserInfo findUserInfoByUserId(String userId) {

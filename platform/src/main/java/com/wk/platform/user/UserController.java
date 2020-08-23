@@ -18,16 +18,22 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-//    @GetMapping("test")
-//    public String helloWorld(){
-//        return "helloworld";
-//    }
+
 //    @GetMapping("/user/{userId}")
 //    public Result<UserInfo> findUserInfoByUserId(@PathVariable String userId){
 //        UserInfo userInfo = userService.findUserInfoByUserId(userId);
 //        return Result.success(userInfo);
 //    }
-
+    @ApiOperation("用户登录")
+    @PostMapping("/login")
+    public Result login(String userName,String password){
+        try {
+            return userService.login(userName, password);
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            return Result.error(e.getMessage());
+        }
+    }
 
     @ApiOperation("添加用户")
     @PostMapping("/user")

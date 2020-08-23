@@ -7,6 +7,8 @@ import com.wk.common.vo.Result;
 import java.util.List;
 
 public interface UserService {
+    Result login(String userName,String password);
+
     UserInfo findUserInfoByUserId(String userId);
 
     Result<UserInfo> addUser(UserInfo userInfo,String operateUserId);

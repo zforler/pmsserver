@@ -5,4 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserInfoRepo extends JpaRepository<UserInfo,String> {
     UserInfo findFirstByUserId(String userId);
+    UserInfo findFirstByUserNameAndPassword(String userName,String password);
 }
