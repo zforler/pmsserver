@@ -18,7 +18,25 @@ public final class Const {
     public static final String BZ_ROLE = "ROLE";
     public static final String BZ_USER = "USER";
     public static final String BZ_CUSTOMER = "CUSTOMER";
-
+    public static final String BZ_DEPART = "DEPART";
+    public static final String BZ_STAFF = "STAFF";
+    //用户状态
     public static final int USER_STATUS_NORMAL = 0;
 
+    //数据删除
+    public static final int DATA_STATUS_DEL = 99;
+
+
+    //部门类型
+    public static final int DEPART_TYPE_DEPART = 1;
+    public static final int DEPART_TYPE_WORKSHOP = 3;
+    public static final int DEPART_TYPE_GROUP = 3;
+    public static final int DEPART_TYPE_STAFF = 4;
+    //部门状态
+    public static final int DEPART_STATUS_NORMAL = 0;
+    public static final int DEPART_STATUS_HISTORY = 1;
+
+    //员工状态
+    public static final int STAFF_STATUS_NORMAL = 0;
+    public static final int STAFF_STATUS_LEAVE = 1;
 }

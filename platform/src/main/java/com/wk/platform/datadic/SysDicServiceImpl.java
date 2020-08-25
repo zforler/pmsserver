@@ -70,7 +70,7 @@ public class SysDicServiceImpl implements SysDicService {
         SysDicItem sysDicItem1 = dicItemRepo.saveAndFlush(sysDicItem);
         return Result.success(sysDicItem1);
     }
-
+    @Transactional
     @Override
     public Result deleteSysDicItem(int id, String operateUserId) {
         sysDicItemRepo.deleteAllById(id);
