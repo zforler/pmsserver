@@ -11,6 +11,6 @@ public interface StaffRepo extends JpaRepository<Staff,String> {
     Staff getStaffByStaffId(String staffId);
 
     @Modifying
-    @Query(value = "update staff set status=?2 where staff_id=?1")
+    @Query(value = "update staff set status=?2 where staff_id=?1",nativeQuery = true)
     void updatStaffStatus(String staffId,int status);
 }
