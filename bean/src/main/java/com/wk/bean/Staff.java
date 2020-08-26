@@ -11,14 +11,45 @@ public class Staff {
     private int entryTime;
     private int leaveTime;
     private int status;
+    private int staffType;
     private String phone;
     private String address;
-    private String create;
     private String idcard;
+    private String customerId;
     private int createTime;
     private int updateTime;
     private String append;
     private String departmentId;
+    private String departmentName;
+    @Basic
+    @Column(name = "customer_id")
+    public String getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(String customerId) {
+        this.customerId = customerId;
+    }
+
+    @Basic
+    @Column(name = "staff_type")
+    public int getStaffType() {
+        return staffType;
+    }
+
+    public void setStaffType(int staffType) {
+        this.staffType = staffType;
+    }
+
+    @Transient
+    public String getDepartmentName() {
+        return departmentName;
+    }
+
+    public void setDepartmentName(String departmentName) {
+        this.departmentName = departmentName;
+    }
+
     @Transient
     public String getDepartmentId() {
         return departmentId;
@@ -108,15 +139,6 @@ public class Staff {
         this.address = address;
     }
 
-    @Basic
-    @Column(name = "create")
-    public String getCreate() {
-        return create;
-    }
-
-    public void setCreate(String create) {
-        this.create = create;
-    }
 
     @Basic
     @Column(name = "idcard")
@@ -171,7 +193,6 @@ public class Staff {
                 Objects.equals(status, staff.status) &&
                 Objects.equals(phone, staff.phone) &&
                 Objects.equals(address, staff.address) &&
-                Objects.equals(create, staff.create) &&
                 Objects.equals(idcard, staff.idcard) &&
                 Objects.equals(createTime, staff.createTime) &&
                 Objects.equals(updateTime, staff.updateTime) &&
@@ -180,6 +201,6 @@ public class Staff {
 
     @Override
     public int hashCode() {
-        return Objects.hash(staffId, staffName, sex, entryTime, leaveTime, status, phone, address, create, idcard, createTime, updateTime, append);
+        return Objects.hash(staffId, staffName, sex, entryTime, leaveTime, status, phone, address, idcard, createTime, updateTime, append);
     }
 }

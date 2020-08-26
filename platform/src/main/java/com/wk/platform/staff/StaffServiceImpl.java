@@ -12,10 +12,16 @@ import com.wk.platform.repo.StaffDepartRepo;
 import org.apache.commons.lang3.StringUtils;
 import org.checkerframework.checker.units.qual.A;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class StaffServiceImpl implements StaffService {
@@ -42,7 +48,7 @@ public class StaffServiceImpl implements StaffService {
         int second = TimeUtil.getCurrentInSecond();
         staff.setCreateTime(second);
         staff.setUpdateTime(second);
-        String staffId = seqService.getNextBusinessId(Const.BZ_STAFF, "", 8);
+        String staffId = seqService.getNextBusinessId(Const.BZ_STAFF, staff.getCustomerId(), 8);
         staff.setStaffId(staffId);
         Staff staff1 = staffRepo.saveAndFlush(staff);
         String departmentId = staff.getDepartmentId();
@@ -94,7 +100,46 @@ public class StaffServiceImpl implements StaffService {
     }
 
     @Override
-    public Result<PageList<Staff>> getStaffPageList(String keyword, int page, int size, String customerId, String operateUserId) {
-        return null;
+    public Result<PageList<Staff>> getStaffPageList(String keyword, int page, int size, String customerId,
+                                                    int status,int sex,int staffType,String departmentId,int departmentType,
+                                                    String operateUserId) {
+        String sql = "SELECT sf.*,d.department_id,d.name departmentName FROM staff sf LEFT JOIN staff_depart sd" +
+                " ON sf.staff_id=sd.staff_id AND sd.end_time=0 LEFT JOIN department d ON" +
+                " sd.department_id=d.department_id WHERE sf.customer_id=:customerId";
+
+        Map<String,Object> param = new HashMap<>();
+        param.put("customerId", customerId);
+
+        if(sex >= 0){
+            sql += " AND sex=:sex";
+            param.put("sex", sex);
+        }
+        if(status >= 0){
+            sql += " AND status=:status";
+            param.put("status", status);
+        }
+        if(staffType >= 0){
+            sql += " AND staff_type=:staffType";
+            param.put("staff_type", staffType);
+        }
+        if(departmentType>-1){
+            if(departmentType == Const.DEPART_TYPE_GROUP){
+                sql += " AND d.department_id=:departmentId";
+                param.put("departmentId", departmentId);
+            }else{
+                sql += " AND FIND_IN_SET(:departmentId,d.parents)";
+                param.put("departmentId", departmentId);
+            }
+        }
+
+        if(StringUtils.isNotBlank(keyword)){
+            sql += " AND (sf.staff_id LIKE :keyword OR sf.staff_name like :keyword OR phone like :keyword";
+            param.put("keyword","%"+keyword+"%");
+        }
+
+        Pageable pageable = PageRequest.of(page, size, Sort.Direction.ASC, "staffId");
+        Page<Staff> list = commonService.pageBySql(sql,param,pageable,Staff.class);
+
+        return Result.success(new PageList<>(list.getContent(),list.getTotalElements(),page,size));
     }
 }

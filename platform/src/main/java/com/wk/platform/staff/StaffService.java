@@ -15,5 +15,7 @@ public interface StaffService {
 
     Result<List<Staff>> getStaffList(String keyword,String customerId, String operateUserId);
 
-    Result<PageList<Staff>> getStaffPageList(String keyword, int page, int size,String customerId, String operateUserId);
+    Result<PageList<Staff>> getStaffPageList(String keyword, int page, int size,String customerId,int status,int sex,
+                                             int staffType,
+                                             String departmentId,int departmentType,String operateUserId);
 }
