@@ -10,6 +10,7 @@ import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -83,6 +84,60 @@ public class StaffController {
             String operateUserId = LocalMemCache.getUserIdByToken(token);
             return staffService.getStaffPageList(keyword, page, size,customerId, status, sex,staffType,departmentId,
                     departmentType, operateUserId);
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            return Result.error(e.getMessage());
+        }
+    }
+    @ApiOperation("获取未分配班组员工列表")
+    @GetMapping("/getNoDepartStaffList")
+    public Result<List<Staff>> getStaffPageList(String keyword, String customerId,
+                                                    @RequestParam(required = false,defaultValue = "-1")int sex,
+                                                    @RequestParam(required = false,defaultValue = "-1")int staffType,
+                                                    String token){
+        try {
+            String operateUserId = LocalMemCache.getUserIdByToken(token);
+            return staffService.getNoDepartStaffList(keyword, sex,staffType,customerId,operateUserId);
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            return Result.error(e.getMessage());
+        }
+    }
+
+    @ApiOperation("批量分配班组")
+    @GetMapping("/configDeparts")
+    public Result configDeparts(String staffIds, String departmentId,
+                                                String token){
+        try {
+            String operateUserId = LocalMemCache.getUserIdByToken(token);
+            return staffService.configDeparts(staffIds, departmentId,operateUserId);
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            return Result.error(e.getMessage());
+        }
+    }
+
+    @ApiOperation("解绑分组")
+    @GetMapping("/unbindDepart")
+    public Result unbindDepart(int id,  String token){
+        try {
+            String operateUserId = LocalMemCache.getUserIdByToken(token);
+            return staffService.unbindDepart(id,operateUserId);
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            return Result.error(e.getMessage());
+        }
+    }
+
+    @ApiOperation("获取班组下员工列表")
+    @GetMapping("/getStaffList")
+    public Result<PageList<Staff>> getDepartStaffPageList(String keyword, int page, int size, String customerId, String departmentId,
+                                                      @RequestParam(required = false,defaultValue = "-1")int sex,
+                                                      @RequestParam(required = false,defaultValue = "-1")int staffType,
+                                                      String token){
+        try {
+            String operateUserId = LocalMemCache.getUserIdByToken(token);
+            return staffService.getDepartStaffPageList(keyword,page,size,customerId, sex,staffType, departmentId,operateUserId);
         }catch (Exception e){
             logger.error(e.getMessage(),e);
             return Result.error(e.getMessage());

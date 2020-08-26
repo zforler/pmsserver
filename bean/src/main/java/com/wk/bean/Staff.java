@@ -21,6 +21,16 @@ public class Staff {
     private String append;
     private String departmentId;
     private String departmentName;
+    private String parents;
+    @Transient
+    public String getParents() {
+        return parents;
+    }
+
+    public void setParents(String parents) {
+        this.parents = parents;
+    }
+
     @Basic
     @Column(name = "customer_id")
     public String getCustomerId() {
