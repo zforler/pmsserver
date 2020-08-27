@@ -22,7 +22,7 @@ public interface StaffService {
 
     Result configDeparts(String staffIds,String departmentId,String operateUserId);
 
-    Result unbindDepart(int id,String operateUserId);
+    Result unbindDepart(String staffId,String operateUserId);
 
     Result<PageList<Staff>> getDepartStaffPageList(String keyword, int page, int size,String customerId,int sex,
                                              int staffType,String departmentId,String operateUserId);

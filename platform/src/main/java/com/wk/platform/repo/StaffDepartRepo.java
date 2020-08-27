@@ -13,4 +13,6 @@ public interface StaffDepartRepo extends JpaRepository<StaffDepart,Integer> {
     @Modifying
     @Query(value = "update staff_depart set end_time=?2 where id=?1",nativeQuery = true)
     int updateEndTimeById(int id,int endTime);
+
+    StaffDepart findFirstByStaffIdAndEndTimeEquals(String staffId,int endTime);
 }

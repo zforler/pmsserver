@@ -9,11 +9,8 @@ import com.wk.common.vo.Result;
 import com.wk.commonservice.service.CommonService;
 import com.wk.commonservice.service.SeqService;
 import com.wk.platform.department.DepartmentRepo;
-import com.wk.platform.department.DepartmentService;
 import com.wk.platform.repo.StaffDepartRepo;
 import org.apache.commons.lang3.StringUtils;
-import org.checkerframework.checker.units.qual.A;
-import org.checkerframework.checker.units.qual.Time;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -49,8 +46,6 @@ public class StaffServiceImpl implements StaffService {
     @Transactional
     @Override
     public Result<Staff> addStaff(Staff staff, String operateUserId) {
-
-
         int second = TimeUtil.getCurrentInSecond();
         staff.setCreateTime(second);
         staff.setUpdateTime(second);
@@ -68,6 +63,7 @@ public class StaffServiceImpl implements StaffService {
         String departmentId = staff.getDepartmentId();
         if(StringUtils.isNotBlank(departmentId)){
             saveStaffDepart(staffId,departmentId,second);
+            departmentRepo.updateStaffCount(departmentId,1);
         }
 
         return Result.success(staff1);
@@ -100,9 +96,11 @@ public class StaffServiceImpl implements StaffService {
         String newPartId = staff.getDepartmentId();
         if(StringUtils.isNotBlank(oldPartId) && !oldPartId.equals(newPartId)){
             staffDepartRepo.updateEndTime(staffId,oldPartId,second);
+            departmentRepo.updateStaffCount(oldPartId,-1);
         }
         if(StringUtils.isNotBlank(newPartId)){
             saveStaffDepart(staffId,newPartId,second);
+            departmentRepo.updateStaffCount(newPartId,1);
         }
         return Result.success();
     }
@@ -111,6 +109,7 @@ public class StaffServiceImpl implements StaffService {
     @Override
     public Result deleteStaff(String staffId, String operateUserId) {
         staffRepo.updatStaffStatus(staffId,Const.DATA_STATUS_DEL);
+        unbindDepart(staffId,operateUserId);
         return Result.success();
     }
 
@@ -185,13 +184,13 @@ public class StaffServiceImpl implements StaffService {
         }
 
         if(StringUtils.isNotBlank(keyword)){
-            sql += " AND (sf.staff_id LIKE :keyword OR sf.staff_name like :keyword)";
+            sql += " AND (s.staff_id LIKE :keyword OR s.staff_name like :keyword)";
             param.put("keyword","%"+keyword+"%");
         }
         List<Staff> staffList = commonService.listBySql(sql, param, Staff.class);
         return Result.success(staffList);
     }
-
+    @Transactional
     @Override
     public Result configDeparts(String staffIds, String departmentId, String operateUserId) {
         if(StringUtils.isBlank(staffIds)){
@@ -216,12 +215,12 @@ public class StaffServiceImpl implements StaffService {
 
     @Transactional
     @Override
-    public Result unbindDepart(int id, String operateUserId) {
-        StaffDepart staffDepart = staffDepartRepo.findById(id).orElse(null);
+    public Result unbindDepart(String staffId, String operateUserId) {
+        StaffDepart staffDepart = staffDepartRepo.findFirstByStaffIdAndEndTimeEquals(staffId,0);
         if(staffDepart == null){
             return Result.error("无此数据");
         }
-        staffDepartRepo.updateEndTimeById(id, TimeUtil.getCurrentInSecond());
+        staffDepartRepo.updateEndTimeById(staffDepart.getId(), TimeUtil.getCurrentInSecond());
         departmentRepo.updateStaffCount(staffDepart.getDepartmentId(),-1);
 
         return Result.success();

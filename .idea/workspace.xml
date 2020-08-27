@@ -6,12 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="df02bf22-7c92-4e5a-914e-0194ec572d7b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/Staff.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/StaffDepart.java" beforeDir="false" afterPath="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/StaffDepart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/department/DepartmentRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/department/DepartmentRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/repo/StaffDepartRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/repo/StaffDepartRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffController.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffService.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffServiceImpl.java" afterDir="false" />
     </list>
@@ -51,11 +47,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="141" column="42" selection-start-line="141" selection-start-column="42" selection-end-line="141" selection-end-column="42" />
+            <state relative-caret-position="255">
+              <caret line="121" column="62" lean-forward="true" selection-start-line="121" selection-start-column="62" selection-end-line="121" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/repo/StaffDepartRepo.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="308">
-              <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+              <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -78,8 +74,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="122">
+              <caret line="13" column="60" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -90,7 +86,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffRepo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
+            <state relative-caret-position="176">
               <caret line="11" column="28" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -99,11 +95,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="230" column="57" selection-start-line="230" selection-start-column="35" selection-end-line="230" selection-end-column="57" />
+            <state relative-caret-position="350">
+              <caret line="102" column="57" lean-forward="true" selection-start-line="102" selection-start-column="57" selection-end-line="102" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -123,8 +119,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/department/DepartmentServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="87" column="45" lean-forward="true" selection-start-line="87" selection-start-column="45" selection-end-line="87" selection-end-column="45" />
+            <state relative-caret-position="1518">
+              <caret line="87" column="45" selection-start-line="87" selection-start-column="45" selection-end-line="87" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -195,6 +191,7 @@
       <find>saveAndFlush</find>
       <find>customer</find>
       <find>updateSubDepartStatusAndEndTime</find>
+      <find>unbindDepart</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -260,11 +257,11 @@
         <option value="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/Staff.java" />
         <option value="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/StaffDepart.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffRepo.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/repo/StaffDepartRepo.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/department/DepartmentRepo.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffService.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffServiceImpl.java" />
+        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/repo/StaffDepartRepo.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffController.java" />
+        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -338,8 +335,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="832" />
-    <option name="y" value="45" />
+    <option name="x" value="-521" />
+    <option name="y" value="61" />
     <option name="width" value="1617" />
     <option name="height" value="959" />
   </component>
@@ -351,8 +348,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -495,6 +490,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -595,7 +592,8 @@
       <workItem from="1598226898885" duration="3040000" />
       <workItem from="1598275046954" duration="942000" />
       <workItem from="1598278017478" duration="20603000" />
-      <workItem from="1598450933314" duration="2530000" />
+      <workItem from="1598450933314" duration="2584000" />
+      <workItem from="1598486048293" duration="5037000" />
     </task>
     <task id="LOCAL-00001" summary="qq">
       <created>1597485488611</created>
@@ -660,19 +658,26 @@
       <option name="project" value="LOCAL" />
       <updated>1598437206465</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="qq">
+      <created>1598453496517</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1598453496517</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111265000" />
+    <option name="totallyTimeSpent" value="116356000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7974068" visible="true" weight="0.17305644" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7960426" visible="true" weight="0.17465389" />
       <window_info id="Structure" order="1" weight="0.25" />
-      <window_info id="Persistence" order="2" sideWeight="0.20259319" side_tool="true" visible="true" weight="0.17305644" />
+      <window_info id="Persistence" order="2" sideWeight="0.20395738" side_tool="true" visible="true" weight="0.17465389" />
       <window_info id="Designer" order="3" />
       <window_info id="Image Layers" order="4" />
       <window_info id="UI Designer" order="5" />
@@ -682,7 +687,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3401728" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.3336933" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.29049677" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -715,13 +720,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="qq" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/src/main/java/com/wk/config/interceptor/BadRequestExceptionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/src/main/java/com/wk/common/cache/LocalMemCache.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
@@ -1102,6 +1100,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffRepo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/department/DepartmentRepo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="19" column="91" selection-start-line="19" selection-start-column="91" selection-end-line="19" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/department/DepartmentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1518">
+          <caret line="87" column="45" selection-start-line="87" selection-start-column="45" selection-end-line="87" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/wk/bean/Department.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="19" column="26" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/department/DepartmentController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -1122,44 +1154,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://E:/maven/repo/org/springframework/data/spring-data-commons/2.3.3.RELEASE/spring-data-commons-2.3.3.RELEASE.jar!/org/springframework/data/repository/CrudRepository.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/repo/StaffDepartRepo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
-          <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/wk/bean/Department.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="19" column="26" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/department/DepartmentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="87" column="45" lean-forward="true" selection-start-line="87" selection-start-column="45" selection-end-line="87" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/department/DepartmentRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="19" column="91" selection-start-line="19" selection-start-column="91" selection-end-line="19" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="28" />
+          <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1168,18 +1173,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="230" column="57" selection-start-line="230" selection-start-column="35" selection-end-line="230" selection-end-column="57" />
+        <state relative-caret-position="122">
+          <caret line="13" column="60" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1188,8 +1183,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="141" column="42" selection-start-line="141" selection-start-column="42" selection-end-line="141" selection-end-column="42" />
+        <state relative-caret-position="255">
+          <caret line="121" column="62" lean-forward="true" selection-start-line="121" selection-start-column="62" selection-end-line="121" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="102" column="57" lean-forward="true" selection-start-line="102" selection-start-column="57" selection-end-line="102" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

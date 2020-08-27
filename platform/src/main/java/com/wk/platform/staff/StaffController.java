@@ -105,7 +105,7 @@ public class StaffController {
     }
 
     @ApiOperation("批量分配班组")
-    @GetMapping("/configDeparts")
+    @PostMapping("/configDeparts")
     public Result configDeparts(String staffIds, String departmentId,
                                                 String token){
         try {
@@ -118,11 +118,11 @@ public class StaffController {
     }
 
     @ApiOperation("解绑分组")
-    @GetMapping("/unbindDepart")
-    public Result unbindDepart(int id,  String token){
+    @PostMapping("/unbindDepart")
+    public Result unbindDepart(String staffId,  String token){
         try {
             String operateUserId = LocalMemCache.getUserIdByToken(token);
-            return staffService.unbindDepart(id,operateUserId);
+            return staffService.unbindDepart(staffId,operateUserId);
         }catch (Exception e){
             logger.error(e.getMessage(),e);
             return Result.error(e.getMessage());
@@ -130,7 +130,7 @@ public class StaffController {
     }
 
     @ApiOperation("获取班组下员工列表")
-    @GetMapping("/getStaffList")
+    @GetMapping("/getDepartStaffPageList")
     public Result<PageList<Staff>> getDepartStaffPageList(String keyword, int page, int size, String customerId, String departmentId,
                                                       @RequestParam(required = false,defaultValue = "-1")int sex,
                                                       @RequestParam(required = false,defaultValue = "-1")int staffType,
