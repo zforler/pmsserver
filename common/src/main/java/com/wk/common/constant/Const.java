@@ -20,6 +20,7 @@ public final class Const {
     public static final String BZ_CUSTOMER = "CUSTOMER";
     public static final String BZ_DEPART = "DEPART";
     public static final String BZ_STAFF = "STAFF";
+    public static final String BZ_CARD = "CARD";
     //用户状态
     public static final int USER_STATUS_NORMAL = 0;
 

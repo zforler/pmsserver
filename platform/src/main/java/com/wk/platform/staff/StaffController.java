@@ -143,4 +143,15 @@ public class StaffController {
             return Result.error(e.getMessage());
         }
     }
+    @ApiOperation("获取未绑定电卡员工列表")
+    @GetMapping("/getUnbindCardStaffList")
+    public Result<List<Staff>> getUnbindCardStaffList(String keyword,String customerId, String token){
+        try {
+            String operateUserId = LocalMemCache.getUserIdByToken(token);
+            return staffService.getUnbindCardStaffList(keyword,customerId,  operateUserId);
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            return Result.error(e.getMessage());
+        }
+    }
 }

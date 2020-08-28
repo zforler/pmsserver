@@ -256,4 +256,21 @@ public class StaffServiceImpl implements StaffService {
 
         return Result.success(new PageList<>(list.getContent(),list.getTotalElements(),page,size));
     }
+
+    @Override
+    public Result<List<Staff>> getUnbindCardStaffList(String keyword, String customerId, String operateUserId) {
+        String sql = "SELECT * FROM staff WHERE customer_id=:customerId AND status!=99 AND staff_id NOT IN" +
+                "(SELECT staff_id FROM staff_card WHERE card_id LIKE :card AND end_time=0)";
+
+        Map<String,Object> param = new HashMap<>();
+        param.put("customerId", customerId);
+        param.put("card", customerId+"%");
+        if(StringUtils.isNotBlank(keyword)){
+            sql += " AND (staff_id LIKE :keyword OR staff_name like :keyword)";
+            param.put("keyword","%"+keyword+"%");
+        }
+        List<Staff> staffList = commonService.listBySql(sql, param, Staff.class);
+
+        return Result.success(staffList);
+    }
 }

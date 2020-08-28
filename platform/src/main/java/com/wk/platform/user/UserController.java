@@ -5,6 +5,7 @@ import com.wk.bean.UserInfo;
 import com.wk.common.cache.LocalMemCache;
 import com.wk.common.vo.PageList;
 import com.wk.common.vo.Result;
+import com.wk.config.annotation.IgnoreAuth;
 import com.wk.platform.role.RoleController;
 import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
@@ -24,6 +25,7 @@ public class UserController {
 //        UserInfo userInfo = userService.findUserInfoByUserId(userId);
 //        return Result.success(userInfo);
 //    }
+    @IgnoreAuth
     @ApiOperation("用户登录")
     @PostMapping("/login")
     public Result login(String userName,String password){

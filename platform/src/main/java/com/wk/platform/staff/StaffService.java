@@ -26,4 +26,6 @@ public interface StaffService {
 
     Result<PageList<Staff>> getDepartStaffPageList(String keyword, int page, int size,String customerId,int sex,
                                              int staffType,String departmentId,String operateUserId);
+
+    Result<List<Staff>> getUnbindCardStaffList(String keyword,String customerId, String operateUserId);
 }
