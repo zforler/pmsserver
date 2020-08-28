@@ -18,6 +18,7 @@ public interface CardService {
     Result<PageList<Card>> getCardPageList(String keyword, int page, int size,int cardType,int status,String customerId,
                                            String operateUserId);
 
-
     Result<List<Card>> getUnbindStaffCardList(String keyword, String customerId, String operateUserId);
+
+    Result updateCardStatus(String cardId,int status,String operateUserId);
 }

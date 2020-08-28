@@ -168,8 +168,8 @@ public class StaffServiceImpl implements StaffService {
     @Override
     public Result<List<Staff>> getNoDepartStaffList(String keyword, int sex, int staffType, String customerId,
                                                     String operateUserId) {
-        String sql = "SELECT s.* FROM staff s LEFT JOIN staff_depart sd ON s.staff_id=sd.staff_id WHERE s.customer_id=:customerId" +
-                " AND status!=99 AND sd.end_time IS NULL";
+        String sql = "SELECT * FROM staff WHERE customer_id=:customerId AND staff_id NOT IN(SELECT staff_id FROM" +
+                " staff_depart WHERE customer_id=:customerId AND end_time=0) AND status!=99";
         Map<String,Object> param = new HashMap<>();
         param.put("customerId", customerId);
 

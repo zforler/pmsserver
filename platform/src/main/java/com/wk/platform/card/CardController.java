@@ -94,4 +94,17 @@ public class CardController {
             return Result.error(e.getMessage());
         }
     }
+
+    @ApiOperation("更新卡状态")
+    @PostMapping("/updateCardStatus")
+    public Result<Card> updateCardStatus(String cardId,int status, String token){
+        try {
+            String operateUserId = LocalMemCache.getUserIdByToken(token);
+            Result<Card> result = cardService.updateCardStatus(cardId,status, operateUserId);
+            return result;
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            return Result.error(e.getMessage());
+        }
+    }
 }

@@ -40,11 +40,11 @@ public class CardServiceImpl implements CardService {
         if(card1 != null){
             return Result.error("卡内号已存在");
         }
-        card1 = cardRepo.findFirstByCardNameAndCustomerIdEquals(card.getCardName(), card.getCustomerId());
-        if(card1 != null){
-            return Result.error("卡名称重复");
-        }
-
+//        card1 = cardRepo.findFirstByCardNameAndCustomerIdEquals(card.getCardName(), card.getCustomerId());
+//        if(card1 != null){
+//            return Result.error("卡名称重复");
+//        }
+        card.setStatus(0);
         String cardId = seqService.getNextBusinessId(Const.BZ_CARD, card.getCustomerId(), 4);
         card.setCardId(cardId);
         int currentInSecond = TimeUtil.getCurrentInSecond();
@@ -75,10 +75,10 @@ public class CardServiceImpl implements CardService {
         if(card2 != null){
             return Result.error("卡内号已存在");
         }
-        card2 = cardRepo.findFirstByCardNameAndCustomerIdEqualsAndCardIdNot(card.getCardName(), card.getCustomerId(),cardId);
-        if(card2 != null){
-            return Result.error("卡名称重复");
-        }
+//        card2 = cardRepo.findFirstByCardNameAndCustomerIdEqualsAndCardIdNot(card.getCardName(), card.getCustomerId(),cardId);
+//        if(card2 != null){
+//            return Result.error("卡名称重复");
+//        }
         int second = TimeUtil.getCurrentInSecond();
         card.setUpdateTime(second);
         Card oldCard = cardRepo.findFirstByCardId(cardId);
@@ -159,5 +159,12 @@ public class CardServiceImpl implements CardService {
         }
         List<Card> cards = commonService.listBySql(sql, param, Card.class);
         return Result.success(cards);
+    }
+
+    @Transactional
+    @Override
+    public Result updateCardStatus(String cardId, int status, String operateUserId) {
+        cardRepo.updateCardStatus(cardId,status);
+        return Result.success();
     }
 }
