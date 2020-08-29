@@ -21,7 +21,19 @@ public class Staff {
     private String append;
     private String departmentId;
     private String departmentName;
+    private String cardId;
+    private String cardName;
     private String parents;
+    @Transient
+    public String getCardId() {
+        return cardId;
+    }
+
+    public void setCardId(String cardId) {
+        this.cardId = cardId;
+    }
+
+
     @Transient
     public String getParents() {
         return parents;

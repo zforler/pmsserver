@@ -147,7 +147,7 @@ public class CardServiceImpl implements CardService {
 
     @Override
     public Result<List<Card>> getUnbindStaffCardList(String keyword, String customerId, String operateUserId) {
-        String sql = "SELECT * FROM card WHERE customer_id=:customerId AND card_id NOT IN(SELECT c.card_id FROM card c LEFT JOIN" +
+        String sql = "SELECT * FROM card WHERE customer_id=:customerId AND card_type=1 AND card_id NOT IN(SELECT c.card_id FROM card c LEFT JOIN" +
                 " staff_card sc ON c.card_id=sc.card_id WHERE sc.end_time=0 AND c.customer_id=:customerId)";
 
         Map<String,Object> param = new HashMap<>();

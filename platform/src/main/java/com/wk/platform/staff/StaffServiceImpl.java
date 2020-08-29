@@ -8,7 +8,9 @@ import com.wk.common.vo.PageList;
 import com.wk.common.vo.Result;
 import com.wk.commonservice.service.CommonService;
 import com.wk.commonservice.service.SeqService;
+import com.wk.platform.card.CardService;
 import com.wk.platform.department.DepartmentRepo;
+import com.wk.platform.repo.StaffCardRepo;
 import com.wk.platform.repo.StaffDepartRepo;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +35,10 @@ public class StaffServiceImpl implements StaffService {
     private StaffDepartRepo staffDepartRepo;
     @Autowired
     private DepartmentRepo departmentRepo;
-
+    @Autowired
+    private CardService cardService;
+    @Autowired
+    private StaffCardRepo staffCardRepo;
 
     @Transactional
     public void saveStaffDepart(String staffId,String departmentId,int time){
@@ -65,7 +70,9 @@ public class StaffServiceImpl implements StaffService {
             saveStaffDepart(staffId,departmentId,second);
             departmentRepo.updateStaffCount(departmentId,1);
         }
-
+        if(StringUtils.isNotBlank(staff.getCardId())){
+            cardService.saveStaffCard(staff.getCardId(),staffId,second);
+        }
         return Result.success(staff1);
     }
     @Transactional
@@ -102,6 +109,15 @@ public class StaffServiceImpl implements StaffService {
             saveStaffDepart(staffId,newPartId,second);
             departmentRepo.updateStaffCount(newPartId,1);
         }
+        //修改卡
+        String oldCardId = staff.getCardId();
+        String newCardId = staff.getCardId();
+        if(StringUtils.isNotBlank(oldCardId) && !oldCardId.equals(newCardId)){
+            staffCardRepo.updateEndtimeByCardId(oldCardId,second);
+        }
+        if(StringUtils.isNotBlank(newCardId)){
+            cardService.saveStaffCard(newCardId,staffId,second);
+        }
         return Result.success();
     }
 
@@ -122,9 +138,10 @@ public class StaffServiceImpl implements StaffService {
     public Result<PageList<Staff>> getStaffPageList(String keyword, int page, int size, String customerId,
                                                     int status,int sex,int staffType,String departmentId,int departmentType,
                                                     String operateUserId) {
-        String sql = "SELECT sf.*,d.department_id,d.name departmentName,d.parents FROM staff sf LEFT JOIN staff_depart sd" +
-                " ON sf.staff_id=sd.staff_id AND sd.end_time=0 LEFT JOIN department d ON" +
-                " sd.department_id=d.department_id WHERE sf.customer_id=:customerId AND sf.status!=99 ";
+        String sql = "SELECT sf.*,d.department_id,d.name departmentName,d.parents,sc.card_id FROM staff sf LEFT JOIN staff_depart sd" +
+                " ON sf.staff_id=sd.staff_id AND sd.end_time=0 LEFT JOIN department d ON sd.department_id=d.department_id" +
+                " LEFT JOIN staff_card sc ON sf.staff_id=sc.staff_id  AND sc.end_time=0 " +
+                " WHERE sf.customer_id=:customerId AND sf.status!=99 ";
 
         Map<String,Object> param = new HashMap<>();
         param.put("customerId", customerId);
