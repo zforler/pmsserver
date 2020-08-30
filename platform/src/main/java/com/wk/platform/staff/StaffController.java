@@ -49,7 +49,7 @@ public class StaffController {
     }
     @ApiOperation("删除员工")
     @PostMapping("/deleteStaff")
-    public Result<Staff> deleteStaff(String staffId, String token){
+    public Result<Staff> deleteStaff(String staffId,String customerId, String token){
         try {
             String operateUserId = LocalMemCache.getUserIdByToken(token);
             Result<Staff> result = staffService.deleteStaff(staffId, operateUserId);

@@ -24,6 +24,7 @@ public final class Const {
     public static final String BZ_PRODUCTION = "PRODUCTION";
     public static final String BZ_TECH = "TECH";
     public static final String BZ_SPEC = "SPEC";
+    public static final String BZ_BATCH = "BATCH";
     //用户状态
     public static final int USER_STATUS_NORMAL = 0;
 

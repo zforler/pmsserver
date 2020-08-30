@@ -8,6 +8,5 @@ public interface UserInfoRepo extends JpaRepository<UserInfo,String> {
     UserInfo findFirstByUserNameAndPassword(String userName,String password);
 
     UserInfo findFirstByUserName(String userName);
-
     UserInfo findFirstByUserNameAndUserIdNot(String userName,String userId);
 }

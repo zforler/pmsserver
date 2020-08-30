@@ -51,22 +51,16 @@ public class StaffServiceImpl implements StaffService {
     @Transactional
     @Override
     public Result<Staff> addStaff(Staff staff, String operateUserId) {
-        Staff staffTemp = staffRepo.findFirstByStaffIdAndCustomerId(staff.getStaffId(), staff.getCustomerId());
+        Staff staffTemp = staffRepo.findFirstByStaffNoAndCustomerId(staff.getStaffNo(), staff.getCustomerId());
         if(staffTemp != null){
             return Result.error("员工编号已存在");
         }
         int second = TimeUtil.getCurrentInSecond();
         staff.setCreateTime(second);
         staff.setUpdateTime(second);
-        String staffId = staff.getStaffId();
-        if(StringUtils.isBlank(staffId)){
-            staffId = seqService.getNextBusinessId(Const.BZ_STAFF, staff.getCustomerId(), 8);
-        }else{
-            Staff staffId1 = staffRepo.findFirstByStaffId(staffId);
-            if(staffId1!=null){
-                return Result.error("员工编号已存在");
-            }
-        }
+
+        String staffId = seqService.getNextBusinessId(Const.BZ_STAFF, staff.getCustomerId(), 8);
+
         staff.setStaffId(staffId);
         Staff staff1 = staffRepo.saveAndFlush(staff);
         String departmentId = staff.getDepartmentId();
@@ -83,6 +77,10 @@ public class StaffServiceImpl implements StaffService {
     @Override
     public Result updateStaff(Staff staff, String operateUserId) {
         String staffId = staff.getStaffId();
+        Staff staffTemp = staffRepo.findFirstByStaffNoAndCustomerIdAndStaffIdNot(staff.getStaffNo(), staff.getCustomerId(),staffId);
+        if(staffTemp != null){
+            return Result.error("员工编号已存在");
+        }
         String sql = "SELECT s.*,sd.department_id FROM staff s LEFT JOIN staff_depart sd ON s.staff_id=sd.staff_id" +
                 " AND sd.end_time=0 WHERE s.staff_id=:staffId";
         Map<String,Object> param = new HashMap<>();
@@ -176,7 +174,7 @@ public class StaffServiceImpl implements StaffService {
             param.put("departmentId", departmentId);
         }
         if(StringUtils.isNotBlank(keyword)){
-            sql += " AND (sf.staff_id LIKE :keyword OR sf.staff_name like :keyword OR phone like :keyword)";
+            sql += " AND (sf.staff_no LIKE :keyword OR sf.staff_name like :keyword OR phone like :keyword)";
             param.put("keyword","%"+keyword+"%");
         }
 
@@ -205,7 +203,7 @@ public class StaffServiceImpl implements StaffService {
         }
 
         if(StringUtils.isNotBlank(keyword)){
-            sql += " AND (s.staff_id LIKE :keyword OR s.staff_name like :keyword)";
+            sql += " AND (s.staff_no LIKE :keyword OR s.staff_name like :keyword)";
             param.put("keyword","%"+keyword+"%");
         }
         List<Staff> staffList = commonService.listBySql(sql, param, Staff.class);
@@ -268,7 +266,7 @@ public class StaffServiceImpl implements StaffService {
         }
 
         if(StringUtils.isNotBlank(keyword)){
-            sql += " AND (sf.staff_id LIKE :keyword OR sf.staff_name like :keyword)";
+            sql += " AND (sf.staff_no LIKE :keyword OR sf.staff_name like :keyword)";
             param.put("keyword","%"+keyword+"%");
         }
 
@@ -287,7 +285,7 @@ public class StaffServiceImpl implements StaffService {
         param.put("customerId", customerId);
         param.put("card", customerId+"%");
         if(StringUtils.isNotBlank(keyword)){
-            sql += " AND (staff_id LIKE :keyword OR staff_name like :keyword)";
+            sql += " AND (staff_no LIKE :keyword OR staff_name like :keyword)";
             param.put("keyword","%"+keyword+"%");
         }
         List<Staff> staffList = commonService.listBySql(sql, param, Staff.class);

@@ -67,8 +67,8 @@ public class CardServiceImpl implements CardService {
         Map<String,Object> param = new HashMap<>();
         param.put("cardId", cardId);
 
-        Card card1 = commonService.nativeQuery4FirstObject(sql,param,Card.class);
-        if(card1 == null){
+        Card oldCard = commonService.nativeQuery4FirstObject(sql,param,Card.class);
+        if(oldCard == null){
             return Result.error("电卡不存在");
         }
         Card card2 = cardRepo.findFirstByCardNoAndCardIdNot(card.getCardNo(),cardId);
@@ -81,7 +81,6 @@ public class CardServiceImpl implements CardService {
 //        }
         int second = TimeUtil.getCurrentInSecond();
         card.setUpdateTime(second);
-        Card oldCard = cardRepo.findFirstByCardId(cardId);
         card.setStatus(oldCard.getStatus());
         card.setCreateTime(oldCard.getCreateTime());
         card.setCardType(oldCard.getCardType());
@@ -171,7 +170,7 @@ public class CardServiceImpl implements CardService {
     @Override
     public Result<PageList<Card>> getUnbindCardPageList(String keyword, int page, int size, String customerId,
                                                         String operateUserId) {
-        String sql = "SELECT * FROM card WHERE customer_id=:customerId AND status=0 AND card_id NOT IN" +
+        String sql = "SELECT * FROM card WHERE customer_id=:customerId AND status=0 AND card_type=1 AND card_id NOT IN" +
                 "(SELECT card_id FROM staff_card WHERE card_id LIKE :card AND end_time=0)";
 
         Map<String,Object> param = new HashMap<>();

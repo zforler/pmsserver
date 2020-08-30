@@ -6,6 +6,7 @@ import java.util.Objects;
 @Entity
 public class Staff {
     private String staffId;
+    private String staffNo;
     private String staffName;
     private int sex;
     private int entryTime;
@@ -24,6 +25,16 @@ public class Staff {
     private String cardId;
     private String cardName;
     private String parents;
+    @Basic
+    @Column(name = "staff_no")
+    public String getStaffNo() {
+        return staffNo;
+    }
+
+    public void setStaffNo(String staffNo) {
+        this.staffNo = staffNo;
+    }
+
     @Transient
     public String getCardId() {
         return cardId;

@@ -16,4 +16,6 @@ public interface StaffRepo extends JpaRepository<Staff,String> {
     void updatStaffStatus(String staffId,int status);
 
     Staff findFirstByStaffIdAndCustomerId(String staffId,String customerId);
+    Staff findFirstByStaffNoAndCustomerId(String staffNo,String customerId);
+    Staff findFirstByStaffNoAndCustomerIdAndStaffIdNot(String staffNo,String customerId,String staffId);
 }
