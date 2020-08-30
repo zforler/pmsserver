@@ -51,6 +51,10 @@ public class StaffServiceImpl implements StaffService {
     @Transactional
     @Override
     public Result<Staff> addStaff(Staff staff, String operateUserId) {
+        Staff staffTemp = staffRepo.findFirstByStaffIdAndCustomerId(staff.getStaffId(), staff.getCustomerId());
+        if(staffTemp != null){
+            return Result.error("员工编号已存在");
+        }
         int second = TimeUtil.getCurrentInSecond();
         staff.setCreateTime(second);
         staff.setUpdateTime(second);

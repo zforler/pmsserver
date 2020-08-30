@@ -83,6 +83,10 @@ public class UserServiceImpl implements UserService {
     @Transactional
     @Override
     public Result<UserInfo> addUser(UserInfo userInfo, String operateUserId) {
+        UserInfo u = userInfoRepo.findFirstByUserName(userInfo.getUserName());
+        if(u == null){
+            return Result.error("用户名已存在");
+        }
         String cusotmerId = userInfo.getCustomerId();
         String userId = seqService.getNextBusinessId(Const.BZ_USER, cusotmerId, 4);
         userInfo.setUserId(userId);
@@ -98,6 +102,10 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Result<UserInfo> updateUser(UserInfo userInfo, String operateUserId) {
+        UserInfo u = userInfoRepo.findFirstByUserNameAndUserIdNot(userInfo.getUserName(),userInfo.getUserId());
+        if(u == null){
+            return Result.error("用户名已存在");
+        }
         int currentInSecond = TimeUtil.getCurrentInSecond();
         userInfo.setUpdateTime(currentInSecond);
 

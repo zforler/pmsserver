@@ -16,6 +16,16 @@ public class Card {
     private String append;
     private String staffId;
     private String staffName;
+    private int beginTime;
+    @Transient
+    public int getBeginTime() {
+        return beginTime;
+    }
+
+    public void setBeginTime(int beginTime) {
+        this.beginTime = beginTime;
+    }
+
     @Transient
     public String getStaffId() {
         return staffId;

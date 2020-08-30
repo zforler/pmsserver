@@ -30,8 +30,8 @@ public interface StaffService {
 
     Result<List<Staff>> getUnbindCardStaffList(String keyword,String customerId, String operateUserId);
 
-
-
     Result bindCards(String cardIds,String staffId,String customerId, String operateUserId);
     Result unbindCards(String cardIds,String staffId,String customerId, String operateUserId);
+
+
 }
