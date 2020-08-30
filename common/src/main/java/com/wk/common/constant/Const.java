@@ -21,6 +21,9 @@ public final class Const {
     public static final String BZ_DEPART = "DEPART";
     public static final String BZ_STAFF = "STAFF";
     public static final String BZ_CARD = "CARD";
+    public static final String BZ_PRODUCTION = "PRODUCTION";
+    public static final String BZ_TECH = "TECH";
+    public static final String BZ_SPEC = "SPEC";
     //用户状态
     public static final int USER_STATUS_NORMAL = 0;
 
