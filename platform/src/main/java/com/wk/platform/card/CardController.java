@@ -107,4 +107,28 @@ public class CardController {
             return Result.error(e.getMessage());
         }
     }
+
+    @ApiOperation("获取未分配电卡分页列表")
+    @GetMapping("/getUnbindCardPageList")
+    public Result<PageList<Card>> getUnbindCardPageList(String keyword, int page, int size, String customerId,String token){
+        try {
+            String operateUserId = LocalMemCache.getUserIdByToken(token);
+            return cardService.getUnbindCardPageList(keyword, page,size,customerId,operateUserId);
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            return Result.error(e.getMessage());
+        }
+    }
+
+    @ApiOperation("获取绑定电卡列表")
+    @GetMapping("/getBindCardList")
+    public Result<List<Card>> getBindCardList(String keyword,String staffId,String customerId, String token){
+        try {
+            String operateUserId = LocalMemCache.getUserIdByToken(token);
+            return cardService.getBindCardList(keyword,staffId,customerId,  operateUserId);
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            return Result.error(e.getMessage());
+        }
+    }
 }

@@ -1,5 +1,6 @@
 package com.wk.platform.staff;
 
+import com.wk.bean.Card;
 import com.wk.bean.Staff;
 import com.wk.common.vo.PageList;
 import com.wk.common.vo.Result;
@@ -28,4 +29,9 @@ public interface StaffService {
                                              int staffType,String departmentId,String operateUserId);
 
     Result<List<Staff>> getUnbindCardStaffList(String keyword,String customerId, String operateUserId);
+
+
+
+    Result bindCards(String cardIds,String staffId,String customerId, String operateUserId);
+    Result unbindCards(String cardIds,String staffId,String customerId, String operateUserId);
 }

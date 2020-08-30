@@ -167,4 +167,40 @@ public class CardServiceImpl implements CardService {
         cardRepo.updateCardStatus(cardId,status);
         return Result.success();
     }
+
+    @Override
+    public Result<PageList<Card>> getUnbindCardPageList(String keyword, int page, int size, String customerId,
+                                                        String operateUserId) {
+        String sql = "SELECT * FROM card WHERE customer_id=:customerId AND status=0 AND card_id NOT IN" +
+                "(SELECT card_id FROM staff_card WHERE card_id LIKE :card AND end_time=0)";
+
+        Map<String,Object> param = new HashMap<>();
+        param.put("customerId", customerId);
+        param.put("card", customerId+"%");
+        if(StringUtils.isNotBlank(keyword)){
+            sql += " AND (card_id LIKE :keyword OR card_no like :keyword)";
+            param.put("keyword","%"+keyword+"%");
+        }
+        Pageable pageable = PageRequest.of(page, size, Sort.Direction.ASC, "cardId");
+        Page<Card> list = commonService.pageBySql(sql,param,pageable,Card.class);
+
+        return Result.success(new PageList<>(list.getContent(),list.getTotalElements(),page,size));
+    }
+
+    @Override
+    public Result<List<Card>> getBindCardList(String keyword,String staffId, String customerId, String operateUserId) {
+        String sql = "SELECT c.*,sc.begin_time FROM card c LEFT JOIN staff_card sc ON c.card_id=sc.card_id" +
+                " AND sc.end_time=0 WHERE c.customer_id=:customerId AND staff_id=:staffId AND `status`=0";
+        Map<String,Object> param = new HashMap<>();
+        param.put("customerId", customerId);
+        param.put("staffId", staffId);
+        if(StringUtils.isNotBlank(keyword)){
+            sql += " AND (card_id LIKE :keyword OR card_no like :keyword)";
+            param.put("keyword","%"+keyword+"%");
+        }
+        List<Card> cardList = commonService.listBySql(sql, param, Card.class);
+
+        return Result.success(cardList);
+    }
+
 }

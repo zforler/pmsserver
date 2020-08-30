@@ -1,5 +1,6 @@
 package com.wk.platform.staff;
 
+import com.wk.bean.Card;
 import com.wk.bean.Staff;
 import com.wk.common.cache.LocalMemCache;
 import com.wk.common.vo.PageList;
@@ -149,6 +150,31 @@ public class StaffController {
         try {
             String operateUserId = LocalMemCache.getUserIdByToken(token);
             return staffService.getUnbindCardStaffList(keyword,customerId,  operateUserId);
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            return Result.error(e.getMessage());
+        }
+    }
+
+    @ApiOperation("绑定电卡")
+    @PostMapping("/bindCards")
+    public Result bindCards(String staffId,String cardIds,String customerId, String token){
+        try {
+            String operateUserId = LocalMemCache.getUserIdByToken(token);
+            Result result = staffService.bindCards(cardIds,staffId,customerId, operateUserId);
+            return result;
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            return Result.error(e.getMessage());
+        }
+    }
+    @ApiOperation("解绑电卡")
+    @PostMapping("/unbindCards")
+    public Result unbindCards(String staffId,String cardIds,String customerId, String token){
+        try {
+            String operateUserId = LocalMemCache.getUserIdByToken(token);
+            Result result = staffService.unbindCards(cardIds,staffId,customerId, operateUserId);
+            return result;
         }catch (Exception e){
             logger.error(e.getMessage(),e);
             return Result.error(e.getMessage());

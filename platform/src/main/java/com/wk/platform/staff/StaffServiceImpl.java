@@ -1,7 +1,6 @@
 package com.wk.platform.staff;
 
-import com.wk.bean.Staff;
-import com.wk.bean.StaffDepart;
+import com.wk.bean.*;
 import com.wk.common.constant.Const;
 import com.wk.common.util.TimeUtil;
 import com.wk.common.vo.PageList;
@@ -21,6 +20,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.sql.Time;
 import java.util.*;
 
 @Service
@@ -70,9 +70,9 @@ public class StaffServiceImpl implements StaffService {
             saveStaffDepart(staffId,departmentId,second);
             departmentRepo.updateStaffCount(departmentId,1);
         }
-        if(StringUtils.isNotBlank(staff.getCardId())){
-            cardService.saveStaffCard(staff.getCardId(),staffId,second);
-        }
+//        if(StringUtils.isNotBlank(staff.getCardId())){
+//            cardService.saveStaffCard(staff.getCardId(),staffId,second);
+//        }
         return Result.success(staff1);
     }
     @Transactional
@@ -109,15 +109,15 @@ public class StaffServiceImpl implements StaffService {
             saveStaffDepart(staffId,newPartId,second);
             departmentRepo.updateStaffCount(newPartId,1);
         }
-        //修改卡
-        String oldCardId = staff.getCardId();
-        String newCardId = staff.getCardId();
-        if(StringUtils.isNotBlank(oldCardId) && !oldCardId.equals(newCardId)){
-            staffCardRepo.updateEndtimeByCardId(oldCardId,second);
-        }
-        if(StringUtils.isNotBlank(newCardId)){
-            cardService.saveStaffCard(newCardId,staffId,second);
-        }
+//        //修改卡
+//        String oldCardId = staff.getCardId();
+//        String newCardId = staff.getCardId();
+//        if(StringUtils.isNotBlank(oldCardId) && !oldCardId.equals(newCardId)){
+//            staffCardRepo.updateEndtimeByCardId(oldCardId,second);
+//        }
+//        if(StringUtils.isNotBlank(newCardId)){
+//            cardService.saveStaffCard(newCardId,staffId,second);
+//        }
         return Result.success();
     }
 
@@ -138,9 +138,9 @@ public class StaffServiceImpl implements StaffService {
     public Result<PageList<Staff>> getStaffPageList(String keyword, int page, int size, String customerId,
                                                     int status,int sex,int staffType,String departmentId,int departmentType,
                                                     String operateUserId) {
-        String sql = "SELECT sf.*,d.department_id,d.name departmentName,d.parents,sc.card_id FROM staff sf LEFT JOIN staff_depart sd" +
+        String sql = "SELECT sf.*,d.department_id,d.name departmentName,d.parents FROM staff sf LEFT JOIN staff_depart sd" +
                 " ON sf.staff_id=sd.staff_id AND sd.end_time=0 LEFT JOIN department d ON sd.department_id=d.department_id" +
-                " LEFT JOIN staff_card sc ON sf.staff_id=sc.staff_id  AND sc.end_time=0 " +
+//                " LEFT JOIN staff_card sc ON sf.staff_id=sc.staff_id  AND sc.end_time=0 " +
                 " WHERE sf.customer_id=:customerId AND sf.status!=99 ";
 
         Map<String,Object> param = new HashMap<>();
@@ -289,5 +289,35 @@ public class StaffServiceImpl implements StaffService {
         List<Staff> staffList = commonService.listBySql(sql, param, Staff.class);
 
         return Result.success(staffList);
+    }
+
+
+    @Transactional
+    @Override
+    public Result bindCards(String cardIds, String staffId, String customerId, String operateUserId) {
+        int second = TimeUtil.getCurrentInSecond();
+        if(StringUtils.isBlank(cardIds)){
+            return Result.error("请选择IC卡");
+        }
+        String[] arr = cardIds.split(",");
+        for (int i = 0,len = arr.length; i < len; i++) {
+            StaffCard staffCard = new StaffCard();
+            staffCard.setEndTime(0);
+            staffCard.setBeginTime(second);
+            staffCard.setCardId(arr[i]);
+            staffCard.setStaffId(staffId);
+            staffCardRepo.saveAndFlush(staffCard);
+        }
+        return Result.success();
+    }
+    @Transactional
+    @Override
+    public Result unbindCards(String cardIds, String staffId, String customerId, String operateUserId) {
+        if(StringUtils.isBlank(cardIds)){
+            return Result.error("请选择IC卡");
+        }
+        String[] arr = cardIds.split(",");
+        staffCardRepo.updateEndtimeByCardId(staffId,arr, TimeUtil.getCurrentInSecond());
+        return Result.success();
     }
 }
