@@ -16,4 +16,7 @@ public interface UserService {
 
     Result<PageList<UserInfo>> findUserPageList(String keyword, int page, int size, String customerId,
                                                 int level, String operateUserId);
+
+    Result updatePass(String oldPass,String nwePass1,String newPass2,String userId,String customerId, String operateUserId);
+    Result resetPass(String userId,String customerId,String operateUserId);
 }

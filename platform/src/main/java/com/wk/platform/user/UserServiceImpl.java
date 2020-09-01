@@ -136,4 +136,23 @@ public class UserServiceImpl implements UserService {
 
         return Result.success(new PageList<UserInfo>(list.getContent(),list.getTotalElements(),page,size));
     }
+    @Transactional
+    @Override
+    public Result updatePass(String oldPass, String newPass1, String newPass2, String userId, String customerId, String operateUserId) {
+        if(!newPass1.equals(newPass2)){
+            return Result.error("两次新密码不一致");
+        }
+        UserInfo userInfo = userInfoRepo.findFirstByUserIdAndPassword(userId,MD5Util.getMD5Str(oldPass));
+        if(userInfo == null){
+            return Result.error("旧密码错误");
+        }
+        userInfoRepo.updatePass(userId,MD5Util.getMD5Str(newPass1));
+        return Result.success();
+    }
+    @Transactional
+    @Override
+    public Result resetPass(String userId, String customerId, String operateUserId) {
+        userInfoRepo.updatePass(userId,MD5Util.getMD5Str("12345678"));
+        return Result.success();
+    }
 }

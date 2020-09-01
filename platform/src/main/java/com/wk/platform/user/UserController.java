@@ -73,4 +73,28 @@ public class UserController {
             return Result.error(e.getMessage());
         }
     }
+
+    @ApiOperation("修改密码")
+    @PostMapping("/updatePass")
+    public Result updatePass(String oldPass,String newPass1,String newPass2,String userId,String customerId,String token){
+        try {
+            String operateUserId = LocalMemCache.getUserIdByToken(token);
+            return userService.updatePass(oldPass,newPass1,newPass2,userId,customerId,operateUserId);
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            return Result.error(e.getMessage());
+        }
+    }
+
+    @ApiOperation("重置密码")
+    @PostMapping("/resetPass")
+    public Result resetPass(String userId,String customerId,String token){
+        try {
+            String operateUserId = LocalMemCache.getUserIdByToken(token);
+            return userService.resetPass(userId,customerId,operateUserId);
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            return Result.error(e.getMessage());
+        }
+    }
 }

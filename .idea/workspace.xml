@@ -5,24 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df02bf22-7c92-4e5a-914e-0194ec572d7b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/Batch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/BatchItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/batch/BatchController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/batch/BatchItemRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/batch/BatchRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/batch/BatchService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/batch/BatchServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b2c14589-ec84-4f00-8840-e72b435e08a2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b2c14589-ec84-4f00-8840-e72b435e08a2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/Staff.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/wk/common/constant/Const.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/wk/common/constant/Const.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/wk/common/constant/Const.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/wk/common/constant/Const.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/src/main/java/com/wk/config/interceptor/LogInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/config/src/main/java/com/wk/config/interceptor/LogInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/card/CardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/card/CardServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffController.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/user/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/user/UserInfoRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/user/UserInfoRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/user/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/user/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/user/UserServiceImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/platform/target/" />
@@ -62,37 +48,9 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="54" column="69" selection-start-line="54" selection-start-column="69" selection-end-line="54" selection-end-column="69" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/card/CardServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-110">
-              <caret line="172" column="99" selection-start-line="172" selection-start-column="99" selection-end-line="172" selection-end-column="99" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#4159#4160#0" expanded="true" />
-                <element signature="e#4186#4187#0" expanded="true" />
-                <element signature="e#4302#4303#0" expanded="true" />
-                <element signature="e#4329#4330#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/src/main/java/com/wk/common/cache/LocalMemCache.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
+            <state relative-caret-position="286">
               <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -108,7 +66,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/role/RoleServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-990">
+            <state relative-caret-position="264">
               <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="34" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -117,11 +75,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/user/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-396">
-              <caret line="87" column="42" lean-forward="true" selection-start-line="87" selection-start-column="42" selection-end-line="87" selection-end-column="42" />
+            <state relative-caret-position="394">
+              <caret line="151" column="18" selection-start-line="151" selection-start-column="18" selection-end-line="151" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/user/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="93" column="35" lean-forward="true" selection-start-line="93" selection-start-column="35" selection-end-line="93" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -133,15 +103,24 @@
         <entry file="file://$PROJECT_DIR$/config/src/main/java/com/wk/config/interceptor/LogInterceptor.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="264">
-              <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
+              <caret line="39" column="50" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/user/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="20" column="15" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/src/main/java/com/wk/common/util/LoggerUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
+            <state relative-caret-position="1144">
               <caret line="66" column="41" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="41" />
               <folding>
                 <element signature="e#527#528#0" expanded="true" />
@@ -154,8 +133,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/user/UserInfoRepo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="308">
+              <caret line="17" column="18" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#49#1" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -163,7 +145,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="53">
+            <state relative-caret-position="1276">
               <caret line="79" column="130" selection-start-line="79" selection-start-column="130" selection-end-line="79" selection-end-column="130" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -175,7 +157,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffRepo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
+            <state relative-caret-position="352">
               <caret line="19" column="54" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -256,7 +238,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/department/DepartmentContoller.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/department/DepartmentService.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/department/DepartmentController.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/datadic/SysDicServiceImpl.java" />
@@ -267,7 +248,6 @@
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/department/DepartmentRepo.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/repo/StaffDepartRepo.java" />
         <option value="$PROJECT_DIR$/config/src/main/java/com/wk/config/interceptor/AuthorizationInterceptor.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/user/UserController.java" />
         <option value="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/StaffCard.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/card/CardRepo.java" />
         <option value="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/ProductionEditLog.java" />
@@ -304,9 +284,11 @@
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffRepo.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffServiceImpl.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/card/CardServiceImpl.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/user/UserInfoRepo.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/user/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/config/src/main/java/com/wk/config/interceptor/LogInterceptor.java" />
+        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/user/UserInfoRepo.java" />
+        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/user/UserService.java" />
+        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/user/UserController.java" />
+        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/user/UserServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -380,10 +362,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="68" />
-    <option name="y" value="72" />
-    <option name="width" value="1859" />
-    <option name="height" value="959" />
+    <option name="x" value="812" />
+    <option name="y" value="33" />
+    <option name="width" value="1820" />
+    <option name="height" value="970" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -393,6 +375,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -568,16 +551,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="platform" type="462c0819:PsiDirectoryNode" />
-              <item name="batch" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pmsserver" type="462c0819:PsiDirectoryNode" />
-              <item name="platform" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="platform" type="462c0819:PsiDirectoryNode" />
               <item name="card" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -660,12 +633,19 @@
               <item name="platform" type="462c0819:PsiDirectoryNode" />
               <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pmsserver" type="462c0819:PsiDirectoryNode" />
+              <item name="platform" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -680,7 +660,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="F:/hhdprogram/chargeCloudFrontendBranch/protocol3" />
+    <property name="last_opened_file_path" value="F:/hhdprogram/chargingCloud" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -769,7 +749,9 @@
       <workItem from="1598450933314" duration="2584000" />
       <workItem from="1598486048293" duration="14324000" />
       <workItem from="1598577216292" duration="12230000" />
-      <workItem from="1598692601854" duration="28686000" />
+      <workItem from="1598692601854" duration="30008000" />
+      <workItem from="1598834734749" duration="1800000" />
+      <workItem from="1598861071505" duration="3456000" />
     </task>
     <task id="LOCAL-00001" summary="qq">
       <created>1597485488611</created>
@@ -897,19 +879,25 @@
       <option name="project" value="LOCAL" />
       <updated>1598777636653</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="qq">
+      <created>1598797263130</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1598797263130</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="166559000" />
+    <option name="totallyTimeSpent" value="173137000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.71936274" visible="true" weight="0.23109691" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.715942" visible="true" weight="0.22097977" />
       <window_info id="Structure" order="1" weight="0.25" />
-      <window_info id="Persistence" order="2" sideWeight="0.28063726" side_tool="true" visible="true" weight="0.23109691" />
+      <window_info id="Persistence" order="2" sideWeight="0.28405797" side_tool="true" visible="true" weight="0.22097977" />
       <window_info id="Designer" order="3" />
       <window_info id="Image Layers" order="4" />
       <window_info id="UI Designer" order="5" />
@@ -919,7 +907,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3401728" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.1187905" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.2548596" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -952,27 +940,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="qq" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/wk/bean/StaffCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/repo/StaffDepartRepo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="9" column="68" selection-start-line="9" selection-start-column="68" selection-end-line="9" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/user/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -999,23 +970,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/wk/bean/ProductionEditLog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="35" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/production/ProductionEditLogRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" selection-start-line="8" selection-end-line="10" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/wk/bean/ProductionEditLog.java" />
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/production/ProductionEditLogRepo.java" />
     <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/department/DepartmentService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -1037,13 +993,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/spec/SpecImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/spec/SpecImpl.java" />
     <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/technology/TechnologyRepo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -1370,28 +1320,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
+        <state relative-caret-position="814">
           <caret line="54" column="69" selection-start-line="54" selection-start-column="69" selection-end-line="54" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="54" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="79" column="130" selection-start-line="79" selection-start-column="130" selection-end-line="79" selection-end-column="130" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1400,21 +1330,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/card/CardServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-110">
+        <state relative-caret-position="3256">
           <caret line="172" column="99" selection-start-line="172" selection-start-column="99" selection-end-line="172" selection-end-column="99" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4159#4160#0" expanded="true" />
-            <element signature="e#4186#4187#0" expanded="true" />
-            <element signature="e#4302#4303#0" expanded="true" />
-            <element signature="e#4329#4330#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/src/main/java/com/wk/common/cache/LocalMemCache.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
+        <state relative-caret-position="286">
           <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1428,7 +1354,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/role/RoleServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-990">
+        <state relative-caret-position="264">
           <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="34" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1436,17 +1362,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/user/UserInfoRepo.java">
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/wk/common/util/LoggerUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="1144">
+          <caret line="66" column="41" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="41" />
+          <folding>
+            <element signature="e#527#528#0" expanded="true" />
+            <element signature="e#567#568#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/user/UserServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-396">
-          <caret line="87" column="42" lean-forward="true" selection-start-line="87" selection-start-column="42" selection-end-line="87" selection-end-column="42" />
+        <state relative-caret-position="1276">
+          <caret line="79" column="130" selection-start-line="79" selection-start-column="130" selection-end-line="79" selection-end-column="130" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffRepo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="19" column="54" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1456,17 +1396,43 @@
     <entry file="file://$PROJECT_DIR$/config/src/main/java/com/wk/config/interceptor/LogInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
-          <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
+          <caret line="39" column="50" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/wk/common/util/LoggerUtil.java">
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/user/UserInfoRepo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="66" column="41" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="41" />
+        <state relative-caret-position="308">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="18" />
           <folding>
-            <element signature="e#527#528#0" expanded="true" />
-            <element signature="e#567#568#0" expanded="true" />
+            <element signature="e#0#49#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/user/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="20" column="15" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/user/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="93" column="35" lean-forward="true" selection-start-line="93" selection-start-column="35" selection-end-line="93" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/user/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="151" column="18" selection-start-line="151" selection-start-column="18" selection-end-line="151" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
