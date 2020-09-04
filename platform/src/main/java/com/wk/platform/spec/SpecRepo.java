@@ -5,6 +5,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 
+import java.util.List;
+
 public interface SpecRepo extends JpaRepository<Spec,Integer> {
     Spec findFirstById(int id);
 
@@ -13,4 +15,6 @@ public interface SpecRepo extends JpaRepository<Spec,Integer> {
     @Modifying
     @Query(value = "update spec set end_time=?2 where id=?1",nativeQuery = true)
     int updateSpecEndTime(int id,int endTime);
+    List<Spec> findAllByProductionId(String productionId);
+    List<Spec> findAllByProductionIdAndEndTime(String productionId,int endTime);
 }

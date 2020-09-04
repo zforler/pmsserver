@@ -35,17 +35,17 @@ public class AuthorizationInterceptor extends HandlerInterceptorAdapter {
         //从header中获取token
         String token = request.getHeader("x-token");
         //token为空
-        if (StringUtils.isEmpty(token)) {
-            response.setContentType("text/html;charset=utf-8");
-            response.getWriter().print(Result.error(Errorcode.TOKEN_ERROR,"请先登录").toString());
-            return false;
-        }
-        UserInfo user = LocalMemCache.getUserByToken(token);
-        if(user == null){
-            response.setContentType("text/html;charset=utf-8");
-            response.getWriter().print(Result.error(Errorcode.TOKEN_ERROR,"请重新登录").toString());
-            return false;
-        }
+//        if (StringUtils.isEmpty(token)) {
+//            response.setContentType("text/html;charset=utf-8");
+//            response.getWriter().print(Result.error(Errorcode.TOKEN_ERROR,"请先登录").toString());
+//            return false;
+//        }
+//        UserInfo user = LocalMemCache.getUserByToken(token);
+//        if(user == null){
+//            response.setContentType("text/html;charset=utf-8");
+//            response.getWriter().print(Result.error(Errorcode.TOKEN_ERROR,"请重新登录").toString());
+//            return false;
+//        }
 
         return true;
     }

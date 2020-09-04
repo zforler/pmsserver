@@ -1,16 +1,20 @@
 package com.wk.platform.production;
 
 import com.wk.bean.Production;
+import com.wk.bean.ProductionVo;
 import com.wk.common.constant.Const;
 import com.wk.common.util.TimeUtil;
 import com.wk.common.vo.Result;
 import com.wk.commonservice.service.CommonService;
 import com.wk.commonservice.service.SeqService;
+import com.wk.platform.spec.SpecRepo;
+import com.wk.platform.technology.TechnologyRepo;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -23,6 +27,10 @@ public class ProductionServiceImpl implements ProductionService {
     private SeqService seqService;
     @Autowired
     private ProductionRepo productionRepo;
+    @Autowired
+    private SpecRepo specRepo;
+    @Autowired
+    private TechnologyRepo technologyRepo;
 
     @Transactional
     @Override
@@ -93,5 +101,25 @@ public class ProductionServiceImpl implements ProductionService {
 
         return Result.success(productions);
 
+    }
+
+    @Override
+    public Result<List<ProductionVo>> getProductionVoList(String customerId, String operateUserId) {
+        List<Production> productions = productionRepo.findAllByCustomerId(customerId);
+        List<ProductionVo> productionVos = new ArrayList<>();
+        String pid = null;
+        Production production = null;
+        for (int i = 0,size=productions.size(); i < size; i++) {
+            production = productions.get(i);
+            pid = production.getProductionId();
+
+            ProductionVo productionVo = new ProductionVo();
+            productionVo.setProductionId(pid);
+            productionVo.setProductionName(production.getProductionName());
+            productionVos.add(productionVo);
+            productionVo.setSpecs(specRepo.findAllByProductionIdAndEndTime(pid,0));
+            productionVo.setTechnologies(technologyRepo.findAllByProductionIdAndEndTime(pid,0));
+        }
+        return Result.success(productionVos);
     }
 }

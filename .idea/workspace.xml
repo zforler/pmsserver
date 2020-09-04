@@ -1,19 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/common/src/main/java/com/wk/common/constant/Const.java" line="33" />
+    <bookmark url="file://$PROJECT_DIR$/common/src/main/java/com/wk/common/constant/Const.java" line="34" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df02bf22-7c92-4e5a-914e-0194ec572d7b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/Shift.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/shift/ShiftController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/shift/ShiftRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/shift/ShiftService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/shift/ShiftServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/Price.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/ProductionVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/price/PriceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/price/PriceRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/price/PriceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/price/PriceServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/b2c14589-ec84-4f00-8840-e72b435e08a2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b2c14589-ec84-4f00-8840-e72b435e08a2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bean/target/bean-0.0.1-SNAPSHOT-exec.jar" beforeDir="false" afterPath="$PROJECT_DIR$/bean/target/bean-0.0.1-SNAPSHOT-exec.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bean/target/bean-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/bean/target/bean-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/Department.class" beforeDir="false" afterPath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/Department.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/MenuAuthority.class" beforeDir="false" afterPath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/MenuAuthority.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/Menus.class" beforeDir="false" afterPath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/Menus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/SysDic.class" beforeDir="false" afterPath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/SysDic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/SysDicItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/SysDicItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/SysLog.class" beforeDir="false" afterPath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/SysLog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/SysMenuAuthorityPK.class" beforeDir="false" afterPath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/SysMenuAuthorityPK.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/SysSeq.class" beforeDir="false" afterPath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/SysSeq.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/UserInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/UserInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bean/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/bean/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/wk/common/cache/LocalMemCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/wk/common/cache/LocalMemCache.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/src/main/java/com/wk/common/constant/Const.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/wk/common/constant/Const.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/target/classes/com/wk/common/constant/Const.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/wk/common/constant/Const.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/src/main/java/com/wk/config/filter/LoggerConfguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/config/src/main/java/com/wk/config/filter/LoggerConfguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/src/main/java/com/wk/config/interceptor/AuthorizationInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/config/src/main/java/com/wk/config/interceptor/AuthorizationInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/target/classes/com/wk/config/filter/LoggerConfguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/config/target/classes/com/wk/config/filter/LoggerConfguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/target/classes/com/wk/config/interceptor/AuthorizationInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/config/target/classes/com/wk/config/interceptor/AuthorizationInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/PlatformApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/PlatformApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/production/ProductionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/production/ProductionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/production/ProductionRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/production/ProductionRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/production/ProductionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/production/ProductionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/production/ProductionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/production/ProductionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/spec/SpecRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/spec/SpecRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/technology/TechnologyRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/technology/TechnologyRepo.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/platform/target/" />
     <ignored path="$PROJECT_DIR$/boot/target/" />
@@ -52,10 +79,36 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/shift/ShiftRepo.java">
+        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/price/PriceRepo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="15" column="32" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/src/main/java/com/wk/common/cache/LocalMemCache.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="282">
+              <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#782#783#0" expanded="true" />
+                <element signature="e#835#836#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/price/PriceService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="286">
-              <caret line="13" column="32" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="32" />
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,7 +120,28 @@
         <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/shift/ShiftService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
-              <caret line="15" column="39" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="39" />
+              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="97" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/customer/CustomerController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="63" column="49" selection-start-line="63" selection-start-column="49" selection-end-line="63" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/price/PriceServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="567">
+              <caret line="103" column="36" selection-start-line="103" selection-start-column="36" selection-end-line="103" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -78,8 +152,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/shift/ShiftServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="152" column="36" selection-start-line="152" selection-start-column="36" selection-end-line="152" selection-end-column="36" />
+            <state relative-caret-position="611">
+              <caret line="151" column="55" selection-start-line="151" selection-start-column="39" selection-end-line="151" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,78 +162,34 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/time/LocalTime.java">
+        <entry file="file://$PROJECT_DIR$/config/src/main/java/com/wk/config/interceptor/BadRequestExceptionHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1122">
-              <caret line="140" column="42" selection-start-line="140" selection-start-column="34" selection-end-line="140" selection-end-column="42" />
+            <state relative-caret-position="110">
+              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/price/PriceController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="426">
+              <caret line="75" column="29" lean-forward="true" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/shift/ShiftController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="73" column="46" selection-start-line="73" selection-start-column="31" selection-end-line="73" selection-end-column="46" />
+            <state relative-caret-position="347">
+              <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="81" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/src/main/java/com/wk/config/interceptor/ResultResponseBodyAdvice.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1100">
-              <caret line="67" column="39" selection-start-line="67" selection-start-column="39" selection-end-line="67" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2486">
-              <caret line="134" column="31" selection-start-line="134" selection-start-column="31" selection-end-line="134" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#5294#5295#0" expanded="true" />
-                <element signature="e#5321#5322#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/production/ProductionService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="15" selection-end-column="103" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/wk/bean/Shift.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -176,8 +206,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>swa</find>
-      <find>role</find>
       <find>Role</find>
       <find>findUserMenus</find>
       <find>角色</find>
@@ -195,7 +223,6 @@
       <find>getNoDepartStaffList</find>
       <find>getUserDataAuthList</find>
       <find>customer</find>
-      <find>产品</find>
       <find>工艺</find>
       <find>updateEndtimeByStaffId</find>
       <find>technology</find>
@@ -203,9 +230,12 @@
       <find>客户</find>
       <find>getBatchItemPageList</find>
       <find>findFirstByStaffIdAndCustomerId</find>
-      <find>production</find>
       <find>Production</find>
       <find>getStaffList</find>
+      <find>production</find>
+      <find>产品</find>
+      <find>price</find>
+      <find>EnableWebMvc</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -230,6 +260,8 @@
       <replace>batch</replace>
       <replace>shift</replace>
       <replace>Shift</replace>
+      <replace>price</replace>
+      <replace>价格</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -238,23 +270,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/StaffDepart.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/department/DepartmentRepo.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/repo/StaffDepartRepo.java" />
-        <option value="$PROJECT_DIR$/config/src/main/java/com/wk/config/interceptor/AuthorizationInterceptor.java" />
-        <option value="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/StaffCard.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/card/CardRepo.java" />
-        <option value="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/ProductionEditLog.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/production/ProductionEditLogRepo.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/production/ProductionService.java" />
-        <option value="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/Production.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/technology/TechnologyService.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/technology/TechnologyController.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/production/ProductionRepo.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/technology/TechnologyRepo.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/technology/TechnologyServiceImpl.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/spec/SpecRepo.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/spec/SpecService.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/spec/SpecContoller.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/spec/SpecServiceImpl.java" />
         <option value="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/Spec.java" />
@@ -263,9 +278,7 @@
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/card/CardController.java" />
         <option value="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/Card.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/repo/StaffCardRepo.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/production/ProductionServiceImpl.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/batch/BatchRepo.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/production/ProductionController.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/batch/BatchService.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/batch/BatchController.java" />
         <option value="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/BatchItem.java" />
@@ -283,12 +296,31 @@
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/user/UserController.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/user/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/shift/ShiftServieImpl.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/com/wk/common/constant/Const.java" />
         <option value="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/Shift.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/shift/ShiftService.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/shift/ShiftRepo.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/shift/ShiftServiceImpl.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/shift/ShiftController.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/wk/common/constant/Const.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/wk/common/vo/ProductionVo.java" />
+        <option value="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/ProductionVo.java" />
+        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/production/ProductionService.java" />
+        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/production/ProductionRepo.java" />
+        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/production/ProductionController.java" />
+        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/spec/SpecRepo.java" />
+        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/technology/TechnologyRepo.java" />
+        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/production/ProductionServiceImpl.java" />
+        <option value="$PROJECT_DIR$/config/src/main/java/com/wk/config/convert/SpringDataConvert.java" />
+        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/PlatformApplication.java" />
+        <option value="$PROJECT_DIR$/config/src/main/java/com/wk/config/interceptor/AuthorizationInterceptor.java" />
+        <option value="$PROJECT_DIR$/config/src/main/java/com/wk/config/convert/StringToFloatConverter.java" />
+        <option value="$PROJECT_DIR$/config/src/main/java/com/wk/config/filter/LoggerConfguration.java" />
+        <option value="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/Price.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/wk/common/cache/LocalMemCache.java" />
+        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/price/PriceService.java" />
+        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/price/PriceRepo.java" />
+        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/price/PriceServiceImpl.java" />
+        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/price/PriceController.java" />
       </list>
     </option>
   </component>
@@ -309,15 +341,6 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="bean" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="bean" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="boot" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
@@ -327,45 +350,22 @@
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="common" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="common" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="common" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="config" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="config" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="platform" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="platform" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
         </path>
       </expand>
       <select />
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="528" />
-    <option name="y" value="136" />
-    <option name="width" value="1631" />
-    <option name="height" value="970" />
+    <option name="x" value="144" />
+    <option name="y" value="128" />
+    <option name="width" value="1456" />
+    <option name="height" value="818" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -375,6 +375,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -466,6 +467,16 @@
             <path>
               <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
               <item name="pmsserver" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="vo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pmsserver" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -497,6 +508,26 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pmsserver" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="annotation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pmsserver" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="filter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
@@ -581,6 +612,16 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="platform" type="462c0819:PsiDirectoryNode" />
+              <item name="price" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pmsserver" type="462c0819:PsiDirectoryNode" />
+              <item name="platform" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="platform" type="462c0819:PsiDirectoryNode" />
               <item name="production" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -655,7 +696,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -670,7 +710,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="F:/hhdprogram/chargingCloud" />
+    <property name="last_opened_file_path" value="F:/hhdprogram/piledirect-jingzhou" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -680,19 +720,8 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.wk.config.filter" />
-      <recent name="com.wk.bean" />
-      <recent name="com.wk.common.vo" />
-      <recent name="com.wk.commonservice.service" />
-      <recent name="com.wx.bean" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.wx.config" />
-    </key>
-    <key name="ImportMappingsDialog.RecentPackages">
-      <recent name="com.wk.bean" />
-      <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\myprogram\pmsserver\bean\src\main\java\com\wk\bean" />
@@ -700,6 +729,17 @@
       <recent name="F:\myprogram\pmsserver\platform\src\main\resources" />
       <recent name="F:\myprogram\pmsserver\commonservice\src\main\java\com\wx\commonservice" />
       <recent name="F:\myprogram\pmsserver\common\src\main\java\com\wx\common\util" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.wk.config.filter" />
+      <recent name="com.wk.bean" />
+      <recent name="com.wk.common.vo" />
+      <recent name="com.wk.commonservice.service" />
+      <recent name="com.wx.bean" />
+    </key>
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="com.wk.bean" />
+      <recent name="" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -765,7 +805,8 @@
       <workItem from="1598953862580" duration="4714000" />
       <workItem from="1599048531855" duration="6568000" />
       <workItem from="1599090690771" duration="1215000" />
-      <workItem from="1599126039909" duration="1942000" />
+      <workItem from="1599126039909" duration="7342000" />
+      <workItem from="1599177288589" duration="10946000" />
     </task>
     <task id="LOCAL-00001" summary="qq">
       <created>1597485488611</created>
@@ -907,18 +948,25 @@
       <option name="project" value="LOCAL" />
       <updated>1598921563222</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="qq">
+      <created>1599135209920</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1599135209921</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="188827000" />
+    <option name="totallyTimeSpent" value="205173000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7113402" visible="true" weight="0.22949947" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7109267" visible="true" weight="0.23162939" />
       <window_info id="Structure" order="1" weight="0.25" />
-      <window_info id="Persistence" order="2" sideWeight="0.28865978" side_tool="true" weight="0.22949947" />
+      <window_info id="Persistence" order="2" sideWeight="0.28947368" side_tool="true" weight="0.23162939" />
       <window_info id="Designer" order="3" />
       <window_info id="Image Layers" order="4" />
       <window_info id="UI Designer" order="5" />
@@ -928,7 +976,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3401728" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.237581" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.14362851" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -949,7 +997,7 @@
       <window_info anchor="right" id="Database" order="6" weight="0.045793395" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Maven" order="9" weight="0.19542067" />
+      <window_info anchor="right" id="Maven" order="9" visible="true" weight="0.19542067" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -961,247 +1009,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="qq" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/technology/TechnologyRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="14" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/spec/SpecRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/technology/TechnologyService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" selection-start-line="8" selection-end-line="14" selection-end-column="104" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/spec/SpecService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/technology/TechnologyServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="93" column="5" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="93" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2255#2256#0" expanded="true" />
-            <element signature="e#2282#2283#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/technology/TechnologyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="68" column="5" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="68" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/spec/SpecContoller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="909">
-          <caret line="59" column="41" selection-start-line="59" selection-start-column="30" selection-end-line="59" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/spec/SpecServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="28" column="19" lean-forward="true" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2506#2507#0" expanded="true" />
-            <element signature="e#2533#2534#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/wk/bean/Spec.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="8" column="15" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="15" />
-          <folding>
-            <element signature="e#456#457#0" expanded="true" />
-            <element signature="e#493#494#0" expanded="true" />
-            <element signature="e#553#554#0" expanded="true" />
-            <element signature="e#605#606#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/wk/bean/Technology.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="15" column="34" lean-forward="true" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/card/CardService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/card/CardController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="123" column="33" selection-start-line="123" selection-start-column="18" selection-end-line="123" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/wk/bean/Card.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-          <folding>
-            <element signature="e#484#485#0" expanded="true" />
-            <element signature="e#516#517#0" expanded="true" />
-            <element signature="e#563#564#0" expanded="true" />
-            <element signature="e#605#606#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/repo/StaffCardRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/batch/BatchRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="55" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/customer/CustomerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="108" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="108" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/customer/CustomerServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="73" column="6" lean-forward="true" selection-start-line="73" selection-start-column="6" selection-end-line="83" selection-end-column="107" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/customer/CustomerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="81" column="5" lean-forward="true" selection-start-line="24" selection-start-column="3" selection-end-line="81" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/maven/repo/org/springframework/data/spring-data-commons/2.3.3.RELEASE/spring-data-commons-2.3.3.RELEASE.jar!/org/springframework/data/repository/CrudRepository.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/batch/BatchController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="96" column="36" lean-forward="true" selection-start-line="96" selection-start-column="36" selection-end-line="96" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/batch/BatchService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/wk/bean/BatchItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
-          <folding>
-            <element signature="e#327#328#0" expanded="true" />
-            <element signature="e#352#353#0" expanded="true" />
-            <element signature="e#334#335#0" expanded="true" />
-            <element signature="e#362#363#0" expanded="true" />
-            <element signature="e#395#396#0" expanded="true" />
-            <element signature="e#424#425#0" expanded="true" />
-            <element signature="e#468#469#0" expanded="true" />
-            <element signature="e#504#505#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/batch/BatchItemRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="138" selection-start-line="17" selection-start-column="138" selection-end-line="17" selection-end-column="138" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/batch/BatchServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -1234,20 +1041,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/wk/common/cache/LocalMemCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#782#783#0" expanded="true" />
-            <element signature="e#835#836#0" expanded="true" />
-            <element signature="e#1074#1075#0" expanded="true" />
-            <element signature="e#1130#1131#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/role/RoleServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -1265,13 +1058,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/src/main/java/com/wk/config/interceptor/LogInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="39" column="50" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -1399,45 +1185,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/wk/common/constant/Const.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="27" column="39" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/production/ProductionServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="83" column="3" selection-start-line="83" selection-start-column="3" selection-end-line="93" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2874#2875#0" expanded="true" />
-            <element signature="e#2901#2902#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/production/ProductionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="69" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/production/ProductionRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="77" selection-start-line="11" selection-start-column="77" selection-end-line="11" selection-end-column="77" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://E:/maven/repo/org/springframework/spring-web/5.2.8.RELEASE/spring-web-5.2.8.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -1449,13 +1196,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1122">
           <caret line="140" column="42" selection-start-line="140" selection-start-column="34" selection-end-line="140" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/src/main/java/com/wk/config/interceptor/ResultResponseBodyAdvice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -1481,16 +1221,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/production/ProductionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="15" selection-end-column="103" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/wk/bean/Shift.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -1500,8 +1230,263 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/shift/ShiftRepo.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="37" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/wk/common/constant/Const.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="28" column="39" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/production/ProductionService.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
-          <caret line="13" column="32" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="32" />
+          <caret line="18" column="90" selection-start-line="18" selection-start-column="90" selection-end-line="18" selection-end-column="90" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/wk/bean/ProductionVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#355#356#0" expanded="true" />
+            <element signature="e#411#412#0" expanded="true" />
+            <element signature="e#459#460#0" expanded="true" />
+            <element signature="e#500#501#0" expanded="true" />
+            <element signature="e#537#538#0" expanded="true" />
+            <element signature="e#597#598#0" expanded="true" />
+            <element signature="e#649#650#0" expanded="true" />
+            <element signature="e#685#686#0" expanded="true" />
+            <element signature="e#713#714#0" expanded="true" />
+            <element signature="e#759#760#0" expanded="true" />
+            <element signature="e#793#794#0" expanded="true" />
+            <element signature="e#842#843#0" expanded="true" />
+            <element signature="e#877#878#0" expanded="true" />
+            <element signature="e#943#944#0" expanded="true" />
+            <element signature="e#991#992#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/wk/bean/Production.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/production/ProductionRepo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="40" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/production/ProductionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="75" column="57" selection-start-line="75" selection-start-column="38" selection-end-line="75" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/spec/SpecRepo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="18" column="46" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/technology/TechnologyRepo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="18" column="52" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/production/ProductionServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="120" column="93" selection-start-line="120" selection-start-column="93" selection-end-line="120" selection-end-column="93" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/src/main/java/com/wk/config/filter/RequestWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/src/main/java/com/wk/config/filter/PageFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/maven/repo/org/springframework/spring-core/5.2.8.RELEASE/spring-core-5.2.8.RELEASE.jar!/org/springframework/core/convert/converter/Converter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/src/main/java/com/wk/config/interceptor/GlobalExceptionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/src/main/java/com/wk/config/interceptor/LogInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="39" column="50" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/src/main/java/com/wk/config/interceptor/ResultResponseBodyAdvice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/src/main/java/com/wk/config/annotation/IgnoreAuth.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-396" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/src/main/java/com/wk/config/convert/SpringDataConvert.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/src/main/java/com/wk/config/interceptor/AuthorizationInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="37" selection-start-line="37" selection-start-column="2" selection-end-line="47" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/maven/repo/org/springframework/spring-core/5.2.8.RELEASE/spring-core-5.2.8.RELEASE.jar!/org/springframework/core/convert/converter/GenericConverter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-492">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/src/main/java/com/wk/config/convert/StringToFloatConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="11" column="63" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#479#480#0" expanded="true" />
+            <element signature="e#506#507#0" expanded="true" />
+            <element signature="e#622#623#0" expanded="true" />
+            <element signature="e#649#650#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/PlatformApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/wk/bean/Price.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/customer/CustomerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="63" column="49" selection-start-line="63" selection-start-column="49" selection-end-line="63" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/wk/common/cache/LocalMemCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#782#783#0" expanded="true" />
+            <element signature="e#835#836#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/src/main/java/com/wk/config/filter/LoggerConfguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/src/main/java/com/wk/config/interceptor/BadRequestExceptionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/shift/ShiftService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="97" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/price/PriceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1510,18 +1495,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/shift/ShiftServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="152" column="36" selection-start-line="152" selection-start-column="36" selection-end-line="152" selection-end-column="36" />
+        <state relative-caret-position="611">
+          <caret line="151" column="55" selection-start-line="151" selection-start-column="39" selection-end-line="151" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/shift/ShiftService.java">
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/price/PriceRepo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
-          <caret line="15" column="39" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="39" />
+          <caret line="15" column="32" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/price/PriceServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="103" column="36" selection-start-line="103" selection-start-column="36" selection-end-line="103" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1530,8 +1525,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/shift/ShiftController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="73" column="46" selection-start-line="73" selection-start-column="31" selection-end-line="73" selection-end-column="46" />
+        <state relative-caret-position="347">
+          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="81" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/price/PriceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="75" column="29" lean-forward="true" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -5,6 +5,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 
+import java.util.List;
+
 public interface TechnologyRepo extends JpaRepository<Technology,Integer> {
     Technology findFirstById(int id);
 
@@ -13,4 +15,6 @@ public interface TechnologyRepo extends JpaRepository<Technology,Integer> {
     @Modifying
     @Query(value = "update technology set end_time=?2 where id=?1",nativeQuery = true)
     int updateTechnologyEndTime(int id,int endTime);
+    List<Technology> findAllByProductionId(String productionId);
+    List<Technology> findAllByProductionIdAndEndTime(String productionId,int endTime);
 }

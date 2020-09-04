@@ -3,6 +3,7 @@ package com.wk.config.filter;
 import com.wk.config.interceptor.AuthorizationInterceptor;
 import com.wk.config.interceptor.LogInterceptor;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.format.FormatterRegistry;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
@@ -24,4 +25,5 @@ public class LoggerConfguration extends WebMvcConfigurerAdapter {
                 .maxAge(3600)
                 .allowCredentials(true);
     }
+
 }

@@ -1,6 +1,7 @@
 package com.wk.platform.production;
 
 import com.wk.bean.Production;
+import com.wk.bean.ProductionVo;
 import com.wk.common.cache.LocalMemCache;
 import com.wk.common.vo.PageList;
 import com.wk.common.vo.Result;
@@ -63,6 +64,19 @@ public class ProductionController {
         try {
             String operateUserId = LocalMemCache.getUserIdByToken(token);
             return productionService.getProductionList(keyword,customerId,  operateUserId);
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            return Result.error(e.getMessage());
+        }
+    }
+
+
+    @ApiOperation("获取企业下产品列表")
+    @GetMapping("/getProductionVoList")
+    public Result<List<ProductionVo>> getProductionVoList(String customerId, String token){
+        try {
+            String operateUserId = LocalMemCache.getUserIdByToken(token);
+            return productionService.getProductionVoList(customerId,  operateUserId);
         }catch (Exception e){
             logger.error(e.getMessage(),e);
             return Result.error(e.getMessage());

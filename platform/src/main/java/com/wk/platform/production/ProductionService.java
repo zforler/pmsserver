@@ -1,6 +1,7 @@
 package com.wk.platform.production;
 
 import com.wk.bean.Production;
+import com.wk.bean.ProductionVo;
 import com.wk.common.vo.PageList;
 import com.wk.common.vo.Result;
 
@@ -14,5 +15,7 @@ public interface ProductionService {
     Result deleteProduction(String productionId,String operateUserId);
 
     Result<List<Production>> getProductionList(String keyword,String customerId, String operateUserId);
+
+    Result<List<ProductionVo>> getProductionVoList(String customerId, String operateUserId);
 
 }
