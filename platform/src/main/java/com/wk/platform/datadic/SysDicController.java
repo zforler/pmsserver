@@ -26,7 +26,7 @@ public class SysDicController {
     @PostMapping("/sysDic")
     public Result<SysDic> addSysDic(SysDic sysDic, String token){
         try {
-            String operateUserId = LocalMemCache.getUserByToken(token).getUserId();
+            String operateUserId = LocalMemCache.getUserIdByToken(token);
             return sysDicService.addSysDic(sysDic, operateUserId);
         }catch (Exception e){
             logger.error(e.getMessage(),e);
@@ -37,7 +37,7 @@ public class SysDicController {
     @PostMapping("/updateSysDic")
     public Result<SysDic> updateSysDic(SysDic sysDic, String token){
         try {
-            String operateUserId = LocalMemCache.getUserByToken(token).getUserId();
+            String operateUserId = LocalMemCache.getUserIdByToken(token);
             Result<SysDic> result = sysDicService.updateSysDic(sysDic, operateUserId);
             return result;
         }catch (Exception e){

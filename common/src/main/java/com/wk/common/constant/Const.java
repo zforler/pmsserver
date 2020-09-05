@@ -27,6 +27,8 @@ public final class Const {
     public static final String BZ_BATCH = "BATCH";
     public static final String BZ_SHIFT = "SHIFT";
     public static final String BZ_PRICE = "PRICE";
+    public static final String BZ_EQUIP = "equipment";
+    public static final String BZ_EQUIP_SUB = "EQUIPSUB";
     //用户状态
     public static final int USER_STATUS_NORMAL = 0;
 
