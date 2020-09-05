@@ -7,6 +7,7 @@ import com.wk.common.vo.PageList;
 import com.wk.common.vo.Result;
 import com.wk.commonservice.service.CommonService;
 import com.wk.commonservice.service.SeqService;
+import com.wk.platform.user.UserInfoRepo;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -28,6 +29,8 @@ public class CustomerServiceImpl implements CustomerService {
     private CommonService commonService;
     @Autowired
     private SeqService seqService;
+    @Autowired
+    private UserInfoRepo userInfoRepo;
 
     @Transactional
     @Override
@@ -70,6 +73,7 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public Result<PageList<Customer>> getCustomerPageList(String keyword, int page, int size, String operateUserId) {
+
         String sql = "SELECT * FROM customer WHERE 1=1";
         Map<String,Object> param = new HashMap<>();
         if(StringUtils.isNotBlank(keyword)){
@@ -82,5 +86,39 @@ public class CustomerServiceImpl implements CustomerService {
         Page<Customer> list = commonService.pageBySql(sql,param,pageable,Customer.class);
 
         return Result.success(new PageList<Customer>(list.getContent(),list.getTotalElements(),page,size));
+    }
+
+    @Override
+    public Result<List<Customer>> getNoReportCustomerList(String keyword, int reportId, String operateUserId) {
+        String sql = "SELECT * FROM customer WHERE customer_id != '0000' and  customer_id not in" +
+                " (SELECT customer_id FROM report_auth WHERE report_id=:reportId)";
+        Map<String,Object> param = new HashMap<>();
+        param.put("reportId",reportId);
+
+        if(StringUtils.isNotBlank(keyword)){
+            sql += " AND (customer_id LIKE :keyword OR company LIKE :keyword)";
+            param.put("keyword","%"+keyword+"%");
+        }
+
+        List<Customer> customers = commonService.listBySql(sql, param, Customer.class);
+
+        return Result.success(customers);
+    }
+
+    @Override
+    public Result<List<Customer>> getHasReportCustomerList(String keyword, int reportId, String operateUserId) {
+        String sql = "SELECT * FROM customer WHERE customer_id != '0000' and customer_id in" +
+                " (SELECT customer_id FROM report_auth WHERE report_id=:reportId)";
+        Map<String,Object> param = new HashMap<>();
+        param.put("reportId",reportId);
+
+        if(StringUtils.isNotBlank(keyword)){
+            sql += " AND (customer_id LIKE :keyword OR company LIKE :keyword)";
+            param.put("keyword","%"+keyword+"%");
+        }
+
+        List<Customer> customers = commonService.listBySql(sql, param, Customer.class);
+
+        return Result.success(customers);
     }
 }

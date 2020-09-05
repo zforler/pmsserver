@@ -16,4 +16,8 @@ public interface CustomerService {
     Result<List<Customer>> getCustomerList(String keyword, String operateUserId);
 
     Result<PageList<Customer>> getCustomerPageList(String keyword, int page, int size,String operateUserId);
+
+    Result<List<Customer>> getNoReportCustomerList(String keyword,int reportId, String operateUserId);
+
+    Result<List<Customer>> getHasReportCustomerList(String keyword,int reportId, String operateUserId);
 }

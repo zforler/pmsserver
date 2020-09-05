@@ -80,4 +80,28 @@ public class CustomerController {
             return Result.error(e.getMessage());
         }
     }
+
+    @ApiOperation("获取未分配给定报表客户列表")
+    @GetMapping("/getNoReportCustomerList")
+    public Result<List<Customer>> getNoReportCustomerList(String keyword, int reportId, String token){
+        try {
+            String operateUserId = LocalMemCache.getUserIdByToken(token);
+            return customerService.getNoReportCustomerList(keyword,reportId,  operateUserId);
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            return Result.error(e.getMessage());
+        }
+    }
+
+    @ApiOperation("获取分配给定报表客户列表")
+    @GetMapping("/getHasReportCustomerList")
+    public Result<List<Customer>> getHasReportCustomerList(String keyword, int reportId, String token){
+        try {
+            String operateUserId = LocalMemCache.getUserIdByToken(token);
+            return customerService.getHasReportCustomerList(keyword,reportId, operateUserId);
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            return Result.error(e.getMessage());
+        }
+    }
 }
