@@ -24,6 +24,7 @@ public class LoggerConfguration extends WebMvcConfigurerAdapter {
                 .allowedMethods("POST", "GET", "PUT", "OPTIONS", "DELETE")
                 .maxAge(3600)
                 .allowCredentials(true);
+        super.addCorsMappings(registry);
     }
 
 }

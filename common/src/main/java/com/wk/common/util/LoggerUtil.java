@@ -26,15 +26,18 @@ public class LoggerUtil {
         REQUEST_LOG.remove();
     }
 
-    public static SysLog getLog(HttpServletRequest request, Object o){
+    public static SysLog getLog(HttpServletRequest request, Object handler){
         //1.依次获取每个属性信息 userId,operator,action,remark,ip,targetType
         SysLog log = new SysLog();
         log.setClientIp(LoggerUtil.getCliectIp(request));
         log.setRequestUri(request.getRequestURI());
         log.setRequestMethod(request.getMethod());
-
+        log.setRequestTime(TimeUtil.getCurrentInMillis());
+        if (!(handler instanceof HandlerMethod)) {
+            return log;
+        }
         //获取注解中的方法描述
-        HandlerMethod method = (HandlerMethod)o;
+        HandlerMethod method = (HandlerMethod)handler;
         ApiOperation apiOperation = method.getMethod().getAnnotation(ApiOperation.class);
         if(apiOperation != null){
             log.setRemark(apiOperation.value());
@@ -52,23 +55,20 @@ public class LoggerUtil {
 
             }
         }
-        String userTypeId="";
-        if(!StringUtils.isBlank(token)){
+        if(!StringUtils.isBlank(token) && token.length()>8){
             log.setUserId(getUserIdByToken(token));
         }else {
-
             log.setUserId(null);
         }
         log.setParamData(paramData);
 
-        log.setRequestTime(TimeUtil.getCurrentInMillis());
         return log;
     }
     public static String getUserIdByToken(String token){
         if(StringUtils.isBlank(token)){
             return null;
         }else {
-            return token.substring(32);
+            return token.substring(token.length()-8);
         }
     }
     public static SysLog updateLog(SysLog log, HttpServletResponse response){

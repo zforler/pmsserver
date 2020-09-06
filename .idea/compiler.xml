@@ -6,10 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="platform" />
-        <module name="common" />
-        <module name="commonservice" />
         <module name="bean" />
+        <module name="common" />
+        <module name="platform" />
+        <module name="commonservice" />
+        <module name="common-cache" />
         <module name="config" />
       </profile>
     </annotationProcessing>
@@ -17,6 +18,7 @@
       <module name="bean" target="1.8" />
       <module name="boot" target="1.8" />
       <module name="common" target="1.8" />
+      <module name="common-cache" target="1.8" />
       <module name="commonservice" target="1.8" />
       <module name="config" target="1.8" />
       <module name="platform" target="1.8" />
@@ -27,6 +29,7 @@
       <module name="bean" options="-parameters" />
       <module name="boot" options="" />
       <module name="common" options="-parameters" />
+      <module name="common-cache" options="-parameters" />
       <module name="commonservice" options="-parameters" />
       <module name="config" options="-parameters" />
       <module name="platform" options="-parameters" />

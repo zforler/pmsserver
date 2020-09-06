@@ -28,10 +28,11 @@ public class LocalMemCache {
         return getUserByToken(xToken).getUserId();
     }
     public static String getUserIdByToken(String token){
-        return "00000000";
-//        return getUserByToken(token).getUserId();
+        return token.substring(token.length() - 8);
+//        return getUserByoken(token).getUserId();
     }
     public static void deleteUserToken(String token){
         tokenCache.invalidate(token);
     }
+
 }

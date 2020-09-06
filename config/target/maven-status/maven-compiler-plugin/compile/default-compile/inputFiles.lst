@@ -1,4 +1,5 @@
 F:\myprogram\pmsserver\config\src\main\java\com\wk\config\interceptor\AuthorizationInterceptor.java
+F:\myprogram\pmsserver\config\src\main\java\com\wk\config\filter\LoggerConfguration.java
 F:\myprogram\pmsserver\config\src\main\java\com\wk\config\filter\FilterConfig.java
 F:\myprogram\pmsserver\config\src\main\java\com\wk\config\interceptor\ResultResponseBodyAdvice.java
 F:\myprogram\pmsserver\config\src\main\java\com\wk\config\annotation\IgnoreAuth.java

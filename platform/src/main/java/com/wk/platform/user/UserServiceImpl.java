@@ -4,8 +4,10 @@ import com.wk.bean.Customer;
 import com.wk.bean.Menus;
 import com.wk.bean.Role;
 import com.wk.bean.UserInfo;
+import com.wk.cache.RedisCacheService;
 import com.wk.common.cache.LocalMemCache;
 import com.wk.common.constant.Const;
+import com.wk.common.util.LoggerUtil;
 import com.wk.common.util.MD5Util;
 import com.wk.common.util.TimeUtil;
 import com.wk.common.vo.PageList;
@@ -46,6 +48,9 @@ public class UserServiceImpl implements UserService {
     private CustomerRepo customerRepo;
     @Autowired
     private RoleRepo roleRepo;
+    @Autowired
+    private RedisCacheService redisCacheService;
+
     @Override
     public Result login(String userName, String password) {
         String md5Str = MD5Util.getMD5Str(password);
@@ -58,8 +63,11 @@ public class UserServiceImpl implements UserService {
 
         String userId = userInfo.getUserId();
         //生成token
-        String token = UUID.randomUUID().toString()+userId;
+        String token = UUID.randomUUID().toString().replace("-","")+userId;
         LocalMemCache.addUserToken(token,userInfo);
+
+        redisCacheService.addUserInfo(token,userInfo);
+
         res.put("token", token);
 
         Customer customer = customerRepo.findFirstByCustomerId(userInfo.getCustomerId());
@@ -68,6 +76,7 @@ public class UserServiceImpl implements UserService {
 //        res.put("menus", userMenus.getData());
         Role role = roleRepo.findFirstByRoleId(userInfo.getRoleId());
         res.put("role", role);
+        LoggerUtil.getRequestLog().setUserId(userId);
         return Result.success(res);
     }
 

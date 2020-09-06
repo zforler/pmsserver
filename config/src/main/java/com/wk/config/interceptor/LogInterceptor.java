@@ -1,8 +1,10 @@
 package com.wk.config.interceptor;
 
 import com.wk.bean.SysLog;
+import com.wk.common.util.ContextHolder;
 import com.wk.common.util.GsonUtil;
 import com.wk.common.util.LoggerUtil;
+import com.wk.commonservice.service.SysLogService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -23,7 +25,7 @@ public class LogInterceptor implements HandlerInterceptor {
             log = LoggerUtil.getLog(httpServletRequest, o);
             LoggerUtil.setRequestLog(log);
         }catch (Exception e){
-            logger.error("logger",e.getMessage());
+            logger.error("logger",e);
         }
         return true;
     }
@@ -35,29 +37,25 @@ public class LogInterceptor implements HandlerInterceptor {
 
     @Override
     public void afterCompletion(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, Exception e) throws Exception {
+        if("OPTIONS".equals(httpServletRequest.getMethod())){
+            return;
+        }
         //返回视图时，插入操作日志
-        //LogMapper logMapper = getMapper(LogMapper.class,httpServletRequest);
-//        SysLog log = LoggerUtil.getRequestLog();
-//
-//        log =LoggerUtil.updateLog(log,httpServletResponse);
-//
-//        logger.info(GsonUtil.toJson(log,SysLog.class));
-//        if(log.getRequestMethod().equalsIgnoreCase("get")){
-//            LoggerUtil.removeRequestLog();
-//            return;
-//        }
-//        try {
-//            //保存
-//
-////            SysLogService sysLogService= ContextHolder.getBean(SysLogService.class);
-////            sysLogService.saveSysLog(log);
-//        } catch (Exception e1) {
-//            logger.error(e1.getMessage(),e1);
-//        }finally {
-//            LoggerUtil.removeRequestLog();
-//        }
-
-
+        SysLog log = LoggerUtil.getRequestLog();
+        log =LoggerUtil.updateLog(log,httpServletResponse);
+        System.out.println(log.getRequestMethod());
+        logger.info(GsonUtil.toJson(log,SysLog.class));
+        if("get".equalsIgnoreCase(log.getRequestMethod())){
+            LoggerUtil.removeRequestLog();
+            return;
+        }
+        try {
+            SysLogService sysLogService= ContextHolder.getBean(SysLogService.class);
+            sysLogService.saveSysLog(log);
+        } catch (Exception e1) {
+            logger.error(e1.getMessage(),e1);
+        }finally {
+            LoggerUtil.removeRequestLog();
+        }
     }
-
 }
