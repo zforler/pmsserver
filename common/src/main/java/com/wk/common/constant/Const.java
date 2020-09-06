@@ -48,4 +48,14 @@ public final class Const {
     //员工状态
     public static final int STAFF_STATUS_NORMAL = 0;
     public static final int STAFF_STATUS_LEAVE = 1;
+
+    public static final int STAFF_SEX_NAN = 1;
+    public static final int STAFF_SEX_NV = 2;
+
+    public static final int STAFF_TYPE_NORMAL = 0;
+    public static final int STAFF_TYPE_TEMP = 1;
+
+    //导入类型
+    public static final int IMPORT_STAFF = 1;
+    public static final int IMPORT_CARD = 2;
 }

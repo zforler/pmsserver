@@ -12,6 +12,8 @@ public interface DepartmentRepo extends JpaRepository<Department,Integer> {
 
     Department findFirstByDepartmentIdAndStatusEquals(String departmentId,int status);
 
+    Department findFirstByDepartmentIdAndStatusAndCustomerId(String departmentId,int status,String customerId);
+
     @Modifying
     @Query(value = "UPDATE department SET end_time=?3,status=?2 where FIND_IN_SET(?1,parents)",nativeQuery = true)
     int updateSubDepartStatusAndEndTime(String departmentId,int status,int time);

@@ -3,6 +3,7 @@ package com.wk.config.interceptor;
 import com.wk.bean.UserInfo;
 import com.wk.cache.RedisCacheService;
 import com.wk.common.cache.LocalMemCache;
+import com.wk.common.constant.Const;
 import com.wk.common.exception.Errorcode;
 import com.wk.common.util.ContextHolder;
 import com.wk.common.vo.Result;
@@ -45,6 +46,13 @@ public class AuthorizationInterceptor extends HandlerInterceptorAdapter {
        }
         //从header中获取token
         String token = request.getHeader("x-token");
+        if(StringUtils.isEmpty(token)){
+            try {
+                token = request.getParameterMap().get(Const.LOGIN_TOKEN_PARAM)[0];
+            }catch (Exception e){
+
+            }
+        }
         //token为空
         if (StringUtils.isEmpty(token)) {
             response.setContentType("text/html;charset=utf-8");

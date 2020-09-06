@@ -43,8 +43,6 @@ public class LogInterceptor implements HandlerInterceptor {
         //返回视图时，插入操作日志
         SysLog log = LoggerUtil.getRequestLog();
         log =LoggerUtil.updateLog(log,httpServletResponse);
-        System.out.println(log.getRequestMethod());
-        logger.info(GsonUtil.toJson(log,SysLog.class));
         if("get".equalsIgnoreCase(log.getRequestMethod())){
             LoggerUtil.removeRequestLog();
             return;
