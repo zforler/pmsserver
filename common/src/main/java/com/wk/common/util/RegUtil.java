@@ -12,8 +12,4 @@ public class RegUtil {
     public static boolean checkStaffNo(String staffNo){
         return Pattern.matches(REG_STAFFNO,staffNo);
     }
-
-    public static void main(String[] args) {
-        System.out.println(RegUtil.checkStaffNo("23455.1234"));
-    }
 }

@@ -4,7 +4,7 @@ import com.wk.bean.BatchItem;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-public interface BatchItemRepo extends JpaRepository<BatchItem,String> {
+public interface BatchItemRepo extends JpaRepository<BatchItem,Integer> {
     void deleteByItemId(String itemId);
     BatchItem findFirstByBatchIdAndItemId(String batchId,String itemId);
     BatchItem findFirstByBatchIdAndItemIdAndIdNot(String batchId,String itemId,int id);

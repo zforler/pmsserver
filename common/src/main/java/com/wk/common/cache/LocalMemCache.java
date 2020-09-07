@@ -2,8 +2,6 @@ package com.wk.common.cache;
 
 import com.github.benmanes.caffeine.cache.Cache;
 import com.github.benmanes.caffeine.cache.Caffeine;
-import com.github.benmanes.caffeine.cache.LoadingCache;
-import com.sun.corba.se.impl.orbutil.graph.Graph;
 import com.wk.bean.UserInfo;
 
 import javax.servlet.http.HttpServletRequest;

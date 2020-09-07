@@ -2,7 +2,7 @@
 <configuration>
     <include resource="org/springframework/boot/logging/logback/base.xml"/>
     <jmxConfigurator/>
-    <property name="project" value="hhd-platform-service-station"/>
+    <property name="project" value="service"/>
     <springProperty scope="context" name="ip" source="spring.cloud.client.ipAddress" />
     <appender name="LOGSTASH" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <!--<filter class="ch.qos.logback.classic.filter.LevelFilter">-->

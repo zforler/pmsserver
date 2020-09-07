@@ -30,6 +30,7 @@ public class UserController {
     @PostMapping("/login")
     public Result login(String userName,String password){
         try {
+            logger.info("login:"+userName);
             return userService.login(userName, password);
         }catch (Exception e){
             logger.error(e.getMessage(),e);
