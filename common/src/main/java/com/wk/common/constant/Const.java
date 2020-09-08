@@ -58,4 +58,7 @@ public final class Const {
     //导入类型
     public static final int IMPORT_STAFF = 1;
     public static final int IMPORT_CARD = 2;
+    //卡类型
+    public static final int CARD_TYPE_STAFF = 1;
+    public static final int CARD_TYPE_PRODUCT = 2;
 }

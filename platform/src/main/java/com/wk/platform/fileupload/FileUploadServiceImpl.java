@@ -1,5 +1,6 @@
 package com.wk.platform.fileupload;
 
+import com.wk.bean.Card;
 import com.wk.bean.Department;
 import com.wk.bean.Staff;
 import com.wk.common.constant.Const;
@@ -7,6 +8,7 @@ import com.wk.common.util.RegUtil;
 import com.wk.common.util.TimeUtil;
 import com.wk.common.vo.Result;
 import com.wk.commonservice.service.SeqService;
+import com.wk.platform.card.CardRepo;
 import com.wk.platform.department.DepartmentRepo;
 import com.wk.platform.staff.StaffRepo;
 import org.apache.commons.lang3.StringUtils;
@@ -14,6 +16,7 @@ import org.apache.poi.hssf.usermodel.HSSFDateUtil;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.checkerframework.checker.units.qual.A;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,6 +38,8 @@ public class FileUploadServiceImpl implements FileUploadService {
     private DepartmentRepo departmentRepo;
     @Autowired
     private SeqService seqService;
+    @Autowired
+    private CardRepo cardRepo;
 
     private Map<String,Integer> sexMap = new HashMap<String,Integer>(){
         {
@@ -48,11 +53,18 @@ public class FileUploadServiceImpl implements FileUploadService {
             this.put("临时工",Const.STAFF_TYPE_TEMP);
         }
     };
+    private Map<String,Integer> cardTypeMap = new HashMap<String,Integer>(){
+        {
+            this.put("员工卡", Const.CARD_TYPE_STAFF);
+            this.put("发料卡",Const.CARD_TYPE_PRODUCT);
+        }
+    };
     @Transactional
     @Override
     public Result uploadFile(MultipartFile file, String customerId, int type, String operateUserId) {
         Workbook hssfWorkbook = null;
         List<Staff> staffList = null;
+        List<Card> cardList = null;
         try (InputStream inputStream = file.getInputStream()){
             String fileName = file.getOriginalFilename();
             if (fileName.endsWith("xlsx")){
@@ -65,9 +77,8 @@ public class FileUploadServiceImpl implements FileUploadService {
             Sheet hssfSheet = hssfWorkbook.getSheetAt(0);
             if(Const.IMPORT_STAFF == type){
                 staffList = readStaff(hssfSheet, customerId, operateUserId);
-
             }else if(Const.IMPORT_CARD == type){
-
+                cardList = readCard(hssfSheet, customerId, operateUserId);
             }else{
 
             }
@@ -78,6 +89,8 @@ public class FileUploadServiceImpl implements FileUploadService {
         }
         if(Const.IMPORT_STAFF == type){
             staffRepo.saveAll(staffList);
+        }else if(Const.IMPORT_CARD == type){
+            cardRepo.saveAll(cardList);
         }
         return Result.success();
     }
@@ -180,7 +193,53 @@ public class FileUploadServiceImpl implements FileUploadService {
 
         return staffList;
     }
+    @Transactional
+    public List<Card> readCard(Sheet sheet, String targetCustomerId, String operateUserId) throws Exception {
+        List<Card> cardList = new ArrayList<>();
+        Map<String ,String> cardNoMap = new HashMap<>();
+        int second = TimeUtil.getCurrentInSecond();
+        for (int rowNum = 1,rowCount=sheet.getPhysicalNumberOfRows(); rowNum < rowCount; rowNum++) {
+            Row hssfRow = sheet.getRow(rowNum);
+            //卡内号
+            Cell c1 = hssfRow.getCell(0);
+            String cardNo = getValueOfString(c1,rowNum,1);
+            int len = cardNo.length();
+            if(len<1 || len > 32){
+                throw new Exception("第"+rowNum+"行，IC卡内号长度1-32字符");
+            }
+            if(cardNoMap.containsKey(cardNo)){
+                throw new Exception("第"+rowNum+"行，IC卡内号重复");
+            }
+            cardNoMap.put(cardNo,cardNo);
+            Card check = cardRepo.findFirstByCardNo(cardNo);
+            if(check != null){
+                throw new Exception("第"+rowNum+"行，IC卡内号已存在");
+            }
 
+            //卡类型
+            Cell c2 = hssfRow.getCell(1);
+            String cardType = getValueOfString(c2,rowNum,2);
+            if(!cardTypeMap.containsKey(cardType)){
+                throw new Exception("第"+rowNum+"行，IC卡类型错误");
+            }
+
+
+            Card card = new Card();
+            card.setAppend("自动导入");
+            card.setCardNo(cardNo);
+            card.setStatus(0);
+            String cardId = seqService.getNextBusinessId(Const.BZ_CARD, targetCustomerId, 4);
+            card.setCardId(cardId);
+            int currentInSecond = TimeUtil.getCurrentInSecond();
+            card.setCreateTime(currentInSecond);
+            card.setUpdateTime(currentInSecond);
+            card.setCustomerId(targetCustomerId);
+            card.setCardType(cardTypeMap.get(cardType));
+            cardList.add(card);
+        }
+
+        return cardList;
+    }
     private String getValueOfString(Cell cell, int rowNum, int columnNum) throws Exception{
         String res = "";
         if(cell == null){

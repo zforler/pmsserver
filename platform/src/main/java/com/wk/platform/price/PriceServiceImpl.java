@@ -100,7 +100,17 @@ public class PriceServiceImpl implements PriceService {
 
     @Override
     public Result<List<Price>> getHisPriceList(String priceId, String customerId, String operateUserId) {
-        List<Price> prices = priceRepo.findAllByPriceId(priceId);
+        String sql = "SELECT p.*,pd.production_name,s.spec_name,t.technology_name,sh.shift_name FROM price p LEFT JOIN" +
+                " production pd ON p.production_id=pd.production_id AND pd.end_time=0 LEFT JOIN spec s ON p.spec_id=s.spec_id AND s.end_time=0 " +
+                "LEFT JOIN technology t ON p.technology_id=t.technology_id AND t.end_time=0 LEFT JOIN shift sh ON" +
+                " p.shift_id=sh.shift_id AND sh.reactive_time=0 WHERE p.customer_id=:customerId and p.price_id=:priceId";
+
+        Map<String,Object> param = new HashMap<>();
+        param.put("customerId",customerId);
+        param.put("priceId",priceId);
+
+        List<Price> prices = commonService.listBySql(sql, param, Price.class);
+
         return Result.success(prices);
     }
 }
