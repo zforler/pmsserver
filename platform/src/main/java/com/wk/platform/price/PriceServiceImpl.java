@@ -27,8 +27,8 @@ public class PriceServiceImpl implements PriceService {
     @Override
     public Result<Price> addPrice(Price price, String operateUserId) {
         String customerId = price.getCustomerId();
-        Price old = priceRepo.findFirstByProductionIdAndSpecIdAndTechnologyIdAndShiftIdAndCustomerId(price.getProductionId()
-                , price.getSpecId(), price.getTechnologyId(), price.getShiftId(), customerId);
+        Price old = priceRepo.findFirstByProductionIdAndSpecIdAndTechnologyIdAndShiftIdAndPriceTypeAndCustomerId(price.getProductionId()
+                , price.getSpecId(), price.getTechnologyId(), price.getShiftId(),price.getPriceType(), customerId);
         if(old != null){
             return Result.error("计价规则重复");
         }
@@ -49,8 +49,8 @@ public class PriceServiceImpl implements PriceService {
             return Result.error("无此计价规则");
         }
         String customerId = price.getCustomerId();
-        Price old1 = priceRepo.findFirstByProductionIdAndSpecIdAndTechnologyIdAndShiftIdAndCustomerIdAndIdNot(price.getProductionId()
-                , price.getSpecId(), price.getTechnologyId(), price.getShiftId(), customerId,price.getId());
+        Price old1 = priceRepo.findFirstByProductionIdAndSpecIdAndTechnologyIdAndShiftIdAndPriceTypeAndCustomerIdAndIdNot(price.getProductionId()
+                , price.getSpecId(), price.getTechnologyId(), price.getShiftId(),price.getPriceType(), customerId,price.getId());
         if(old1 != null){
             return Result.error("计价规则重复");
         }

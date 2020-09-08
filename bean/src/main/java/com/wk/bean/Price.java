@@ -26,6 +26,17 @@ public class Price {
     private String specName;
     private String technologyName;
     private String shiftName;
+    private Integer priceType;
+    @Basic
+    @Column(name = "price_type")
+    public Integer getPriceType() {
+        return priceType;
+    }
+
+    public void setPriceType(Integer priceType) {
+        this.priceType = priceType;
+    }
+
     @Transient
     public String getProductionName() {
         return productionName;
