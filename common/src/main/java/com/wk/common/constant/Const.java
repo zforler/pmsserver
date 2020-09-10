@@ -61,4 +61,13 @@ public final class Const {
     //卡类型
     public static final int CARD_TYPE_STAFF = 1;
     public static final int CARD_TYPE_PRODUCT = 2;
+    //工资统计维度
+    public static final int SALARY_TYPE_DAY = 1;
+    public static final int SALARY_TYPE_MONTH = 2;
+    //设备计费维度
+    public static final int CALC_STAFF_TYPE = 1;
+    public static final int CALC_SHIFT = 2;
+    //是否生效
+    public static final int ACTIVE = 1;
+    public static final int INACTIVE = 0;
 }

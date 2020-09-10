@@ -1,6 +1,7 @@
 package com.wk.platform.subEquipment;
 
 import com.wk.bean.SubEquipment;
+import com.wk.bean.SubEquipmentCalcLog;
 import com.wk.common.cache.LocalMemCache;
 import com.wk.common.vo.Result;
 import com.wk.platform.subEquipment.SubEquipmentController;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 public class SubEquipmentController {
@@ -69,4 +71,28 @@ public class SubEquipmentController {
         }
     }
 
+    @ApiOperation("修改终端支持计费类型")
+    @PostMapping("/calcSwitch")
+    public Result<SubEquipment> calcSwitch(String subEquipmentId, int type,int status, String customerId, String token){
+        try {
+            String operateUserId = LocalMemCache.getUserIdByToken(token);
+            return subEquipmentService.calcSwitch(subEquipmentId, type, status, customerId,operateUserId);
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            return Result.error(e.getMessage());
+        }
+    }
+
+    @ApiOperation("获取终端支持计费类型修改记录")
+    @GetMapping("/getSubEquipmentCalcLogList")
+    public Result<Map<String,List<SubEquipmentCalcLog>>> getSubEquipmentCalcLogList(String subEquipmentId,
+                                                                                    String customerId, String token){
+        try {
+            String operateUserId = LocalMemCache.getUserIdByToken(token);
+            return subEquipmentService.getSubEquipmentCalcLogList(subEquipmentId,customerId,  operateUserId);
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            return Result.error(e.getMessage());
+        }
+    }
 }

@@ -13,6 +13,8 @@ public class SubEquipment {
     private Integer createTime;
     private Integer updateTime;
     private String append;
+    private Integer staffTypeCalc;
+    private Integer shiftCalc;
 
     @Id
     @Column(name = "sub_equipment_id")
@@ -101,5 +103,25 @@ public class SubEquipment {
     @Override
     public int hashCode() {
         return Objects.hash(subEquipmentId, subEquipmentName, type, equipmentId, createTime, updateTime, append);
+    }
+
+    @Basic
+    @Column(name = "staff_type_calc")
+    public Integer getStaffTypeCalc() {
+        return staffTypeCalc;
+    }
+
+    public void setStaffTypeCalc(Integer staffTypeCalc) {
+        this.staffTypeCalc = staffTypeCalc;
+    }
+
+    @Basic
+    @Column(name = "shift_calc")
+    public Integer getShiftCalc() {
+        return shiftCalc;
+    }
+
+    public void setShiftCalc(Integer shiftCalc) {
+        this.shiftCalc = shiftCalc;
     }
 }

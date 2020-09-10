@@ -41,6 +41,22 @@ public class Record {
     private String append;
     private String batchId;
     private String batchName;
+    private String priceId;
+    private String departmentId;
+    private String departmentName;
+    private Integer year;
+    private Integer month;
+    private Integer day;
+
+    @Basic
+    @Column(name = "price_id")
+    public String getPriceId() {
+        return priceId;
+    }
+
+    public void setPriceId(String priceId) {
+        this.priceId = priceId;
+    }
 
     @Basic
     @Column(name = "yield")
@@ -401,5 +417,55 @@ public class Record {
 
     public void setBatchName(String batchName) {
         this.batchName = batchName;
+    }
+
+    @Basic
+    @Column(name = "department_id")
+    public String getDepartmentId() {
+        return departmentId;
+    }
+
+    public void setDepartmentId(String departmentId) {
+        this.departmentId = departmentId;
+    }
+
+    @Basic
+    @Column(name = "department_name")
+    public String getDepartmentName() {
+        return departmentName;
+    }
+
+    public void setDepartmentName(String departmentName) {
+        this.departmentName = departmentName;
+    }
+
+    @Basic
+    @Column(name = "year")
+    public Integer getYear() {
+        return year;
+    }
+
+    public void setYear(Integer year) {
+        this.year = year;
+    }
+
+    @Basic
+    @Column(name = "month")
+    public Integer getMonth() {
+        return month;
+    }
+
+    public void setMonth(Integer month) {
+        this.month = month;
+    }
+
+    @Basic
+    @Column(name = "day")
+    public Integer getDay() {
+        return day;
+    }
+
+    public void setDay(Integer day) {
+        this.day = day;
     }
 }

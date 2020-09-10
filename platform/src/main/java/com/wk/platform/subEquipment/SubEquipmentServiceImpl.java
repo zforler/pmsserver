@@ -1,6 +1,7 @@
 package com.wk.platform.subEquipment;
 
 import com.wk.bean.SubEquipment;
+import com.wk.bean.SubEquipmentCalcLog;
 import com.wk.common.constant.Const;
 import com.wk.common.util.TimeUtil;
 import com.wk.common.vo.Result;
@@ -13,14 +14,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Service
 public class SubEquipmentServiceImpl implements SubEquipmentService {
     @Autowired
     private SubEquipmentRepo subEquipmentRepo;
+    @Autowired
+    private SubEquipmentCalcLogRepo subEquipmentCalcLogRepo;
     @Autowired
     private EquipmentRepo equipmentRepo;
     @Autowired
@@ -42,7 +43,8 @@ public class SubEquipmentServiceImpl implements SubEquipmentService {
         int currentInSecond = TimeUtil.getCurrentInSecond();
         subEquipment.setCreateTime(currentInSecond);
         subEquipment.setUpdateTime(currentInSecond);
-
+        subEquipment.setStaffTypeCalc(Const.INACTIVE);
+        subEquipment.setShiftCalc(Const.INACTIVE);
         SubEquipment newSub = subEquipmentRepo.saveAndFlush(subEquipment);
 
         equipmentRepo.updateSubCount(equipmentId,1);
@@ -67,6 +69,8 @@ public class SubEquipmentServiceImpl implements SubEquipmentService {
         subEquipment.setCreateTime(old.getCreateTime());
         subEquipment.setUpdateTime(currentInSecond);
         subEquipment.setType(old.getType());
+        subEquipment.setStaffTypeCalc(old.getStaffTypeCalc());
+        subEquipment.setShiftCalc(old.getShiftCalc());
 
         subEquipmentRepo.saveAndFlush(subEquipment);
 
@@ -87,5 +91,66 @@ public class SubEquipmentServiceImpl implements SubEquipmentService {
         List<SubEquipment> equipments = commonService.listBySql(sql, param, SubEquipment.class);
 
         return Result.success(equipments);
+    }
+    @Transactional
+    @Override
+    public Result calcSwitch(String subEquipmentId, int type,int status, String customerId, String operateUserId) {
+        SubEquipment sub = subEquipmentRepo.findFirstBySubEquipmentId(subEquipmentId);
+        if(sub == null){
+            return Result.error("终端不存在");
+        }
+        if(type == Const.CALC_STAFF_TYPE){
+            if(status == sub.getStaffTypeCalc()){
+                return Result.success();
+            }
+            sub.setStaffTypeCalc(status);
+            subEquipmentRepo.saveAndFlush(sub);
+        }else if(type == Const.CALC_SHIFT){
+            if(status == sub.getShiftCalc()){
+                return Result.success();
+            }
+            sub.setShiftCalc(status);
+            subEquipmentRepo.saveAndFlush(sub);
+        }else{
+            return Result.error("类型错误");
+        }
+        return updateLog(subEquipmentId,type,status);
+    }
+    @Transactional
+    public Result updateLog(String subEquipmentId,int type,int status){
+        SubEquipmentCalcLog log = subEquipmentCalcLogRepo.findFirstBySubEquipmentIdAndTypeAndEndTime(subEquipmentId,
+                type, 0);
+        int second = TimeUtil.getCurrentInSecond();
+        if(status == Const.INACTIVE){
+            if(log == null){
+                return Result.success();
+            }else{
+                log.setEndTime(second);
+                subEquipmentCalcLogRepo.saveAndFlush(log);
+            }
+        }else if(status == Const.ACTIVE){
+            if(log != null){
+                return Result.success();
+            }else{
+                SubEquipmentCalcLog subEquipmentCalcLog = new SubEquipmentCalcLog();
+                subEquipmentCalcLog.setSubEquipmentId(subEquipmentId);
+                subEquipmentCalcLog.setBeginTime(second);
+                subEquipmentCalcLog.setEndTime(0);
+                subEquipmentCalcLog.setType(type);
+                subEquipmentCalcLogRepo.saveAndFlush(subEquipmentCalcLog);
+            }
+        }
+        return Result.success();
+    }
+
+    @Override
+    public Result<Map<String,List<SubEquipmentCalcLog>>> getSubEquipmentCalcLogList(String subEquipmentId, String customerId
+            , String operateUserId) {
+        Map<String,List<SubEquipmentCalcLog>> map = new HashMap<>();
+        List<SubEquipmentCalcLog> his1 = subEquipmentCalcLogRepo.findAllBySubEquipmentIdAndType(subEquipmentId,Const.CALC_STAFF_TYPE);
+        map.put("his1", Optional.ofNullable(his1).orElse(new ArrayList<>()));
+        List<SubEquipmentCalcLog> his2 = subEquipmentCalcLogRepo.findAllBySubEquipmentIdAndType(subEquipmentId,Const.CALC_SHIFT);
+        map.put("his2", Optional.ofNullable(his2).orElse(new ArrayList<>()));
+        return Result.success(map);
     }
 }
