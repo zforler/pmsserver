@@ -12,6 +12,7 @@ F:\myprogram\pmsserver\bean\src\main\java\com\wk\bean\Technology.java
 F:\myprogram\pmsserver\bean\src\main\java\com\wk\bean\ReportAuth.java
 F:\myprogram\pmsserver\bean\src\main\java\com\wk\bean\SysDicItem.java
 F:\myprogram\pmsserver\bean\src\main\java\com\wk\bean\Equipment.java
+F:\myprogram\pmsserver\bean\src\main\java\com\wk\bean\Record.java
 F:\myprogram\pmsserver\bean\src\main\java\com\wk\bean\Batch.java
 F:\myprogram\pmsserver\bean\src\main\java\com\wk\bean\Production.java
 F:\myprogram\pmsserver\bean\src\main\java\com\wk\bean\Role.java
@@ -24,5 +25,6 @@ F:\myprogram\pmsserver\bean\src\main\java\com\wk\bean\SysSeq.java
 F:\myprogram\pmsserver\bean\src\main\java\com\wk\bean\Spec.java
 F:\myprogram\pmsserver\bean\src\main\java\com\wk\bean\MenuAuthority.java
 F:\myprogram\pmsserver\bean\src\main\java\com\wk\bean\StaffDepart.java
+F:\myprogram\pmsserver\bean\src\main\java\com\wk\bean\SubEquipmentCalcLog.java
 F:\myprogram\pmsserver\bean\src\main\java\com\wk\bean\Staff.java
 F:\myprogram\pmsserver\bean\src\main\java\com\wk\bean\UserInfo.java

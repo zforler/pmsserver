@@ -2,7 +2,7 @@
 <configuration>
     <include resource="org/springframework/boot/logging/logback/base.xml"/>
     <jmxConfigurator/>
-    <property name="project" value="service"/>
+    <property name="project" value="pms"/>
     <springProperty scope="context" name="ip" source="spring.cloud.client.ipAddress" />
     <appender name="LOGSTASH" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <!--<filter class="ch.qos.logback.classic.filter.LevelFilter">-->
@@ -14,19 +14,19 @@
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
             <!-- 历史日志会放到 bak 文件下，最多保存3天的历史，最多占用 512M的空间 -->
             <fileNamePattern>/log/bak/${project}.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
-            <maxHistory>3</maxHistory>
-            <maxFileSize>128MB</maxFileSize>
-            <totalSizeCap>512MB</totalSizeCap>
+            <maxHistory>90</maxHistory>
+            <maxFileSize>10GB</maxFileSize>
+            <totalSizeCap>100GB</totalSizeCap>
         </rollingPolicy>
         <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
             <providers>
                 <pattern>
                     <pattern>
                         {
-                        "tags": ["log"],
-                        "project": "${project}",
-                        "ip": "${ip}",
-                        "log_time": "%date{\"yyyy-MM-dd'T'HH:mm:ss,SSSZ\"}",
+                        "tags":["log"],
+                        "project":"${project}",
+                        "ip":"${ip}",
+                        "log_time":"%date{\"yyyy-MM-dd'T'HH:mm:ss,SSSZ\"}",
                         "log_level": "%level",
                         "thread": "%thread",
                         "class_name": "%class",
@@ -42,20 +42,28 @@
                 </pattern>
             </providers>
         </encoder>
-    </appender>
-    <!--<appender name="LOGSTASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">-->
-    <!--<destination>127.0.0.1:4560</destination>-->
-    <!--<encoder charset="UTF-8" class="net.logstash.logback.encoder.LogstashEncoder" />-->
-    <!--</appender>-->
-    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-        <encoder charset="UTF-8"> <!-- encoder 可以指定字符集，对于中文输出有意义 -->
-            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n
-            </pattern>
-        </encoder>
+        <!-- 日志文件的格式 -->
+<!--        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">-->
+<!--            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %msg%n</pattern>-->
+<!--            <charset>utf-8</charset>-->
+<!--        </encoder>-->
     </appender>
 
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoders are assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <pattern>%d{YY-mm-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <logger name="org.springframework" level="INFO"/>
+    <!--<logger name="org.thymeleaf" level="WARN"/>-->
+    <!--<logger name="org.xnio" level="WARN"/>-->
+    <logger name="springfox" level="INFO"/>
+    <!--<logger name="sun.rmi" level="WARN"/>-->
+    <logger name="com.wk" level="ALL"/>
     <root level="INFO">
         <appender-ref ref="LOGSTASH" />
-        <!--<appender-ref ref="STDOUT" />-->
+<!--        <appender-ref ref="STDOUT" />-->
     </root>
 </configuration>
