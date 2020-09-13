@@ -57,7 +57,8 @@ public class RecordServiceImpl implements RecordService {
 
     @Override
     public Result<List<Map<String, Object>>> getMonthSalaryReportList(String customerId, int beginTime, int endTime, String operateUserId) {
-        String sql = "SELECT staff_no,staff_name,department_name,SUM(total_price) total_price FROM record WHERE customer_id=:customerId";
+        String sql = "SELECT staff_no,staff_name,department_name,SUM(total_price) total_price" +
+                " FROM record WHERE customer_id=:customerId";
         Map<String,Object> param = new HashMap<>();
         param.put("customerId",customerId);
 
@@ -76,7 +77,7 @@ public class RecordServiceImpl implements RecordService {
 
     @Override
     public Result<List<Map<String,Object>>> getProductionReportdList(String customerId, int beginTime, int endTime, String operateUserId) {
-        String sql = "SELECT production_name,spec_name,technology_name,record_time,SUM(dispatch_kg) dispatch_kg FROM" +
+        String sql = "SELECT production_name,batch_name,spec_name,technology_name,record_time,SUM(delivery_kg) delivery_kg FROM" +
                 " record WHERE customer_id=:customerId ";
         Map<String,Object> param = new HashMap<>();
         param.put("customerId",customerId);
@@ -89,7 +90,7 @@ public class RecordServiceImpl implements RecordService {
             sql += " AND calc_time<:endTime";
             param.put("endTime",endTime);
         }
-        sql += " GROUP BY production_name,spec_name,technology_name";
+        sql += " GROUP BY production_name,batch_name,spec_name,technology_name";
         List<Map<String, Object>> record = commonService.nativeQuery4Map(sql, param);
         return Result.success(record);
     }
@@ -97,7 +98,7 @@ public class RecordServiceImpl implements RecordService {
     @Override
     public Result<List<Map<String,Object>>> getYieldReportList(String customerId, int beginTime, int endTime, String operateUserId) {
         String sql = "SELECT staff_no,staff_name,department_name, production_name,spec_name,technology_name," +
-                "SUM(dispatch_kg)/SUM(delivery_kg) yeild FROM record WHERE customer_id=:customerId ";
+                "SUM(dispatch_kg) dispatch_kg,SUM(delivery_kg) delivery_kg, 0 yield_t FROM record WHERE customer_id=:customerId ";
         Map<String,Object> param = new HashMap<>();
         param.put("customerId",customerId);
 

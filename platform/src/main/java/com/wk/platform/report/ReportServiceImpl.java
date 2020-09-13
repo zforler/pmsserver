@@ -67,9 +67,12 @@ public class ReportServiceImpl implements ReportService {
         return Result.success();
     }
 
+    @Transactional
     @Override
-    public Result deleteReport(String reportId, String operateUserId) {
-        return null;
+    public Result deleteReport(int reportId, String operateUserId) {
+        reportRepo.deleteAllByReportId(reportId);
+        reportAuthRepo.deleteAllByReportId(reportId);
+        return Result.success();
     }
 
     @Override

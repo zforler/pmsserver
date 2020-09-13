@@ -57,7 +57,7 @@ public class CustomerController {
         }
     }
 
-    @ApiOperation("获取企业下客户列表")
+    @ApiOperation("获取企业客户列表")
     @GetMapping("/getCustomerList")
     public Result<List<Customer>> getCustomerList(String keyword,  String token){
         try {

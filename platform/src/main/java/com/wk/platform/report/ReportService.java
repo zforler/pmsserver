@@ -10,7 +10,7 @@ public interface ReportService {
 
     Result updateReport(Report report,String operateUserId);
 
-    Result deleteReport(String reportId,String operateUserId);
+    Result deleteReport(int reportId,String operateUserId);
 
     Result<List<Report>> getReportList(String keyword, String customerId, String operateUserId);
 

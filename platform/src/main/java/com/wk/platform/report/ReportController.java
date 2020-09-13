@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -45,7 +46,7 @@ public class ReportController {
     }
     @ApiOperation("删除报表")
     @PostMapping("/deleteReport")
-    public Result<Report> deleteReport(String reportId, String token){
+    public Result<Report> deleteReport(@RequestParam(defaultValue = "-1",required = true) int reportId, String token){
         try {
             String operateUserId = LocalMemCache.getUserIdByToken(token);
             Result<Report> result = reportService.deleteReport(reportId, operateUserId);
