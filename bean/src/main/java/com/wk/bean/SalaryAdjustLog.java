@@ -9,16 +9,26 @@ public class SalaryAdjustLog {
     private int id;
     private String staffNo;
     private String customerId;
-    private Integer adjustType;
-    private Integer count;
+    private Integer adjust;
+    private Integer subsidy;
     private Integer year;
     private Integer month;
     private Integer day;
     private Integer updateTime;
     private String operateUserId;
+    private String userName;
     private String append;
+    @Transient
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     public int getId() {
         return id;
@@ -47,25 +57,23 @@ public class SalaryAdjustLog {
     public void setCustomerId(String customerId) {
         this.customerId = customerId;
     }
-
     @Basic
-    @Column(name = "adjust_type")
-    public Integer getAdjustType() {
-        return adjustType;
+    @Column(name = "adjust")
+    public Integer getAdjust() {
+        return adjust;
     }
 
-    public void setAdjustType(Integer adjustType) {
-        this.adjustType = adjustType;
+    public void setAdjust(Integer adjust) {
+        this.adjust = adjust;
     }
-
     @Basic
-    @Column(name = "count")
-    public Integer getCount() {
-        return count;
+    @Column(name = "subsidy")
+    public Integer getSubsidy() {
+        return subsidy;
     }
 
-    public void setCount(Integer count) {
-        this.count = count;
+    public void setSubsidy(Integer subsidy) {
+        this.subsidy = subsidy;
     }
 
     @Basic
@@ -136,8 +144,8 @@ public class SalaryAdjustLog {
         return id == that.id &&
                 Objects.equals(staffNo, that.staffNo) &&
                 Objects.equals(customerId, that.customerId) &&
-                Objects.equals(adjustType, that.adjustType) &&
-                Objects.equals(count, that.count) &&
+                Objects.equals(adjust, that.adjust) &&
+                Objects.equals(subsidy, that.subsidy) &&
                 Objects.equals(year, that.year) &&
                 Objects.equals(month, that.month) &&
                 Objects.equals(day, that.day) &&
@@ -148,6 +156,6 @@ public class SalaryAdjustLog {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, staffNo, customerId, adjustType, count, year, month, day, updateTime, operateUserId, append);
+        return Objects.hash(id, staffNo, customerId, adjust, subsidy, year, month, day, updateTime, operateUserId, append);
     }
 }

@@ -33,5 +33,5 @@ public interface StaffService {
     Result bindCards(String cardIds,String staffId,String customerId, String operateUserId);
     Result unbindCards(String cardIds,String staffId,String customerId, String operateUserId);
 
-
+    Result<Staff> getStaffByStaffNo(String staffNo,String customerId, String operateUserId);
 }

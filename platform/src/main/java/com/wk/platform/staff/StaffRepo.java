@@ -10,7 +10,6 @@ public interface StaffRepo extends JpaRepository<Staff,String> {
             " WHERE s.staff_id=?1",nativeQuery = true)
     Staff getStaffByStaffId(String staffId);
     Staff findFirstByStaffId(String staffId);
-
     @Modifying
     @Query(value = "update staff set status=?2 where staff_id=?1",nativeQuery = true)
     void updatStaffStatus(String staffId,int status);
@@ -18,4 +17,5 @@ public interface StaffRepo extends JpaRepository<Staff,String> {
     Staff findFirstByStaffIdAndCustomerId(String staffId,String customerId);
     Staff findFirstByStaffNoAndCustomerId(String staffNo,String customerId);
     Staff findFirstByStaffNoAndCustomerIdAndStaffIdNot(String staffNo,String customerId,String staffId);
+
 }

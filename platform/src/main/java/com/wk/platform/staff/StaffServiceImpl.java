@@ -322,4 +322,10 @@ public class StaffServiceImpl implements StaffService {
         staffCardRepo.updateEndtimeByCardId(staffId,arr, TimeUtil.getCurrentInSecond());
         return Result.success();
     }
+
+    @Override
+    public Result<Staff> getStaffByStaffNo(String staffNo, String customerId, String operateUserId) {
+        Staff staff = staffRepo.findFirstByStaffNoAndCustomerId(staffNo, customerId);
+        return Result.success(staff);
+    }
 }

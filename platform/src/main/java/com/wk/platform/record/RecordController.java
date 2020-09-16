@@ -36,12 +36,12 @@ public class RecordController {
 
     @ApiOperation("日工资")
     @GetMapping("/getSalaryReportList")
-    public Result<List<Map<String,Object>>> getSalaryReportList(String customerId,
+    public Result<List<Map<String,Object>>> getSalaryReportList(String customerId,String keyword,
                                                           @RequestParam(required = false,defaultValue = "-1") int beginTime,
                                                           @RequestParam(required = false,defaultValue = "-1") int endTime, String token){
         try {
             String operateUserId = LocalMemCache.getUserIdByToken(token);
-            return recordService.getSalaryReportList(customerId,beginTime,endTime,  operateUserId);
+            return recordService.getSalaryReportList(keyword,customerId,beginTime,endTime,  operateUserId);
         }catch (Exception e){
             logger.error(e.getMessage(),e);
             return Result.error(e.getMessage());
@@ -82,6 +82,19 @@ public class RecordController {
         try {
             String operateUserId = LocalMemCache.getUserIdByToken(token);
             return recordService.getYieldReportList(customerId,beginTime,endTime,  operateUserId);
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            return Result.error(e.getMessage());
+        }
+    }
+
+    @ApiOperation("日工资详情")
+    @GetMapping("/getStaffDayRecordList")
+    public Result<List<Map<String,Object>>> getStaffDayRecordList(String customerId, String staffNo, int year, int month,
+                                                                  int day, String token){
+        try {
+            String operateUserId = LocalMemCache.getUserIdByToken(token);
+            return recordService.getStaffDayRecordList(customerId,staffNo,year,month,day,operateUserId);
         }catch (Exception e){
             logger.error(e.getMessage(),e);
             return Result.error(e.getMessage());

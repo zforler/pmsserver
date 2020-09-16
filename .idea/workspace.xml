@@ -6,21 +6,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df02bf22-7c92-4e5a-914e-0194ec572d7b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/SalaryAdjustLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/salaryAdjust/SalaryAdjustLogController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/salaryAdjust/SalaryAdjustLogRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/salaryAdjust/SalaryAdjustLogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/salaryAdjust/SalaryAdjustLogServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b2c14589-ec84-4f00-8840-e72b435e08a2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b2c14589-ec84-4f00-8840-e72b435e08a2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bean/bean.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bean/bean.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/customer/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/customer/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/SalaryAdjustLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/SalaryAdjustLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/record/RecordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/record/RecordController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/record/RecordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/record/RecordService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/record/RecordServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/record/RecordServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/report/ReportAuthRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/report/ReportAuthRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/report/ReportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/report/ReportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/report/ReportRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/report/ReportRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/report/ReportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/report/ReportService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/report/ReportServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/report/ReportServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/salaryAdjust/SalaryAdjustLogRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/salaryAdjust/SalaryAdjustLogRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/salaryAdjust/SalaryAdjustLogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/salaryAdjust/SalaryAdjustLogServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffController.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffService.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffServiceImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/platform/target/" />
     <ignored path="$PROJECT_DIR$/boot/target/" />
@@ -60,19 +57,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/report/ReportController.java">
+        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/record/RecordServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="47" column="31" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/user/UserServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="127" column="91" selection-start-line="127" selection-start-column="91" selection-end-line="127" selection-end-column="109" />
+            <state relative-caret-position="3410">
+              <caret line="169" column="36" selection-start-line="169" selection-start-column="36" selection-end-line="169" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -81,46 +69,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/salaryAdjust/SalaryAdjustLogRepo.java">
+        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="74" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="74" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="6710">
+              <caret line="328" column="35" selection-start-line="328" selection-start-column="35" selection-end-line="328" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/salaryAdjust/SalaryAdjustLogService.java">
+        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="117" lean-forward="true" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="117" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/salaryAdjust/SalaryAdjustLogServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="3674">
+              <caret line="184" column="15" selection-start-line="184" selection-start-column="15" selection-end-line="184" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/salaryAdjust/SalaryAdjustLogController.java">
+        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/salaryAdjust/SalaryAdjustLogServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+            <state relative-caret-position="656">
+              <caret line="43" selection-start-line="43" selection-end-line="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -129,28 +99,43 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/user/UserController.java">
+        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-110">
-              <caret line="40" selection-start-line="40" selection-end-line="50" selection-end-column="5" />
+            <state relative-caret-position="660">
+              <caret line="35" column="35" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/customer/CustomerController.java">
+        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/record/RecordController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="80" />
+            <state relative-caret-position="1848">
+              <caret line="96" column="46" selection-start-line="96" selection-start-column="46" selection-end-line="96" selection-end-column="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/customer/CustomerService.java">
+        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffRepo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="9" selection-start-line="9" selection-end-line="15" selection-end-column="81" />
+            <state relative-caret-position="308">
+              <caret line="17" column="41" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/record/RecordService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="20" column="59" selection-start-line="20" selection-start-column="59" selection-end-line="20" selection-end-column="59" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -158,8 +143,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/report/ReportServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
+            <state relative-caret-position="1298">
               <caret line="74" column="31" selection-start-line="74" selection-start-column="31" selection-end-line="74" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/report/ReportService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -246,11 +240,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/common/src/main/java/com/wk/common/util/LoggerUtil.java" />
-        <option value="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/SysLog.java" />
-        <option value="$PROJECT_DIR$/config/src/main/java/com/wk/config/filter/LoggerConfguration.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/SysLog/SysLogRepo.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/SysLog/SysLogService.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/SysLog/SysLogServiceImpl.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/SysLog/SysLogController.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/sysLog/SysLogServiceImpl.java" />
@@ -275,8 +264,6 @@
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/price/PriceServiceImpl.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/record/RecordRepo.java" />
         <option value="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/Record.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/record/RecordController.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/record/RecordService.java" />
         <option value="$PROJECT_DIR$/common/src/main/java/com/wk/common/constant/Const.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/subEquipment/SubEquipmentCalcLogRepo.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/subEquipment/SubEquipmentController.java" />
@@ -286,17 +273,24 @@
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/user/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/platform/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/platform/src/main/resources/logback-spring.xml" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/record/RecordServiceImpl.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/report/ReportRepo.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/report/ReportService.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/report/ReportAuthRepo.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/report/ReportServiceImpl.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/report/ReportController.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/salaryAdjust/SalaryAdjustLogRepo.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/salaryAdjust/SalaryAdjustLogService.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/salaryAdjust/SalaryAdjustLogServiceImpl.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/customer/CustomerController.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/salaryAdjust/SalaryAdjustLogController.java" />
+        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/salaryAdjust/SalaryAdjustLogRepo.java" />
+        <option value="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/SalaryAdjustLog.java" />
+        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/salaryAdjust/SalaryAdjustLogServiceImpl.java" />
+        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/record/RecordService.java" />
+        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/record/RecordController.java" />
+        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/record/RecordServiceImpl.java" />
+        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffService.java" />
+        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffRepo.java" />
+        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffServiceImpl.java" />
+        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffController.java" />
       </list>
     </option>
   </component>
@@ -393,10 +387,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="137" />
-    <option name="y" value="139" />
-    <option name="width" value="1934" />
-    <option name="height" value="1054" />
+    <option name="x" value="789" />
+    <option name="y" value="59" />
+    <option name="width" value="1859" />
+    <option name="height" value="959" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -406,6 +400,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -496,21 +491,12 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="platform" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pmsserver" type="462c0819:PsiDirectoryNode" />
-              <item name="platform" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="staff" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -526,7 +512,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="F:/hhdprogram/chargeCloudFrontendBranch/protocol3" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -675,7 +661,13 @@
       <workItem from="1599787955677" duration="7608000" />
       <workItem from="1599819832553" duration="2759000" />
       <workItem from="1599868457891" duration="199000" />
-      <workItem from="1599911367528" duration="6525000" />
+      <workItem from="1599911367528" duration="6569000" />
+      <workItem from="1600041389539" duration="65000" />
+      <workItem from="1600081024670" duration="7389000" />
+      <workItem from="1600128521329" duration="55000" />
+      <workItem from="1600168837033" duration="46000" />
+      <workItem from="1600169150072" duration="4126000" />
+      <workItem from="1600214727681" duration="1183000" />
     </task>
     <task id="LOCAL-00001" summary="qq">
       <created>1597485488611</created>
@@ -894,19 +886,25 @@
       <option name="project" value="LOCAL" />
       <updated>1599834292272</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="qq">
+      <created>1600004953680</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1600004953680</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="304135000" />
+    <option name="totallyTimeSpent" value="317043000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.81299734" visible="true" weight="0.17358893" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8081472" visible="true" weight="0.28061768" />
       <window_info id="Structure" order="1" weight="0.25" />
-      <window_info id="Persistence" order="2" sideWeight="0.18700266" side_tool="true" visible="true" weight="0.17358893" />
+      <window_info id="Persistence" order="2" sideWeight="0.19185282" side_tool="true" visible="true" weight="0.28061768" />
       <window_info id="Designer" order="3" />
       <window_info id="Image Layers" order="4" />
       <window_info id="UI Designer" order="5" />
@@ -916,7 +914,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.2613391" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.18574513" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.17818575" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -937,7 +935,7 @@
       <window_info anchor="right" id="Database" order="6" weight="0.045793395" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Maven" order="9" visible="true" weight="0.12832801" />
+      <window_info anchor="right" id="Maven" order="9" weight="0.12832801" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -956,54 +954,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/platform/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2398">
-          <caret line="109" column="21" selection-start-line="109" selection-start-column="21" selection-end-line="109" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/boot/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/wk/bean/SysLog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/commonservice/src/main/java/com/wk/commonservice/service/SysLogServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/department/DepartmentRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="14" column="109" selection-start-line="14" selection-start-column="109" selection-end-line="14" selection-end-column="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common-cache/src/main/java/com/wk/cache/RedisCacheServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/wk/bean/Batch.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -1220,36 +1170,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/record/RecordController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="70" column="48" selection-start-line="70" selection-start-column="48" selection-end-line="70" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/record/RecordServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="59" column="93" selection-start-line="59" selection-start-column="82" selection-end-line="59" selection-end-column="93" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/record/RecordService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="120" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/wk/bean/Report.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -1264,13 +1184,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/report/ReportService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/report/ReportAuthRepo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -1278,24 +1191,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/report/ReportServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/report/ReportController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="74" column="31" selection-start-line="74" selection-start-column="31" selection-end-line="74" selection-end-column="31" />
+        <state relative-caret-position="726">
+          <caret line="47" column="31" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/report/ReportController.java">
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/user/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="47" column="31" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="31" />
+        <state>
+          <caret line="127" column="91" selection-start-line="127" selection-start-column="91" selection-end-line="127" selection-end-column="109" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/salaryAdjust/SalaryAdjustLogService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="10" column="117" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="117" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/user/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="40" selection-start-line="40" selection-end-line="50" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/customer/CustomerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="80" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/salaryAdjust/SalaryAdjustLogRepo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="74" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="74" />
+        <state relative-caret-position="132">
+          <caret line="9" column="78" selection-start-line="9" selection-start-column="78" selection-end-line="9" selection-end-column="78" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1309,54 +1249,112 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/user/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="127" column="91" selection-start-line="127" selection-start-column="91" selection-end-line="127" selection-end-column="109" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/salaryAdjust/SalaryAdjustLogServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/wk/bean/SalaryAdjustLog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#564#565#0" expanded="true" />
+            <element signature="e#595#596#0" expanded="true" />
+            <element signature="e#643#644#0" expanded="true" />
+            <element signature="e#683#684#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/user/UserController.java">
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/customer/CustomerServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-110">
-          <caret line="40" selection-start-line="40" selection-end-line="50" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/customer/CustomerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/salaryAdjust/SalaryAdjustLogService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="117" lean-forward="true" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="117" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="219">
+          <caret line="111" column="1" selection-start-line="111" selection-start-column="1" selection-end-line="121" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/salaryAdjust/SalaryAdjustLogController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+        <state relative-caret-position="257">
+          <caret line="33" column="40" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/record/RecordServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3410">
+          <caret line="169" column="36" selection-start-line="169" selection-start-column="36" selection-end-line="169" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6710">
+          <caret line="328" column="35" selection-start-line="328" selection-start-column="35" selection-end-line="328" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3674">
+          <caret line="184" column="15" selection-start-line="184" selection-start-column="15" selection-end-line="184" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="35" column="35" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/record/RecordController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1848">
+          <caret line="96" column="46" selection-start-line="96" selection-start-column="46" selection-end-line="96" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffRepo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="17" column="41" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/record/RecordService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="20" column="59" selection-start-line="20" selection-start-column="59" selection-end-line="20" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/report/ReportServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1298">
+          <caret line="74" column="31" selection-start-line="74" selection-start-column="31" selection-end-line="74" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/report/ReportService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/salaryAdjust/SalaryAdjustLogServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="656">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

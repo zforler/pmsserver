@@ -180,4 +180,16 @@ public class StaffController {
             return Result.error(e.getMessage());
         }
     }
+
+    @ApiOperation("根据员工编号获取员工信息")
+    @GetMapping("/getStaffByStaffNo")
+    public Result<Staff> getStaffByStaffNo(String staffNo,String customerId, String operateUserId){
+        try {
+            Result<Staff> result = staffService.getStaffByStaffNo(staffNo, customerId, operateUserId);
+            return result;
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            return Result.error(e.getMessage());
+        }
+    }
 }
