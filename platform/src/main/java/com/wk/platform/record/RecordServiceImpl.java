@@ -1,6 +1,7 @@
 package com.wk.platform.record;
 
 import com.wk.bean.SalaryAdjustLog;
+import com.wk.common.constant.Const;
 import com.wk.common.vo.Result;
 import com.wk.commonservice.service.CommonService;
 import com.wk.platform.salaryAdjust.SalaryAdjustLogRepo;
@@ -28,7 +29,9 @@ public class RecordServiceImpl implements RecordService {
     private SalaryAdjustLogRepo salaryAdjustLogRepo;
 
     @Override
-    public Result<List<Map<String,Object>>> getRecordList(String customerId, int beginTime, int endTime, String operateUserId) {
+    public Result<List<Map<String,Object>>> getRecordList(String customerId, int beginTime, int endTime, String keyword,
+                                                          String subEquipmentId,String departmentId,int priceType,
+                                                          String operateUserId) {
         String sql = "SELECT * FROM record WHERE customer_id=:customerId ";
         Map<String,Object> param = new HashMap<>();
         param.put("customerId",customerId);
@@ -41,6 +44,23 @@ public class RecordServiceImpl implements RecordService {
             sql += " AND calc_time<:endTime";
             param.put("endTime",endTime);
         }
+        if(StringUtils.isNotBlank(subEquipmentId)){
+            sql += " AND (dispatch_sub_id=:subEquipmentId OR delivery_sub_id=:subEquipmentId OR sign_sub_id=:subEquipmentId)";
+            param.put("subEquipmentId",subEquipmentId);
+        }
+        if(StringUtils.isNotBlank(departmentId)){
+            sql += " AND (department_id=:departmentId)";
+            param.put("departmentId",departmentId);
+        }
+        if(priceType>-1){
+            sql += " AND price_type=:priceType";
+            param.put("priceType",priceType);
+        }
+        if(StringUtils.isNotBlank(keyword)){
+            sql += " AND (staff_no LIKE :keyword OR staff_name LIKE :keyword)";
+            param.put("keyword","%"+keyword+"%");
+        }
+
         List<Map<String, Object>> record = commonService.nativeQuery4Map(sql, param);
         return Result.success(record);
     }
@@ -49,10 +69,9 @@ public class RecordServiceImpl implements RecordService {
     public Result<List<Map<String,Object>>> getSalaryReportList(String keyword,String customerId,int beginTime, int endTime,
                                                                 String operateUserId) {
 
-        String sql = "SELECT r.staff_no,s.staff_name,s.staff_type,department_name,production_name,spec_name,technology_name," +
-                "record_time,SUM(total_price) total_price,0 adjust,0 subsidy,r.year,r.month,r.day FROM record r" +
-                " LEFT JOIN staff s ON r.staff_no=s.staff_no" +
-                " WHERE r.customer_id=:customerId";
+        String sql = "SELECT r.staff_no,s.staff_name,s.staff_type,department_name,price_type,total_price,0 kg_salary," +
+                "0 count_salary,0 time_salary,0 adjust,0 subsidy,r.year,r.month,r.day FROM record r" +
+                " LEFT JOIN staff s ON r.staff_no=s.staff_no  WHERE r.customer_id=:customerId";
         Map<String,Object> param = new HashMap<>();
         param.put("customerId",customerId);
         LocalDateTime localDateTime = LocalDateTime.ofEpochSecond(beginTime, 0, OffsetDateTime.now().getOffset());
@@ -64,16 +83,49 @@ public class RecordServiceImpl implements RecordService {
         param.put("day", day);
         sql += " AND r.year=:year AND r.month=:month AND r.day=:day";
         if(StringUtils.isNotBlank(keyword)){
-            sql += " AND s.staff_name LIKE :keyword";
+            sql += " AND (s.staff_name LIKE :keyword OR s.staff_no LIKE :keyword)";
             param.put("keyword", "%"+keyword+"%");
         }
 
-        sql += " GROUP BY staff_no";
-        List<Map<String, Object>> records = commonService.nativeQuery4Map(sql, param);
-
-        if(records == null || records.size()==0){
-            return  Result.success(records);
+        List<Map<String, Object>> records1 = commonService.nativeQuery4Map(sql, param);
+        if(records1.size()==0){
+            return  Result.success(records1);
         }
+
+        List<Map<String, Object>> records = new ArrayList<>();
+        Map<String,Map<String, Object>> tmap = new HashMap<>();
+        Map<String, Object> temp = null;
+        for (int i = 0, len = records1.size(); i < len; i++) {
+            temp = records1.get(i);
+            String staffNo = String.valueOf(temp.get("staff_no"));
+            float priceType = Float.valueOf(String.valueOf(temp.get("price_type")));
+            float totalPrice = Float.valueOf(String.valueOf(temp.get("total_price")));
+            if(!tmap.containsKey(staffNo)){
+                tmap.put(staffNo,temp);
+                records.add(temp);
+                if(priceType == Const.PRICE_TYPE_WEIGHT){
+                    temp.put("kg_salary",totalPrice);
+                }else if(priceType == Const.PRICE_TYPE_COUNT){
+                    temp.put("count_salary",totalPrice);
+                }else if(priceType == Const.PRICE_TYPE_TIME){
+                    temp.put("time_salary",totalPrice);
+                }
+            }else{
+                Map<String, Object> prev = tmap.get(staffNo);
+                if(priceType == Const.PRICE_TYPE_WEIGHT){
+                    prev.put("kg_salary", Float.valueOf(String.valueOf(prev.get("kg_salary")))+totalPrice);
+                }else if(priceType == Const.PRICE_TYPE_COUNT){
+                    prev.put("count_salary", Float.valueOf(String.valueOf(prev.get("count_salary")))+totalPrice);
+                }else if(priceType == Const.PRICE_TYPE_TIME){
+                    prev.put("time_salary", Float.valueOf(String.valueOf(prev.get("time_salary")))+totalPrice);
+                }
+                prev.put("total_price", Float.valueOf(String.valueOf(prev.get("kg_salary")))
+                        +Float.valueOf(String.valueOf(prev.get("count_salary")))
+                        +Float.valueOf(String.valueOf(prev.get("time_salary"))));
+            }
+        }
+
+
         List<String> staffNos = records.stream().map(t -> String.valueOf(t.get("staff_no"))).collect(Collectors.toList());
         List<SalaryAdjustLog> salaryAdjustLogs = salaryAdjustLogRepo.findAllByStaffNoInAndYearAndMonthAndDay(staffNos,
                 year, month, day);

@@ -24,10 +24,13 @@ public class RecordController {
     @GetMapping("/getRecordList")
     public Result<List<Map<String,Object>>> getRecordList(String customerId,
                                                           @RequestParam(required = false,defaultValue = "-1") int beginTime,
-                                                          @RequestParam(required = false,defaultValue = "-1") int endTime, String token){
+                                                          @RequestParam(required = false,defaultValue = "-1") int endTime,
+                                                          String keyword, String subEquipmentId,String departmentId,
+                                                          @RequestParam(required = false,defaultValue = "-1")int priceType, String token){
         try {
             String operateUserId = LocalMemCache.getUserIdByToken(token);
-            return recordService.getRecordList(customerId,beginTime,endTime,  operateUserId);
+            return recordService.getRecordList(customerId,beginTime,endTime,keyword,subEquipmentId,departmentId,priceType,
+                    operateUserId);
         }catch (Exception e){
             logger.error(e.getMessage(),e);
             return Result.error(e.getMessage());

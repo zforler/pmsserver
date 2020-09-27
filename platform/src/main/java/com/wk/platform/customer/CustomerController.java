@@ -18,7 +18,7 @@ import java.util.List;
 
 @RestController
 public class CustomerController {
-    private final Logger logger = LoggerFactory.getLogger(RoleController.class);
+    private final Logger logger = LoggerFactory.getLogger(CustomerController.class);
     @Autowired
     private CustomerService customerService;
 

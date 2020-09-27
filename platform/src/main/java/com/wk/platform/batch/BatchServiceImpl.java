@@ -126,4 +126,14 @@ public class BatchServiceImpl implements BatchService {
 
         return Result.success(new PageList<>(list.getContent(),list.getTotalElements(),page,size));
     }
+
+    @Override
+    public Result<List<BatchItem>> getBatchItemList(String customerId, String operateUserId) {
+        String sql = "SELECT * FROM batch_item WHERE batch_id like :k";
+        Map<String,Object> param = new HashMap<>();
+        param.put("k", customerId+"%");
+        List<BatchItem> batchItems = commonService.listBySql(sql, param, BatchItem.class);
+
+        return Result.success(batchItems);
+    }
 }

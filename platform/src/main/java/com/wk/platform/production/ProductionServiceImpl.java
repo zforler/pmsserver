@@ -105,7 +105,7 @@ public class ProductionServiceImpl implements ProductionService {
 
     @Override
     public Result<List<ProductionVo>> getProductionVoList(String customerId, String operateUserId) {
-        List<Production> productions = productionRepo.findAllByCustomerId(customerId);
+        List<Production> productions = productionRepo.findAllByCustomerIdAndEndTime(customerId,0);
         List<ProductionVo> productionVos = new ArrayList<>();
         String pid = null;
         Production production = null;

@@ -116,7 +116,7 @@ public class RedisCacheServiceImpl implements RedisCacheService {
     @Override
     public boolean addUserInfo(String token, UserInfo userInfo) {
 		ValueOperations<String, String> opsForValue = redisTemplate.opsForValue();
-		opsForValue.set(token,gson.toJson(userInfo),3,TimeUnit.HOURS);
+		opsForValue.set(token,gson.toJson(userInfo),8,TimeUnit.HOURS);
         return true;
     }
 

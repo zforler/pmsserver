@@ -197,6 +197,7 @@ public class FileUploadServiceImpl implements FileUploadService {
     public List<Card> readCard(Sheet sheet, String targetCustomerId, String operateUserId) throws Exception {
         List<Card> cardList = new ArrayList<>();
         Map<String ,String> cardNoMap = new HashMap<>();
+        Map<String ,String> cardOutNoMap = new HashMap<>();
         int second = TimeUtil.getCurrentInSecond();
         for (int rowNum = 1,rowCount=sheet.getPhysicalNumberOfRows(); rowNum < rowCount; rowNum++) {
             Row hssfRow = sheet.getRow(rowNum);
@@ -216,9 +217,27 @@ public class FileUploadServiceImpl implements FileUploadService {
                 throw new Exception("第"+rowNum+"行，IC卡内号已存在");
             }
 
-            //卡类型
+
+            //卡面号
             Cell c2 = hssfRow.getCell(1);
-            String cardType = getValueOfString(c2,rowNum,2);
+            String cardOutNo = getValueOfString(c2,rowNum,2);
+            int len1 = cardOutNo.length();
+            if(len1<1 || len1 > 32){
+                throw new Exception("第"+rowNum+"行，IC卡面号长度1-32字符");
+            }
+            if(cardOutNoMap.containsKey(cardOutNo)){
+                throw new Exception("第"+rowNum+"行，IC卡面号重复");
+            }
+            cardOutNoMap.put(cardNo,cardNo);
+            Card check1 = cardRepo.findFirstByCardOutNo(cardOutNo);
+            if(check1 != null){
+                throw new Exception("第"+rowNum+"行，IC卡面号已存在");
+            }
+
+
+            //卡类型
+            Cell c3 = hssfRow.getCell(2);
+            String cardType = getValueOfString(c3,rowNum,3);
             if(!cardTypeMap.containsKey(cardType)){
                 throw new Exception("第"+rowNum+"行，IC卡类型错误");
             }
@@ -227,6 +246,7 @@ public class FileUploadServiceImpl implements FileUploadService {
             Card card = new Card();
             card.setAppend("自动导入");
             card.setCardNo(cardNo);
+            card.setCardOutNo(cardOutNo);
             card.setStatus(0);
             String cardId = seqService.getNextBusinessId(Const.BZ_CARD, targetCustomerId, 4);
             card.setCardId(cardId);

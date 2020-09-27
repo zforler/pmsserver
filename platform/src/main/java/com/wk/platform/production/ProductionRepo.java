@@ -17,5 +17,5 @@ public interface ProductionRepo extends JpaRepository<Production,Integer> {
     int updateProductionEndTime(int id,int endTime);
 
     List<Production> findAllByCustomerId(String customerId);
-
+    List<Production> findAllByCustomerIdAndEndTime(String customerId,int endTime);
 }

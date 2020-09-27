@@ -118,4 +118,16 @@ public class BatchController {
             return Result.error(e.getMessage());
         }
     }
+
+    @ApiOperation("获取自定义批页列表")
+    @GetMapping("/getBatchItemList")
+    public Result<List<BatchItem>> getBatchItemList(String customerId,String token){
+        try {
+            String operateUserId = LocalMemCache.getUserIdByToken(token);
+            return batchService.getBatchItemList(customerId, operateUserId);
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            return Result.error(e.getMessage());
+        }
+    }
 }

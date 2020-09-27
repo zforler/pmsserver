@@ -7,7 +7,8 @@ import java.util.List;
 import java.util.Map;
 
 public interface RecordService {
-    Result<List<Map<String,Object>>> getRecordList(String customerId, int beginTime, int endTime, String operateUserId);
+    Result<List<Map<String,Object>>> getRecordList(String customerId, int beginTime, int endTime, String keyword,
+                                                   String subEquipmentId,String departmentId,int priceType,String operateUserId);
 
     Result<List<Map<String,Object>>> getSalaryReportList(String keyword,String customerId,int beginTime, int endTime, String operateUserId);
 

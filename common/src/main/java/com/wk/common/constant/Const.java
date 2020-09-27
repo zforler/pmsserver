@@ -70,4 +70,9 @@ public final class Const {
     //是否生效
     public static final int ACTIVE = 1;
     public static final int INACTIVE = 0;
+
+    //计费方式
+    public static final int PRICE_TYPE_WEIGHT = 1;
+    public static final int PRICE_TYPE_COUNT = 2;
+    public static final int PRICE_TYPE_TIME = 3;
 }

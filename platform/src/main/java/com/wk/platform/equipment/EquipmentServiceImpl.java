@@ -1,6 +1,7 @@
 package com.wk.platform.equipment;
 
 import com.wk.bean.Equipment;
+import com.wk.bean.SubEquipment;
 import com.wk.common.constant.Const;
 import com.wk.common.util.TimeUtil;
 import com.wk.common.vo.Result;
@@ -105,5 +106,34 @@ public class EquipmentServiceImpl implements EquipmentService {
     public Result<Equipment> getEquipmentByEquipmentId(String equipmentId, String operateUserId) {
         Equipment old = equipmentRepo.findFirstByEquipmentId(equipmentId);
         return Result.success(old);
+    }
+
+    @Override
+    public Result<List<SubEquipment>> getSubEquipmentList(String equipmentTypes, String customerId, String operateUserId) {
+        String sql = "SELECT * from sub_equipment WHERE sub_equipment_id like :k";
+        Map<String,Object> param = new HashMap<>();
+        param.put("k",customerId+"%");
+
+        if(StringUtils.isNotBlank(equipmentTypes)){
+            String[] split = equipmentTypes.split(",");
+            StringBuffer str = new StringBuffer();
+            for (int i = 0, len = split.length; i < len; i++) {
+                if(i == len - 1){
+                    str.append(split[i]).append(")");
+                }else{
+                    str.append(split[i]).append(",");
+                }
+            }
+            if(StringUtils.isNotBlank(str)){
+                String s  = "("+str.toString();
+                sql += "type in :val";
+                param.put("val",s);
+            }
+
+        }
+
+        List<SubEquipment> subEquipments = commonService.listBySql(sql, param, SubEquipment.class);
+
+        return Result.success(subEquipments);
     }
 }

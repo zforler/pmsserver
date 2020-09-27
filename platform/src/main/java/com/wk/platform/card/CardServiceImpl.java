@@ -40,6 +40,10 @@ public class CardServiceImpl implements CardService {
         if(card1 != null){
             return Result.error("卡内号已存在");
         }
+        Card firstByCardOutNo = cardRepo.findFirstByCardOutNo(card.getCardOutNo());
+        if(firstByCardOutNo != null){
+            return Result.error("卡面号已存在");
+        }
 //        card1 = cardRepo.findFirstByCardNameAndCustomerIdEquals(card.getCardName(), card.getCustomerId());
 //        if(card1 != null){
 //            return Result.error("卡名称重复");
@@ -75,6 +79,10 @@ public class CardServiceImpl implements CardService {
         if(card2 != null){
             return Result.error("卡内号已存在");
         }
+        Card firstByCardOutNo = cardRepo.findFirstByCardOutNoAndCardIdNot(card.getCardOutNo(),cardId);
+        if(firstByCardOutNo != null){
+            return Result.error("卡面号已存在");
+        }
 //        card2 = cardRepo.findFirstByCardNameAndCustomerIdEqualsAndCardIdNot(card.getCardName(), card.getCustomerId(),cardId);
 //        if(card2 != null){
 //            return Result.error("卡名称重复");
@@ -90,9 +98,10 @@ public class CardServiceImpl implements CardService {
         if(StringUtils.isNotBlank(oldStaffId) && !oldStaffId.equals(newStaffId)){
             staffCardRepo.updateEndtimeByCardId(cardId,second);
         }
-        if(StringUtils.isNotBlank(newStaffId)){
+        if(StringUtils.isNotBlank(newStaffId) && !newStaffId.equals(oldStaffId)){
             saveStaffCard(cardId,newStaffId,second);
         }
+        cardRepo.saveAndFlush(card);
         return Result.success();
     }
     @Transactional
@@ -137,8 +146,8 @@ public class CardServiceImpl implements CardService {
                     " c.card_no like :keyword OR c.card_name like :keyword)";
             param.put("keyword", "%" + keyword + "%");
         }
-
-        Pageable pageable = PageRequest.of(page, size, Sort.Direction.ASC, "cardId");
+        sql += " order by c.card_id desc";
+        Pageable pageable = PageRequest.of(page, size);
         Page<Card> list = commonService.pageBySql(sql,param,pageable,Card.class);
 
         return Result.success(new PageList<>(list.getContent(),list.getTotalElements(),page,size));

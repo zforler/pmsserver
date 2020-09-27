@@ -19,7 +19,7 @@ public class Record {
     private Integer priceType;
     private BigDecimal dispatchKg;
     private BigDecimal deliveryCount;
-    private String deliveryKg;
+    private BigDecimal deliveryKg;
     private BigDecimal yield;
     private BigDecimal price;
     private BigDecimal totalPrice;
@@ -47,6 +47,11 @@ public class Record {
     private Integer year;
     private Integer month;
     private Integer day;
+    private Integer signInTime;
+    private Integer signOutTime;
+    private Integer workTime;
+    private String signSubId;
+    private String signCardNo;
 
     @Basic
     @Column(name = "price_id")
@@ -170,11 +175,11 @@ public class Record {
 
     @Basic
     @Column(name = "delivery_kg")
-    public String getDeliveryKg() {
+    public BigDecimal getDeliveryKg() {
         return deliveryKg;
     }
 
-    public void setDeliveryKg(String deliveryKg) {
+    public void setDeliveryKg(BigDecimal deliveryKg) {
         this.deliveryKg = deliveryKg;
     }
 
@@ -467,5 +472,55 @@ public class Record {
 
     public void setDay(Integer day) {
         this.day = day;
+    }
+
+    @Basic
+    @Column(name = "sign_in_time")
+    public Integer getSignInTime() {
+        return signInTime;
+    }
+
+    public void setSignInTime(Integer signInTime) {
+        this.signInTime = signInTime;
+    }
+
+    @Basic
+    @Column(name = "sign_out_time")
+    public Integer getSignOutTime() {
+        return signOutTime;
+    }
+
+    public void setSignOutTime(Integer signOutTime) {
+        this.signOutTime = signOutTime;
+    }
+
+    @Basic
+    @Column(name = "work_time")
+    public Integer getWorkTime() {
+        return workTime;
+    }
+
+    public void setWorkTime(Integer workTime) {
+        this.workTime = workTime;
+    }
+
+    @Basic
+    @Column(name = "sign_sub_id")
+    public String getSignSubId() {
+        return signSubId;
+    }
+
+    public void setSignSubId(String signSubId) {
+        this.signSubId = signSubId;
+    }
+
+    @Basic
+    @Column(name = "sign_card_no")
+    public String getSignCardNo() {
+        return signCardNo;
+    }
+
+    public void setSignCardNo(String signCardNo) {
+        this.signCardNo = signCardNo;
     }
 }

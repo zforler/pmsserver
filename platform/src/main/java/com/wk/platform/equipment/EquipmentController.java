@@ -1,6 +1,7 @@
 package com.wk.platform.equipment;
 
 import com.wk.bean.Equipment;
+import com.wk.bean.SubEquipment;
 import com.wk.common.cache.LocalMemCache;
 import com.wk.common.vo.Result;
 import com.wk.platform.equipment.EquipmentService;
@@ -77,6 +78,18 @@ public class EquipmentController {
         try {
             Result<Equipment> result = equipmentService.getEquipmentByEquipmentId(equipmentId, operateUserId);
             return result;
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            return Result.error(e.getMessage());
+        }
+    }
+
+    @ApiOperation("获取企业下子设备列表")
+    @GetMapping("/getSubEquipmentListAll")
+    public Result<List<SubEquipment>> getSubEquipmentListAll(String equipmentTypes, String customerId, String token){
+        try {
+            String operateUserId = LocalMemCache.getUserIdByToken(token);
+            return equipmentService.getSubEquipmentList(equipmentTypes,customerId,  operateUserId);
         }catch (Exception e){
             logger.error(e.getMessage(),e);
             return Result.error(e.getMessage());

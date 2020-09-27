@@ -17,6 +17,8 @@ public class Card {
     private String staffId;
     private String staffName;
     private int beginTime;
+    private String cardOutNo;
+
     @Transient
     public int getBeginTime() {
         return beginTime;
@@ -34,6 +36,7 @@ public class Card {
     public void setStaffId(String staffId) {
         this.staffId = staffId;
     }
+
     @Transient
     public String getStaffName() {
         return staffName;
@@ -152,5 +155,15 @@ public class Card {
     @Override
     public int hashCode() {
         return Objects.hash(cardId, cardNo, cardName, cardType, customerId, status, createTime, updateTime, append);
+    }
+
+    @Basic
+    @Column(name = "card_out_no")
+    public String getCardOutNo() {
+        return cardOutNo;
+    }
+
+    public void setCardOutNo(String cardOutNo) {
+        this.cardOutNo = cardOutNo;
     }
 }

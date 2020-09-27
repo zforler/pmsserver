@@ -20,4 +20,5 @@ public interface BatchService {
     Result updateBatchItem(BatchItem batchItem, String operateUserId);
     Result deleteBatchItem(String itemId, String operateUserId);
     Result<PageList<BatchItem>> getBatchItemPageList(String keyword, String batchId, int page, int size, String operateUserId);
+    Result<List<BatchItem>> getBatchItemList(String customerId, String operateUserId);
 }
