@@ -75,4 +75,9 @@ public final class Const {
     public static final int PRICE_TYPE_WEIGHT = 1;
     public static final int PRICE_TYPE_COUNT = 2;
     public static final int PRICE_TYPE_TIME = 3;
+
+
+    //
+    public static final String P2C = "P2C";
+    public static final String C2P = "C2P";
 }

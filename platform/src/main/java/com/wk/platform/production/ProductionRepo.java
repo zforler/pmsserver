@@ -18,4 +18,6 @@ public interface ProductionRepo extends JpaRepository<Production,Integer> {
 
     List<Production> findAllByCustomerId(String customerId);
     List<Production> findAllByCustomerIdAndEndTime(String customerId,int endTime);
+
+    int countByCustomerIdAndEndTime(String customerId, int endTime);
 }

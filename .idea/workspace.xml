@@ -5,22 +5,75 @@
     <bookmark url="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/equipment/EquipmentServiceImpl.java" line="50" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df02bf22-7c92-4e5a-914e-0194ec572d7b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/RecordEditLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/RecordOld.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/recordEdit/RecordEditLogController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/recordEdit/RecordEditLogRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/recordEdit/RecordEditLogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/recordEdit/RecordEditLogServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/recordEdit/RecordOldRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/statistics/StatisticsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/statistics/StatisticsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/statistics/StatisticsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b2c14589-ec84-4f00-8840-e72b435e08a2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b2c14589-ec84-4f00-8840-e72b435e08a2.xml" afterDir="false" />
+    <list default="true" id="df02bf22-7c92-4e5a-914e-0194ec572d7b" name="Default Changelist" comment="qq">
+      <change afterPath="$PROJECT_DIR$/access-server/access-server.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/access-server/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/access-server/src/main/java/com/wk/access/AccessApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/access-server/src/main/java/com/wk/access/redisMsg/RedisMsgConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/access-server/src/main/java/com/wk/access/redisMsg/RedisMsgReceiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/access-server/src/main/java/com/wk/access/redisMsg/RedisMsgService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/access-server/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/access-server/src/main/resources/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/access-server/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/access-server/target/classes/META-INF/access-server.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/access-server/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/access-server/target/classes/com/wk/access/AccessApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/access-server/target/classes/com/wk/access/redisMsg/RedisMsgConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/access-server/target/classes/com/wk/access/redisMsg/RedisMsgReceiver.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/access-server/target/classes/com/wk/access/redisMsg/RedisMsgService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/access-server/target/classes/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/access-server/target/classes/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/Batch.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/BatchItem.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/Card.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/Equipment.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/Price.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/Production.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/ProductionVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/Record.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/RecordEditLog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/RecordOld.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/Report.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/ReportAuth.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/SalaryAdjustLog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/Shift.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/Spec.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/Staff.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/StaffCard.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/StaffDepart.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/SubEquipment.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/SubEquipmentCalcLog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/Technology.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/TimePrice.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/boot/src/main/resources/PMS通讯协议.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/boot/src/main/resources/sql/pms.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-cache/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-cache/target/classes/com/wk/cache/RedisCacheConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-cache/target/classes/com/wk/cache/RedisCacheParam.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-cache/target/classes/com/wk/cache/RedisCacheService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-cache/target/classes/com/wk/cache/RedisCacheServiceImpl$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-cache/target/classes/com/wk/cache/RedisCacheServiceImpl$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-cache/target/classes/com/wk/cache/RedisCacheServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-cache/target/classes/com/wk/cache/RedisLock.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-cache/target/common-cache-0.0.1-SNAPSHOT-exec.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-cache/target/common-cache-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-cache/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-cache/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-cache/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-cache/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/wk/common/util/RegUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commonservice/target/classes/com/wk/commonservice/service/SysLogRepo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commonservice/target/classes/com/wk/commonservice/service/SysLogService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commonservice/target/classes/com/wk/commonservice/service/SysLogServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/target/classes/com/wk/config/filter/CorsFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/redisMsg/RedisMsgConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/redisMsg/RedisMsgReceiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/redisMsg/RedisMsgService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bean/bean.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bean/bean.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/Record.java" beforeDir="false" afterPath="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/Record.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bean/target/bean-0.0.1-SNAPSHOT-exec.jar" beforeDir="false" afterPath="$PROJECT_DIR$/bean/target/bean-0.0.1-SNAPSHOT-exec.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bean/target/bean-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/bean/target/bean-0.0.1-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/Customer.class" afterDir="false" />
@@ -35,27 +88,18 @@
       <change beforePath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/SysSeq.class" beforeDir="false" afterPath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/SysSeq.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/UserInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/bean/target/classes/com/wk/bean/UserInfo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bean/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/bean/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-cache/src/main/java/com/wk/cache/RedisCacheServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-cache/src/main/java/com/wk/cache/RedisCacheServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/src/main/java/com/wk/common/constant/Const.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/wk/common/constant/Const.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/target/classes/com/wk/common/constant/Const.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/wk/common/constant/Const.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/target/common-0.0.1-SNAPSHOT-exec.jar" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/common-0.0.1-SNAPSHOT-exec.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/common-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/common-0.0.1-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/commonservice/target/common-service-0.0.1-SNAPSHOT-exec.jar" beforeDir="false" afterPath="$PROJECT_DIR$/commonservice/target/common-service-0.0.1-SNAPSHOT-exec.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/target/config-0.0.1-SNAPSHOT-exec.jar" beforeDir="false" afterPath="$PROJECT_DIR$/config/target/config-0.0.1-SNAPSHOT-exec.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/batch/BatchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/batch/BatchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/batch/BatchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/batch/BatchService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/batch/BatchServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/batch/BatchServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/card/CardRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/card/CardRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/card/CardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/card/CardServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/customer/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/customer/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/equipment/EquipmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/equipment/EquipmentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/equipment/EquipmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/equipment/EquipmentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/equipment/EquipmentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/equipment/EquipmentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/fileupload/FileUploadServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/fileupload/FileUploadServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/platform/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/PlatformApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/PlatformApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/production/ProductionRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/production/ProductionRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/production/ProductionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/production/ProductionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/record/RecordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/record/RecordController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/record/RecordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/record/RecordService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/record/RecordServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/record/RecordServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/statistics/StatisticsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/statistics/StatisticsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/subEquipment/SubEquipmentRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/subEquipment/SubEquipmentRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platform/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/platform/src/main/resources/application.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/platform/target/" />
@@ -65,6 +109,7 @@
     <ignored path="$PROJECT_DIR$/common/target/" />
     <ignored path="$PROJECT_DIR$/commonservice/target/" />
     <ignored path="$PROJECT_DIR$/common-cache/target/" />
+    <ignored path="$PROJECT_DIR$/access-server/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,114 +141,110 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/card/CardServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/access-server/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2728">
-              <caret line="148" column="42" selection-start-line="148" selection-start-column="42" selection-end-line="148" selection-end-column="42" />
+            <state relative-caret-position="1540">
+              <caret line="70" selection-start-line="70" selection-end-line="70" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/access-server/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6710">
-              <caret line="328" column="35" selection-start-line="328" selection-start-column="35" selection-end-line="328" selection-end-column="35" />
+            <state relative-caret-position="154">
+              <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/record/RecordServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="31" column="58" selection-start-line="31" selection-start-column="58" selection-end-line="32" selection-end-column="114" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/record/RecordController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="31" column="98" selection-start-line="31" selection-start-column="84" selection-end-line="31" selection-end-column="98" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/statistics/StatisticsController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/statistics/StatisticsService.java">
+        <entry file="file://$PROJECT_DIR$/access-server/src/main/java/com/wk/access/AccessApplication.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="176">
-              <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+              <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/access-server/src/main/java/com/wk/access/redisMsg/RedisMsgConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/redisMsg/RedisMsgReceiver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/statistics/StatisticsServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="20" />
+            <state relative-caret-position="374">
+              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#311#312#0" expanded="true" />
-                <element signature="e#338#339#0" expanded="true" />
-                <element signature="e#442#443#0" expanded="true" />
-                <element signature="e#469#470#0" expanded="true" />
-                <element signature="e#572#573#0" expanded="true" />
-                <element signature="e#599#600#0" expanded="true" />
-                <element signature="e#718#719#0" expanded="true" />
-                <element signature="e#745#746#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/record/RecordService.java">
+        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/redisMsg/RedisMsgConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="616">
+              <caret line="34" column="88" selection-start-line="34" selection-start-column="88" selection-end-line="34" selection-end-column="88" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/redisMsg/RedisMsgService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/access-server/src/main/java/com/wk/access/redisMsg/RedisMsgReceiver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+              <folding>
+                <element signature="e#254#255#0" expanded="true" />
+                <element signature="e#301#302#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/access-server/src/main/java/com/wk/access/redisMsg/RedisMsgService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="110">
-              <caret line="9" column="96" selection-start-line="9" selection-start-column="96" selection-end-line="10" selection-end-column="107" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/fileupload/FileUploadServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4378">
-              <caret line="226" column="13" selection-start-line="224" selection-start-column="35" selection-end-line="226" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
+              <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -220,13 +261,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>production</find>
-      <find>产品</find>
-      <find>AuthorizationInterceptor</find>
-      <find>LogInterceptor</find>
-      <find>OPTIONS</find>
-      <find>getLog</find>
-      <find>SysLogService</find>
       <find>getSysLogPageList</find>
       <find>poi</find>
       <find>staffId</find>
@@ -250,6 +284,13 @@
       <find>getSalaryReportList</find>
       <find>getProductionReportdList</find>
       <find>getRecordList</find>
+      <find>red</find>
+      <find>redis.database</find>
+      <find>spring-data-redis</find>
+      <find>hello word</find>
+      <find>sendmsg</find>
+      <find>sendmsg:hellow</find>
+      <find>123</find>
     </findStrings>
     <replaceStrings>
       <replace>产品</replace>
@@ -290,49 +331,29 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/subEquipment/SubEquipmentController.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/subEquipment/SubEquipmentService.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/subEquipment/SubEquipmentServiceImpl.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/test/tt.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/user/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/resources/logback-spring.xml" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/report/ReportRepo.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/report/ReportService.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/report/ReportAuthRepo.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/report/ReportServiceImpl.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/report/ReportController.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/salaryAdjust/SalaryAdjustLogService.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/salaryAdjust/SalaryAdjustLogController.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/salaryAdjust/SalaryAdjustLogRepo.java" />
-        <option value="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/SalaryAdjustLog.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/salaryAdjust/SalaryAdjustLogServiceImpl.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffService.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffRepo.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffServiceImpl.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffController.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/recordEdit/RecordOldRepo.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/recordEdit/RecordEditLogRepo.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/recordEdit/RecordEditLogService.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/com/wk/common/constant/Const.java" />
         <option value="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/Record.java" />
         <option value="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/RecordEditLog.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/customer/CustomerController.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/recordEdit/RecordEditLogController.java" />
         <option value="$PROJECT_DIR$/config/src/main/java/com/wk/config/interceptor/AuthorizationInterceptor.java" />
-        <option value="$PROJECT_DIR$/common-cache/src/main/java/com/wk/cache/RedisCacheServiceImpl.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/batch/BatchService.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/batch/BatchServiceImpl.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/batch/BatchController.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/equipment/EquipmentService.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/equipment/EquipmentServiceImpl.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/equipment/EquipmentController.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/production/ProductionRepo.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/production/ProductionServiceImpl.java" />
         <option value="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/RecordOld.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/recordEdit/RecordEditLogServiceImpl.java" />
         <option value="$PROJECT_DIR$/bean/src/main/java/com/wk/bean/Card.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/card/CardRepo.java" />
-        <option value="$PROJECT_DIR$/platform/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/fileupload/FileUploadServiceImpl.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/card/CardServiceImpl.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/record/RecordService.java" />
@@ -340,7 +361,27 @@
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/record/RecordController.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/statistics/StatisticsController.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/statistics/StatisticsService.java" />
+        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffRepo.java" />
+        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/production/ProductionRepo.java" />
+        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/subEquipment/SubEquipmentRepo.java" />
         <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/statistics/StatisticsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/common-cache/src/main/java/com/wk/cache/RedisCacheServiceImpl.java" />
+        <option value="$PROJECT_DIR$/common-cache/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/common-cache/src/main/java/com/wk/cache/RedisCacheConfig.java" />
+        <option value="$PROJECT_DIR$/platform/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/platform/pom.xml" />
+        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/redisMsg/RedisMsgListener.java" />
+        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/redisMsg/RedisMsgReceiver.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/wk/common/constant/Const.java" />
+        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/redisMsg/RedisMsgConfig.java" />
+        <option value="$PROJECT_DIR$/access-server/pom.xml" />
+        <option value="$PROJECT_DIR$/access-server/src/main/java/com/wx/access/AccessApplication.java" />
+        <option value="$PROJECT_DIR$/access-server/src/main/java/com/wx/access/redisMsg/RedisMsgService.java" />
+        <option value="$PROJECT_DIR$/access-server/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/PlatformApplication.java" />
+        <option value="$PROJECT_DIR$/platform/src/main/java/com/wk/platform/redisMsg/RedisMsgService.java" />
+        <option value="$PROJECT_DIR$/access-server/src/main/java/com/wx/access/redisMsg/RedisMsgConfig.java" />
+        <option value="$PROJECT_DIR$/access-server/src/main/java/com/wk/access/AccessApplication.java" />
       </list>
     </option>
   </component>
@@ -437,9 +478,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
-    <option name="width" value="1330" />
-    <option name="height" value="1047" />
+    <option name="x" value="425" />
+    <option name="y" value="3" />
+    <option name="width" value="1940" />
+    <option name="height" value="1100" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -459,60 +501,25 @@
             <path>
               <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
               <item name="pmsserver" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
+              <item name="access-server" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
               <item name="pmsserver" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
+              <item name="access-server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
               <item name="pmsserver" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pmsserver" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pmsserver" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pmsserver" type="462c0819:PsiDirectoryNode" />
-              <item name="platform" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pmsserver" type="462c0819:PsiDirectoryNode" />
-              <item name="platform" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pmsserver" type="462c0819:PsiDirectoryNode" />
-              <item name="platform" type="462c0819:PsiDirectoryNode" />
+              <item name="access-server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
               <item name="pmsserver" type="462c0819:PsiDirectoryNode" />
-              <item name="platform" type="462c0819:PsiDirectoryNode" />
+              <item name="access-server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -520,11 +527,162 @@
             <path>
               <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
               <item name="pmsserver" type="462c0819:PsiDirectoryNode" />
+              <item name="access-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="access" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pmsserver" type="462c0819:PsiDirectoryNode" />
+              <item name="access-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="access" type="462c0819:PsiDirectoryNode" />
+              <item name="redisMsg" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pmsserver" type="462c0819:PsiDirectoryNode" />
+              <item name="access-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pmsserver" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pmsserver" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pmsserver" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pmsserver" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pmsserver" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pmsserver" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="constant" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pmsserver" type="462c0819:PsiDirectoryNode" />
+              <item name="common-cache" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pmsserver" type="462c0819:PsiDirectoryNode" />
+              <item name="common-cache" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pmsserver" type="462c0819:PsiDirectoryNode" />
+              <item name="common-cache" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pmsserver" type="462c0819:PsiDirectoryNode" />
+              <item name="common-cache" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pmsserver" type="462c0819:PsiDirectoryNode" />
+              <item name="common-cache" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cache" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pmsserver" type="462c0819:PsiDirectoryNode" />
+              <item name="common-cache" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pmsserver" type="462c0819:PsiDirectoryNode" />
+              <item name="platform" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pmsserver" type="462c0819:PsiDirectoryNode" />
+              <item name="platform" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pmsserver" type="462c0819:PsiDirectoryNode" />
+              <item name="platform" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pmsserver" type="462c0819:PsiDirectoryNode" />
+              <item name="platform" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pmsserver" type="462c0819:PsiDirectoryNode" />
               <item name="platform" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="platform" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pmsserver" type="462c0819:PsiDirectoryNode" />
+              <item name="platform" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="platform" type="462c0819:PsiDirectoryNode" />
+              <item name="redisMsg" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
@@ -535,6 +693,16 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="platform" type="462c0819:PsiDirectoryNode" />
               <item name="statistics" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pmsserver" type="462c0819:PsiDirectoryNode" />
+              <item name="platform" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="platform" type="462c0819:PsiDirectoryNode" />
+              <item name="subEquipment" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pmsserver" type="b2602c69:ProjectViewProjectNode" />
@@ -574,26 +742,26 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.wx.config" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\myprogram\pmsserver\access-server\src\main\java\com\wx\access" />
+      <recent name="F:\myprogram\pmsserver\access-server\src\main\resources" />
+      <recent name="F:\myprogram\pmsserver\config\src\main\java\com\wk\config\filter" />
+      <recent name="F:\myprogram\pmsserver\common-cache\src\main\resources" />
+      <recent name="F:\myprogram\pmsserver\common-cache\src\main\java\com\wk\cache" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.wx.access" />
+      <recent name="com.wk.platform.redisMsg" />
       <recent name="com.wk.config.filter" />
       <recent name="com.wk.bean" />
       <recent name="com.wk.common.vo" />
-      <recent name="com.wk.commonservice.service" />
-      <recent name="com.wx.bean" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.wx.config" />
     </key>
     <key name="ImportMappingsDialog.RecentPackages">
       <recent name="com.wk.bean" />
       <recent name="" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\myprogram\pmsserver\config\src\main\java\com\wk\config\filter" />
-      <recent name="F:\myprogram\pmsserver\common-cache\src\main\resources" />
-      <recent name="F:\myprogram\pmsserver\common-cache\src\main\java\com\wk\cache" />
-      <recent name="F:\myprogram\pmsserver\common\src\main\java\com\wk\common\cache" />
-      <recent name="F:\myprogram\pmsserver\bean\src\main\java\com\wk\bean" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -608,7 +776,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.PlatformApplication">
+  <component name="RunManager" selected="Spring Boot.AccessApplication (1)">
     <configuration name="LocalMemCache" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.wk.common.cache.LocalMemCache" />
       <module name="common" />
@@ -635,6 +803,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AccessApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="access-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wk.access.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wk.access.AccessApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AccessApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="access-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wx.access.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wx.access.AccessApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="boot" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.wk.boot.BootApplication" />
@@ -654,9 +848,13 @@
       <item itemvalue="Application.RegUtil" />
       <item itemvalue="Spring Boot.BootApplication" />
       <item itemvalue="Spring Boot.PlatformApplication" />
+      <item itemvalue="Spring Boot.AccessApplication" />
+      <item itemvalue="Spring Boot.AccessApplication (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.AccessApplication (1)" />
+        <item itemvalue="Spring Boot.AccessApplication" />
         <item itemvalue="Application.RegUtil" />
         <item itemvalue="Application.LocalMemCache" />
       </list>
@@ -731,6 +929,8 @@
       <workItem from="1600991419735" duration="225000" />
       <workItem from="1601080157586" duration="12571000" />
       <workItem from="1601164828383" duration="1519000" />
+      <workItem from="1601200830808" duration="8373000" />
+      <workItem from="1601513540350" duration="489000" />
     </task>
     <task id="LOCAL-00001" summary="qq">
       <created>1597485488611</created>
@@ -963,19 +1163,25 @@
       <option name="project" value="LOCAL" />
       <updated>1600216139259</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="qq">
+      <created>1601200896030</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1601200896030</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="350784000" />
+    <option name="totallyTimeSpent" value="359646000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.79589635" visible="true" weight="0.20713525" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7937365" visible="true" weight="0.29872206" />
       <window_info id="Structure" order="1" weight="0.25" />
-      <window_info id="Persistence" order="2" sideWeight="0.20410368" side_tool="true" visible="true" weight="0.20713525" />
+      <window_info id="Persistence" order="2" sideWeight="0.2062635" side_tool="true" visible="true" weight="0.29872206" />
       <window_info id="Designer" order="3" />
       <window_info id="Image Layers" order="4" />
       <window_info id="UI Designer" order="5" />
@@ -984,8 +1190,8 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.36285096" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.14254859" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.27105832" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.60799134" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -1006,7 +1212,7 @@
       <window_info anchor="right" id="Database" order="6" weight="0.045793395" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Maven" order="9" weight="0.12779553" />
+      <window_info anchor="right" id="Maven" order="9" visible="true" weight="0.12779553" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1025,208 +1231,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/salaryAdjust/SalaryAdjustLogRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="9" column="78" selection-start-line="9" selection-start-column="78" selection-end-line="9" selection-end-column="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/wk/bean/SalaryAdjustLog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-          <folding>
-            <element signature="e#564#565#0" expanded="true" />
-            <element signature="e#595#596#0" expanded="true" />
-            <element signature="e#643#644#0" expanded="true" />
-            <element signature="e#683#684#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/salaryAdjust/SalaryAdjustLogController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="33" column="40" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3674">
-          <caret line="184" column="15" selection-start-line="184" selection-start-column="15" selection-end-line="184" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="35" column="35" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="17" column="41" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/report/ReportService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/salaryAdjust/SalaryAdjustLogServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/recordEdit/RecordOldRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="69" selection-start-line="5" selection-start-column="69" selection-end-line="5" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/recordEdit/RecordEditLogRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="78" selection-start-line="5" selection-start-column="78" selection-end-line="5" selection-end-column="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/customer/CustomerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="10" selection-start-line="9" selection-end-line="17" selection-end-column="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/wk/common/constant/Const.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="590">
-          <caret line="74" column="45" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/maven/repo/org/springframework/spring-aop/5.2.8.RELEASE/spring-aop-5.2.8.RELEASE.jar!/org/springframework/aop/framework/CglibAopProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="476" selection-start-line="476" selection-end-line="476" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/maven/repo/org/springframework/spring-core/5.2.8.RELEASE/spring-core-5.2.8.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="102" selection-start-line="102" selection-end-line="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/recordEdit/RecordEditLogService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/src/main/java/com/wk/config/interceptor/AuthorizationInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="968">
-          <caret line="61" column="48" selection-start-line="61" selection-start-column="48" selection-end-line="61" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common-cache/src/main/java/com/wk/cache/RedisCacheServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/customer/CustomerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2024">
-          <caret line="106" column="1" selection-start-line="106" selection-start-column="1" selection-end-line="106" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common-cache/src/main/java/com/wk/cache/RedisCacheService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common-cache/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/customer/CustomerServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1386">
-          <caret line="84" column="4" selection-start-line="84" selection-start-column="4" selection-end-line="87" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/wk/bean/RecordEditLog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-880">
-          <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/report/ReportServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="74" column="31" selection-start-line="74" selection-start-column="31" selection-end-line="74" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/batch/BatchService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="18" column="78" selection-start-line="18" selection-start-column="78" selection-end-line="18" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/batch/BatchServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="130" column="51" selection-start-line="130" selection-start-column="35" selection-end-line="130" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/equipment/EquipmentRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/equipment/EquipmentService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -1259,13 +1263,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2068">
           <caret line="113" column="47" selection-start-line="113" selection-start-column="47" selection-end-line="113" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/production/ProductionRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="19" column="50" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -1358,16 +1355,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/record/RecordServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="31" column="58" selection-start-line="31" selection-start-column="58" selection-end-line="32" selection-end-column="114" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/record/RecordController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
@@ -1378,16 +1365,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/statistics/StatisticsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/statistics/StatisticsService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
+        <state>
           <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1412,27 +1392,231 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/staff/StaffRepo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/production/ProductionRepo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/subEquipment/SubEquipmentRepo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="12" column="33" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/maven/repo/org/springframework/data/spring-data-redis/1.8.18.RELEASE/spring-data-redis-1.8.18.RELEASE.jar!/org/springframework/data/redis/core/RedisTemplate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="351" column="19" selection-start-line="351" selection-start-column="19" selection-end-line="351" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-cache/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="24" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/record/RecordServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="118" column="43" selection-start-line="118" selection-start-column="43" selection-end-line="118" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-cache/src/main/java/com/wk/cache/RedisCacheService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-cache/src/main/java/com/wk/cache/RedisCacheServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="25" selection-start-line="25" selection-end-line="26" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-cache/src/main/java/com/wk/cache/RedisCacheParam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-627">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-cache/src/main/java/com/wk/cache/RedisCacheConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-cache/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/redisMsg/RedisMsgListener.java" />
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/statistics/StatisticsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/production/ProductionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="21" selection-start-line="21" selection-end-line="21" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/maven/repo/org/springframework/spring-context/5.2.8.RELEASE/spring-context-5.2.8.RELEASE.jar!/org/springframework/context/ApplicationEvent.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/maven/repo/org/springframework/boot/spring-boot/2.3.3.RELEASE/spring-boot-2.3.3.RELEASE.jar!/org/springframework/boot/context/event/ApplicationReadyEvent.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="10" column="34" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/wk/common/constant/Const.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="729">
+          <caret line="81" column="41" selection-start-line="81" selection-start-column="41" selection-end-line="81" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/resources/logback-spring.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/platform/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
+        <state relative-caret-position="2222">
+          <caret line="101" selection-start-line="101" selection-end-line="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2181">
+          <caret line="131" column="12" selection-start-line="19" selection-end-line="131" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/PlatformApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/access-server/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1540">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/access-server/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/access-server/src/main/java/com/wk/access/AccessApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/access-server/src/main/java/com/wk/access/redisMsg/RedisMsgConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/statistics/StatisticsServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="20" />
+        <state relative-caret-position="374">
+          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#311#312#0" expanded="true" />
-            <element signature="e#338#339#0" expanded="true" />
-            <element signature="e#442#443#0" expanded="true" />
-            <element signature="e#469#470#0" expanded="true" />
-            <element signature="e#572#573#0" expanded="true" />
-            <element signature="e#599#600#0" expanded="true" />
-            <element signature="e#718#719#0" expanded="true" />
-            <element signature="e#745#746#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/redisMsg/RedisMsgConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="34" column="88" selection-start-line="34" selection-start-column="88" selection-end-line="34" selection-end-column="88" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/redisMsg/RedisMsgService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/access-server/src/main/java/com/wk/access/redisMsg/RedisMsgReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+          <folding>
+            <element signature="e#254#255#0" expanded="true" />
+            <element signature="e#301#302#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/access-server/src/main/java/com/wk/access/redisMsg/RedisMsgService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/main/java/com/wk/platform/redisMsg/RedisMsgReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

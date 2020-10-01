@@ -12,6 +12,7 @@
         <option value="$PROJECT_DIR$/config/pom.xml" />
         <option value="$PROJECT_DIR$/common/pom.xml" />
         <option value="$PROJECT_DIR$/commonservice/pom.xml" />
+        <option value="$PROJECT_DIR$/access-server/pom.xml" />
       </list>
     </option>
   </component>

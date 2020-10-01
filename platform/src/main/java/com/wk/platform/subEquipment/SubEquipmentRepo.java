@@ -9,4 +9,6 @@ public interface SubEquipmentRepo extends JpaRepository<SubEquipment,String> {
     SubEquipment findFirstByEquipmentIdAndSubEquipmentNameAndSubEquipmentIdNot(String equipmentId,String name,String subId);
 
     SubEquipment findFirstBySubEquipmentId(String subId);
+
+    int countBySubEquipmentIdLike(String customerId);
 }

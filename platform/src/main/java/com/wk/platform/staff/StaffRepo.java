@@ -18,4 +18,6 @@ public interface StaffRepo extends JpaRepository<Staff,String> {
     Staff findFirstByStaffNoAndCustomerId(String staffNo,String customerId);
     Staff findFirstByStaffNoAndCustomerIdAndStaffIdNot(String staffNo,String customerId,String staffId);
 
+    int countByCustomerIdAndStatus(String customerId,int status);
+
 }
