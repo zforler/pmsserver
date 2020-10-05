@@ -12,7 +12,6 @@
           <factory-entry name="Entities" />
           <factory-entry name="noname-a.xml@0" value="b2c14589-ec84-4f00-8840-e72b435e08a2" />
         </datasource-mapping>
-        <naming-strategy-map />
       </configuration>
     </facet>
   </component>
@@ -46,6 +45,5 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-core:5.2.8.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-jcl:5.2.8.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.yaml:snakeyaml:1.26" level="project" />
-    <orderEntry type="library" name="Maven: mysql:mysql-connector-java:8.0.21" level="project" />
   </component>
 </module>
